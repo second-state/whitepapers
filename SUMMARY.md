@@ -25,7 +25,7 @@
 * [Run](devchain/run.md)
 * [BaaS](devchain/baas.md)
 
-## Smart contracts search engine
+## Data services for contracts <a id="smart-contracts-search-engine"></a>
 
 * [Getting started](smart-contracts-search-engine/getting-started.md)
 * [Start a search engine](smart-contracts-search-engine/start-a-search-engine.md)
