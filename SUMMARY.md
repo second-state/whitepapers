@@ -4,7 +4,7 @@
 
 ## White Papers
 
-* [The enterprise middleware for blockchain smart contracts](white-papers/enterprise-middleware-for-blockchain-smart-contracts.md)
+* [Middleware for blockchain](white-papers/enterprise-middleware-for-blockchain-smart-contracts.md)
 * [Google for smart contracts](white-papers/google-for-smart-contracts.md)
 * [FairPlay: a new type of DApp](white-papers/fairplay-a-new-type-of-dapp.md)
 

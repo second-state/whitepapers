@@ -1,4 +1,4 @@
-# The enterprise middleware for blockchain smart contracts
+# Middleware for blockchain
 
 Blockchain smart contracts enable enterprises to automate business decisions and processes in a transparent and collaborative environment. Second State creates a suite of open source middleware solutions, including [blockchai](https://github.com/second-state/devchain)n, [virtual machine](https://github.com/second-state/lityvm), [rules engine](https://www.litylang.org/business_rules/), [search engine](https://github.com/second-state/smart-contract-search-engine), data analytics services, together with [development and DevOps tools](https://buidl.secondstate.io/), to support enterprise deployment of smart contracts.
 
