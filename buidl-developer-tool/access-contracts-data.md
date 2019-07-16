@@ -87,7 +87,7 @@ function setData (element) {
   element.innerHTML = "Wait ..."
   setTimeout(function () {
     reload();
-  }, 5 * 1000);
+  }, 3 * 1000);
 }
 ```
 
