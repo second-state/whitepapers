@@ -1,2 +1,2 @@
-# Enterprise middleware for blockchain smart contracts
+# Enterprise middleware for DApps
 
