@@ -4,9 +4,9 @@
 
 ## White Papers
 
-* [Enterprise middleware for DApps](white-papers/enterprise-middleware-for-blockchain-smart-contracts.md)
+* [The enterprise middleware for blockchain smart contracts](white-papers/enterprise-middleware-for-blockchain-smart-contracts.md)
 * [Google for smart contracts](white-papers/google-for-smart-contracts.md)
-* [FairPlay: A new type of DApp](white-papers/fairplay-a-new-type-of-dapp.md)
+* [FairPlay: a new type of DApp](white-papers/fairplay-a-new-type-of-dapp.md)
 
 ## BUIDL developer tool
 
