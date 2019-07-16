@@ -1,3 +1,9 @@
+---
+description: >-
+  The BUIDL online IDE can create complete DApps (smart contracts + web3 +
+  ElasticSearch + JS + HTML / CSS) in minutes without installing any software.
+---
+
 # Getting started
 
 In this section, we will walk through the default example that comes with the [BUIDL](http://buidl.secondstate.io/) IDE. The complete source code for this example is [available here](https://gist.github.com/juntao/2f2cbd734bbc3ef8ddae38f4e2ea89dc).
