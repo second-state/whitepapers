@@ -11,7 +11,7 @@
 ## BUIDL developer tool
 
 * [Getting started](buidl-developer-tool/getting-started.md)
-* [Access contracts data](buidl-developer-tool/access-contracts-data.md)
+* [Data-driven DApps](buidl-developer-tool/access-contracts-data.md)
 * [Rule-based smart contract](buidl-developer-tool/rule-based-smart-contract.md)
 * [Sharing your DApp](buidl-developer-tool/sharing-your-dapp.md)
 * [Working with BaaS](buidl-developer-tool/working-with-baas.md)

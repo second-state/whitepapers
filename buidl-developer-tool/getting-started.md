@@ -8,6 +8,8 @@ description: >-
 
 In this section, we will walk through the default example that comes with the [BUIDL](http://buidl.secondstate.io/) IDE. The complete source code for this example is [available here](https://gist.github.com/juntao/2f2cbd734bbc3ef8ddae38f4e2ea89dc).
 
+**Access the BUIDL IDE from your browser:** [**https://buidl.secondstate.io/**](https://buidl.secondstate.io/)\*\*\*\*
+
 {% hint style="info" %}
 BUIDL works with the [Second State DevChain](../devchain/getting-started.md) by default. It could also work with any [blockchain started by the Second BaaS](working-with-baas.md) service, as well as any [Ethereum compatible blockchains](working-with-ethereum.md).
 {% endhint %}

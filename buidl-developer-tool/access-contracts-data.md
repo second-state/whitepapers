@@ -1,4 +1,4 @@
-# Access contracts data
+# Data-driven DApps
 
 The [Getting started guide](getting-started.md) showcased a number storage contract and DApp. In this section, we will use the same smart contract, but to develop a new DApp that highlights data capabilities of the Second State platform, which supports [web3](https://github.com/second-state/web3-ss.js) for transactional data and [elastic search](https://github.com/second-state/es-ss.js) for state data. The complete source code for this example is [available here](https://gist.github.com/juntao/bb63b952119c3e4c56bd56601c9140c3).
 
