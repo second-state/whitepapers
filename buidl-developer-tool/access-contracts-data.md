@@ -150,6 +150,7 @@ function reload () {
       });
     });
   });
+}
 ```
 
 The **Set Data** buttons in the table trigger the `setData()` JS function, which in turn calls the contract’s `set()` function via web3.
