@@ -48,13 +48,13 @@ Now let’s get started!
 
 In today’s enterprises, business rules engines \(BREs\) are widely used to make automated decisions. Rules engines and smart contracts are a perfect match for each other. On one hand, smart contracts are often just rules to be triggered and executed by blockchain transactions. On the other hand, business rules can be guaranteed to execute as written if they are codified in smart contracts. We believe that blockchains are perfect runtimes for rules engines especially when rules need to be audited and verified by multiple parties.
 
-Lity allows users to [create formal business rules in smart contracts](https://www.litylang.org/business_rules/). The Lity rules language constructs are modeled after the popular Drools rules engine. It allows business analysts to create and update rules, and users to verify rules deployed on the blockchain. You can read more about the Lity rules language [here](https://www.litylang.org/business_rules/).
+Lity allows users to [create formal business rules in smart contracts](https://www.litylang.org/business_rules/). The Lity rules language constructs are modeled after the popular Drools rules engine. It allows business analysts to create and update rules, and users to verify rules deployed on the blockchain. You can read more about [the Lity rules language here](https://www.litylang.org/business_rules/).
 
 ### On-chain and off-chain collaboration
 
 In order to automate real-world business decisions, smart contracts must receive real-world information and events. Lity allows certain smart contracts methods to be only invoked by trusted and verified offline entities known as Oracles.
 
-In Lity, [Oracles](https://www.litylang.org/trusted/) are first class programming constructs supported at the language level. Lity smart contracts could detect and trust transactions from the system’s validator nodes. This allows “ground truth”, such as real-world payment confirmations, product shipping confirmation, medical diagnosis, or even the weather, to be provided to enterprise smart contracts in a transparent and verifiable manner. You can read more about Lity’s oracle support here.
+In Lity, [Oracles](https://www.litylang.org/trusted/) are first class programming constructs supported at the language level. Lity smart contracts could detect and trust transactions from the system’s validator nodes. This allows “ground truth”, such as real-world payment confirmations, product shipping confirmation, medical diagnosis, or even the weather, to be provided to enterprise smart contracts in a transparent and verifiable manner. You can read more about [Lity’s oracle support here](https://www.litylang.org/trusted/).
 
 ### More Lity enterprise features
 
@@ -118,7 +118,7 @@ You can access [the public BUIDL tool here](https://buidl.secondstate.io/).
 
 ### Command line tools
 
-For more advanced users, Second State provides command line tools for the Lity language. You can compile and build Lity smart contracts using the lityc tool. The Lity command line tool also supports static analysis of smart contracts to ensure their safety and compliance to standards. You can read more about the Lity static analyzers here.
+For more advanced users, Second State provides command line tools for the Lity language. You can compile and build Lity smart contracts using the lityc tool. The Lity command line tool also supports static analysis of smart contracts to ensure their safety and compliance to standards. You can read more about [the Lity static analyzers here](https://www.litylang.org/security/).
 
 ### The Second State DevChain
 
