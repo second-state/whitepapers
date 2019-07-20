@@ -6,7 +6,7 @@ description: >-
 
 # Getting started
 
-In this section, we will walk through the default example that comes with the [BUIDL](http://buidl.secondstate.io/) IDE. The complete source code for this example is [available here](https://gist.github.com/juntao/2f2cbd734bbc3ef8ddae38f4e2ea89dc).
+In this section, we will walk through the default example that comes with the [BUIDL](http://buidl.secondstate.io/) IDE. The complete source code for this example is [available here](https://github.com/second-state/buidl/tree/master/demo/default).
 
 **Access the BUIDL IDE from your browser:** [**https://buidl.secondstate.io/**](https://buidl.secondstate.io/)\*\*\*\*
 

@@ -1,6 +1,6 @@
 # Data-driven DApps
 
-The [Getting started guide](getting-started.md) showcased a number storage contract and DApp. In this section, we will use the same smart contract, but to develop a new DApp that highlights data capabilities of the Second State platform, which supports [web3](https://github.com/second-state/web3-ss.js) for transactional data and [elastic search](https://github.com/second-state/es-ss.js) for state data. The complete source code for this example is [available here](https://gist.github.com/juntao/bb63b952119c3e4c56bd56601c9140c3).
+The [Getting started guide](getting-started.md) showcased a number storage contract and DApp. In this section, we will use the same smart contract, but to develop a new DApp that highlights data capabilities of the Second State platform, which supports [web3](https://github.com/second-state/web3-ss.js) for transactional data and [elastic search](https://github.com/second-state/es-ss.js) for state data. The complete source code for this example is [available here](https://github.com/second-state/buidl/tree/master/demo/data).
 
 **Access the BUIDL IDE from your browser:** [**https://buidl.secondstate.io/**](https://buidl.secondstate.io/)\*\*\*\*
 
@@ -38,18 +38,22 @@ Compile and deploy the smart contract via the **Compile** and **Deploy** buttons
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <title>Data Stores</title>
   </head>
   <body>
     <div class="container">
-        <p><button id="create" class="btn btn-primary" onclick="create(this)">Create new storage</button></p>
+        <p><br/>The table shows on-chain storage contracts. You can create a new one, or change the number stored in an existing one. All actions are recorded on-chain as immutable history.</p>
+        <p><button id="create" class="btn btn-primary" onclick="create(this)">Create a new storage contract</button></p>
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Block #</th>
+                    <th scope="col">Created</th>
                     <th scope="col">Data</th>
                     <th scope="col"></th>
                 </tr>
@@ -87,7 +91,6 @@ function create (element) {
     if (ee) {
       console.log("Error creating contract " + ee);
     } else {
-      // May take a few seconds for i.address to return
       setTimeout(function () {
         reload();
       }, 5 * 1000);
@@ -96,7 +99,7 @@ function create (element) {
 }
 
 function reload () {
-  document.querySelector("#create").innerHTML = "Create new storage";
+  document.querySelector("#create").innerHTML = "Create a new storage contract";
   document.querySelector("#tbody").innerHTML = "";
   var tbodyInner = "";
   esss.shaAbi(JSON.stringify(abi)).then((shaResult) => {
@@ -106,25 +109,33 @@ function reload () {
       items.sort(compareItem);
       items.forEach(function(item) {
         tbodyInner = tbodyInner + 
-          "<tr><td>" + item.blockNumber + 
+          "<tr id='" + item.contractAddress + "'><td>" + item.blockNumber + 
           "</td><td>" + item.functionData.get + 
-          "</td><td><button class='btn btn-info' onclick='setData(this)' id='" + item.contractAddress + "'>Set</button></td></tr>";
+          "</td><td><button class='btn btn-info' onclick='setData(this)'>Set</button></td></tr>";
       }); // end of JSON iterator
-
       document.querySelector("#tbody").innerHTML = tbodyInner;
     });
   }); // end of esss
 }
 
 function setData (element) {
-  console.log("Set Data " + element.id);
-  instance = contract.at(element.id);
+  var tr = element.closest("tr");
+  console.log("Set Data " + tr.id);
+  instance = contract.at(tr.id);
   var n = window.prompt("Input a number:");
   n && instance.set(n);
-  element.innerHTML = "Wait ..."
+  element.innerHTML = "Wait ...";
   setTimeout(function () {
-    reload();
-  }, 5 * 1000);
+    instance.get.call (function (e, r) {
+      if (e) {
+        console.log(e);
+        return;
+      } else {
+        element.closest("td").previousSibling.innerHTML = r;
+        element.innerHTML = "Set";
+      }
+    });
+  }, 2 * 1000);
 }
 
 function compareItem (a, b) {
@@ -163,7 +174,7 @@ function setData (element) {
 }
 ```
 
-The **Create new storage** button triggers the `create()` JS function to create a new contract on the blockchain. It works as follows.
+The **Create new storage contract** button triggers the `create()` JS function to create a new contract on the blockchain. It works as follows.
 
 ```javascript
 function create (element) {
