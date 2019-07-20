@@ -154,5 +154,11 @@ TBD
 
 You will see the web app running inside the right panel. You can now add purchases to the person, and see his or her rebates change.
 
+There is also a more complex example of the rebate rules, which allows you to create new persons \(one contract per person\), and then manage all persons in a table. Try the [source code here](https://github.com/second-state/buidl/tree/master/demo/rules-es).
+
+
+
+
+
 
 
