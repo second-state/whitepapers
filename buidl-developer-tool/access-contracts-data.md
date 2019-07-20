@@ -10,7 +10,7 @@ Let’s first see how the DApp works. It displays all the storage contracts depl
 
 Now, let’s review the code to see how this is done.
 
-#### Step 1: Copy and paste the following code into contract tab.
+#### Step 1: Copy and paste the following code into contract tab
 
 ```typescript
 pragma solidity >=0.4.0 <0.6.0;
