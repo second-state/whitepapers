@@ -57,7 +57,7 @@ contract Person {
 }
 ```
 
-TBD
+The important code segment is at the end of the contract, where we specify how the rebates should be given in a set of formal rules named `computeRebate`. The contract uses `factInsert`, `factDelete`, and `fireAllRules` built-in functions to manage the data and execution of this rule. For more details, you can read the [Lity rules documentation](https://lity.readthedocs.io/en/latest/rule-engine-guide.html).
 
 Compile and deploy the smart contract via the **Compile** and **Deploy** buttons. Notice that the contract requires a constructor parameter. The parameter is a person's name. This contract represents his or her shopping history.
 
@@ -105,7 +105,7 @@ Compile and deploy the smart contract via the **Compile** and **Deploy** buttons
 </html>
 ```
 
-TBD
+The HTML page presents a UI that allows users to add purchases for this person. With each purchase, the rebate is re-calculated according to the rule.
 
 #### Step 3: Copy and paste the following into the dapp -&gt; JS tab
 
@@ -148,7 +148,9 @@ function buy (element) {
 }
 ```
 
-TBD
+BUIDL pre-fills the JavaScript with the smart contract's compiled artifacts \(ABI and bytecode\), and its deployed address on the blockchain. The script starts by making a `getInfo()` call against the contract instance \(i.e., a person\) via web3 to get the current state of the contract. 
+
+The `buy()` method prompts the user to enter a purchase amount to add to this person. It waits for 2 seconds and then calls `getInfo()` again to get the updated purchase and rebate information for this person from the blockchain smart contract.
 
 #### Step 4: Hit the Run button to launch the DApp
 
