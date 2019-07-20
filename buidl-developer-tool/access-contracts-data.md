@@ -4,6 +4,8 @@ The [Getting started guide](getting-started.md) showcased a number storage contr
 
 **Access the BUIDL IDE from your browser:** [**https://buidl.secondstate.io/**](https://buidl.secondstate.io/)\*\*\*\*
 
+{% embed url="https://youtu.be/-FUzLTu-WYI" caption="Watch a video on how to create and run the DApp" %}
+
 Let’s first see how the DApp works. It displays all the storage contracts deployed on the blockchain, and then allows the user to store numbers in those contracts.
 
 ![](../.gitbook/assets/buidl-access_data-01.png)
@@ -194,7 +196,7 @@ You will see the web app running inside the right panel. You can now create a ne
 
 In this article, we demonstrated how to use [web3](https://github.com/second-state/web3-ss.js) and [elastic search](https://github.com/second-state/es-ss.js) APIs together to build high performance and data driven DApps. The [FairPlay DApp](https://www.fairplaydapp.com/) is a successful real world example based on [this approach](../white-papers/fairplay-a-new-type-of-dapp.md).
 
-In the next article, we will show how to write rule-based smart contracts in BUIDL.
+In the next article, we will show how to write [rule-based smart contracts](rule-based-smart-contract.md) in BUIDL.
 
 
 
