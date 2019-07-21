@@ -4,7 +4,7 @@ The [Getting started guide](getting-started.md) showcased a number storage contr
 
 **Access the BUIDL IDE from your browser:** [**https://buidl.secondstate.io/**](https://buidl.secondstate.io/)\*\*\*\*
 
-{% embed url="https://youtu.be/-FUzLTu-WYI" caption="Watch a video on how to create and run the DApp" %}
+{% embed url="https://youtu.be/fN1EmmEk25Q" caption="Watch a video on how to create and run the DApp" %}
 
 Let’s first see how the DApp works. It displays all the storage contracts deployed on the blockchain, and then allows the user to store numbers in those contracts.
 
