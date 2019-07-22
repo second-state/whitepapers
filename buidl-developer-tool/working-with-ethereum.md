@@ -26,3 +26,4 @@ web3.eth.getGasPrice((error, result) => {
 ```
 Click on the green "Providers" section (located in the lower left hand corner of BUIDL's interface). Click the "Custom Tx Gas" checkbox and then enter the appropriate gas values.
 ![](../.gitbook/assets/buidl-working_with_ethereum-01.png)
+
