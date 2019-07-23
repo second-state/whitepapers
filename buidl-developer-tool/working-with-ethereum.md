@@ -1,8 +1,6 @@
 # Working with Ethereum
 
 ## Calculating gas
-
-### Ethereum Ropsten TestNet example
 Install [web3 via npm](https://www.npmjs.com/package/web3)
 ```
 npm install web3
@@ -10,7 +8,7 @@ npm install web3
 Initialize web3
 ```javascript
 const Web3 = require('web3');
-const web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/YOUR_ACCOUNT_DETAILS_HERE"));
+const web3 = new Web3(new Web3.providers.HttpProvider("RPC URL HERE"));
 ```
 Fetch the Ethereum Gas Block Limit
 ```javascript
