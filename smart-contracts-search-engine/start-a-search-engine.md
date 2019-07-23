@@ -1,6 +1,6 @@
 # Start a search engine
 
-This documentation details how you can start, and host, your own smart contract search engine using Ubuntu 18.04LTS
+This documentation details how you can start, and host, your own [smart contract search engine](https://github.com/second-state/smart-contract-search-engine) using Ubuntu 18.04LTS.
 
 ## Apache 2
 Update system and install Apache2
