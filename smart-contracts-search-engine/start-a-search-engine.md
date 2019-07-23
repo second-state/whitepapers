@@ -426,3 +426,5 @@ Also once all of this is done, please just give the server a quick reboot; durin
 sudo shutdown -r now
 ```
 
+# Talking to the smart contract search engine from your DApp
+The [es-ss.js](https://github.com/second-state/es-ss.js) data services library provides a simple way for your DApp to talk to the data (using native Javascript(client side) and/or Node(server side)) which is indexed in this system.
