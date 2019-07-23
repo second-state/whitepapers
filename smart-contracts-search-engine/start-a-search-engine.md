@@ -165,7 +165,7 @@ Please also put in your Elasticsearch URL and region.
 rpc = https://testnet-rpc.cybermiles.io:8545
 
 [elasticSearch]
-endpoint = search-smart-contract-search-engine-cdul5cxmqop325ularygq62khi.ap-southeast-2.es.amazonaws.com
+endpoint = search-smart-contract-search-engine-abcdefg.es.amazonaws.com
 aws_region = ap-southeast-2
 
 ```
@@ -286,12 +286,12 @@ while true
 do
   STATUS=$(curl --max-time 30 -s -o /dev/null -w '%{http_code}' https://YOUR RPC NODE GOES HERE)
   if [ $STATUS -eq 200 ]; then
-    cd /var/www/ethereum.search.secondstate.io/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m tx >/dev/null 2>&1 &
-    cd /var/www/ethereum.search.secondstate.io/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m abi >/dev/null 2>&1 &
-    cd /var/www/ethereum.search.secondstate.io/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m state >/dev/null 2>&1 &
-    cd /var/www/ethereum.search.secondstate.io/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m bytecode >/dev/null 2>&1 &
-    cd /var/www/ethereum.search.secondstate.io/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m full >/dev/null 2>&1 &
-    cd /var/www/ethereum.search.secondstate.io/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m topup >/dev/null 2>&1 &
+    cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m tx >/dev/null 2>&1 &
+    cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m abi >/dev/null 2>&1 &
+    cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m state >/dev/null 2>&1 &
+    cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m bytecode >/dev/null 2>&1 &
+    cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m full >/dev/null 2>&1 &
+    cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m topup >/dev/null 2>&1 &
     break
   else
     echo "Got $STATUS please wait"
@@ -327,38 +327,11 @@ crontab -e
 Add the following line inside crontab
 ```bash
 @reboot sudo ufw enable
-@reboot cd ~/smart-contract-search-engine/python && nohup /usr/bin/python3.6 io.py >/dev/null 2>&1 &
+@reboot cd /var/www/search-engine.com/html/python && nohup /usr/bin/python3.6 io.py >/dev/null 2>&1 &
 ```
 
 ## CORS (Allowing Javascript, from anywhere, to access the API)
 
-Whilst the API can be accessed from anywhere using REST clients like Postman etc. DApps and websites will also want to access the data in the search engine API by visiting the domain (where the search engine is being hosted) via port 80 i.e.
-
-```
-_data = {"query":{"multi_match":{"fields":["functionData.title","functionData.desc"],"query":"Win"}}}
-var _dataString = JSON.stringify(_data);
-```
-
-```
-response1 = $.ajax({
-    url: "https://search-engine.com/api/es_search",
-    type: "POST",
-    data: _dataString,
-    dataType: "json",
-    contentType: "application/json",
-    success: function(response) {
-        console.log(response);
-    },
-    error: function(xhr) {
-        console.log("Get items failed");
-    }
-});
-```
-Without CORS enabled (on Apache) the above Javascript query will cause the following error.
-
-```
-Access to XMLHttpRequest at 'https://search-engine.com/api/es_search' from origin 'https://theDapp.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
-```
 To enable CORS please following these instructions.
 
 Ensure that Apache2 has the mod_rewrite enabled
