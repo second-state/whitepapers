@@ -151,19 +151,17 @@ if (searchEngineNetwork == "18") {
 
 
 **Blockchain -> rpc variable in config.ini**
-It is important that the search engine is pointing to the correct RPC endpoint i.e. CMT TestNet vs MainNet
+It is important that the search engine is pointing to the correct RPC endpoint i.e. CMT TestNet vs MainNet. It is also important that you set the average block time (this will make the system run more efficiently).
 ```
 [blockchain]
 rpc = https://testnet-rpc.cybermiles.io:8545
+seconds_per_block = 1
 ```
 
 **Elasticsearch**
 Please also put in your Elasticsearch URL and region.
 
 ```
-[blockchain]
-rpc = https://testnet-rpc.cybermiles.io:8545
-
 [elasticSearch]
 endpoint = search-smart-contract-search-engine-abcdefg.es.amazonaws.com
 aws_region = ap-southeast-2
@@ -174,17 +172,25 @@ aws_region = ap-southeast-2
 The masterindex, abiindex and bytecode index can all stay as they are below. You might just want to change the commonindex to be more descriptive i.e. mainnet, testnet etc.
 
 ```
+# Stores every transaction in the blockchain which has a contractAddress (an instantiation of a contract as apposed to a transaction which just moved funds from one EOA to another)
 [masterindex]
 all = all
 
+# Just stores ABI data (an index which holds every ABI that could match up with a contract address and make up a contract instantiation)
 [abiindex]
 abi = abi
 
+# Just stores a contracts bytecode with the appropriate key to find said bytecode
 [bytecodeindex]
 bytecode = bytecode
 
+# Stores all of the smart contract instance details, ABI hashes, function data etc.
 [commonindex]
 network = network
+
+# Ignore stores ABI and contract address Sha3 values which are not contract instantiations. This improves performance greatly because an ABI hash mixed with a contract address hash will either be a contract instance or not and this will never change once set.
+[ignoreindex]
+ignore = ignore
 ```
 ## SSL (HTTPS) using "lets encrypt"
 ```
