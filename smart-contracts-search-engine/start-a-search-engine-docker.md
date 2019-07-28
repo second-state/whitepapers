@@ -15,7 +15,7 @@ Next install the Python pip and AWS CLI utilities as follows. The AWS CLI is req
 ```bash
 $ sudo apt update
 $ sudo apt install python-pip
-$ sudo apt  install awscli
+$ sudo apt install awscli
 ```
 
 ## ElasticSearch
@@ -150,9 +150,11 @@ $ docker exec -it container_id bash
 Next, use Let's Encrypt services to setup SSL.
 
 ```bash
-$ sudo wget https://dl.eff.org/certbot-auto -O /usr/sbin/certbot-auto
-$ sudo chmod a+x /usr/sbin/certbot-auto
-$ sudo certbot-auto --apache -d search.domain.com
+$ apt update && apt upgrade
+$ apt install wget
+$ wget https://dl.eff.org/certbot-auto -O /usr/sbin/certbot-auto
+$ chmod a+x /usr/sbin/certbot-auto
+$ certbot-auto --apache -d search.domain.com
 ```
 
 Next, please open the `/etc/apache2/sites-enabled/*-ssl.conf` file \(which was created automatically by the above command\) and add the following code inside the `VirtualHost` section.
