@@ -82,7 +82,6 @@ var contract = web3.ss.contract(abi);
 var instance = contract.at('');
 /* Don't modify */
 
-document.querySelector("#create").innerHTML = "Create a new storage contract";
 var tbodyInner = "";
 esss.shaAbi(JSON.stringify(abi)).then((shaResult) => {
   var sha = JSON.parse(shaResult).abiSha3;
