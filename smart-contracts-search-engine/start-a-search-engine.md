@@ -395,7 +395,7 @@ Open the `/etc/apache2/apache2.conf` file and add the following.
 </Directory>
 ```
 
-Then in addition to this, please open the `/etc/apache2/sites-enabled/search-engine-le-ssl.conf` file \(which was created automatically by the above "lets encrypt" command\) and add the following code inside the  section.
+Then in addition to this, please open the `/etc/apache2/sites-enabled/search-engine-le-ssl.conf` file \(which was created automatically by the above "lets encrypt" command\) and add the following code inside the `VirtualHost` section.
 
 ```text
 Header always set Access-Control-Allow-Origin "*"

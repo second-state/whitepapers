@@ -90,12 +90,18 @@ function create (element) {
   contract.new({
     data: data
   }, function (ee, i) {
+    console.log(i.address + " : " + i.contracsAddress + " : " + i.blockNumber);
     if (ee) {
       console.log("Error creating contract " + ee);
     } else {
-      setTimeout(function () {
-        reload();
-      }, 5 * 1000);
+      if (i.address != null) {
+        var tbodyInner = document.querySelector("#tbody").innerHTML;
+        tbodyInner = "<tr id='" + i.address + "'><td>New</td><td>0</td>" + 
+          "<td><button class='btn btn-info' onclick='setData(this)'>Set</button></td></tr>" +
+          tbodyInner;
+        document.querySelector("#tbody").innerHTML = tbodyInner;
+        document.querySelector("#create").innerHTML = "Create a new storage contract";
+      }
     }
   });
 }
