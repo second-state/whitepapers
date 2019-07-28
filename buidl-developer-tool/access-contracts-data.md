@@ -82,7 +82,22 @@ var contract = web3.ss.contract(abi);
 var instance = contract.at('');
 /* Don't modify */
 
-reload();
+document.querySelector("#create").innerHTML = "Create a new storage contract";
+var tbodyInner = "";
+esss.shaAbi(JSON.stringify(abi)).then((shaResult) => {
+  var sha = JSON.parse(shaResult).abiSha3;
+  esss.searchUsingAbi(sha).then((searchResult) => {
+    var items = JSON.parse(searchResult);
+    items.sort(compareItem);
+    items.forEach(function(item) {
+      tbodyInner = tbodyInner + 
+        "<tr id='" + item.contractAddress + "'><td>" + item.blockNumber + 
+        "</td><td>" + item.functionData.get + 
+        "</td><td><button class='btn btn-info' onclick='setData(this)'>Set</button></td></tr>";
+    }); // end of JSON iterator
+    document.querySelector("#tbody").innerHTML = tbodyInner;
+  });
+}); // end of esss
 
 function create (element) {
   element.innerHTML = "Wait ...";
@@ -90,40 +105,15 @@ function create (element) {
   contract.new({
     data: data
   }, function (ee, i) {
-    console.log(i.address + " : " + i.contracsAddress + " : " + i.blockNumber);
-    if (ee) {
-      console.log("Error creating contract " + ee);
-    } else {
-      if (i.address != null) {
-        var tbodyInner = document.querySelector("#tbody").innerHTML;
-        tbodyInner = "<tr id='" + i.address + "'><td>New</td><td>0</td>" + 
-          "<td><button class='btn btn-info' onclick='setData(this)'>Set</button></td></tr>" +
-          tbodyInner;
-        document.querySelector("#tbody").innerHTML = tbodyInner;
-        document.querySelector("#create").innerHTML = "Create a new storage contract";
-      }
+    if (!ee && i.address != null) {
+      var tbodyInner = document.querySelector("#tbody").innerHTML;
+      tbodyInner = "<tr id='" + i.address + "'><td>New</td><td>0</td>" + 
+        "<td><button class='btn btn-info' onclick='setData(this)'>Set</button></td></tr>" +
+        tbodyInner;
+      document.querySelector("#tbody").innerHTML = tbodyInner;
+      document.querySelector("#create").innerHTML = "Create a new storage contract";
     }
   });
-}
-
-function reload () {
-  document.querySelector("#create").innerHTML = "Create a new storage contract";
-  document.querySelector("#tbody").innerHTML = "";
-  var tbodyInner = "";
-  esss.shaAbi(JSON.stringify(abi)).then((shaResult) => {
-    var sha = JSON.parse(shaResult).abiSha3;
-    esss.searchUsingAbi(sha).then((searchResult) => {
-      var items = JSON.parse(searchResult);
-      items.sort(compareItem);
-      items.forEach(function(item) {
-        tbodyInner = tbodyInner + 
-          "<tr id='" + item.contractAddress + "'><td>" + item.blockNumber + 
-          "</td><td>" + item.functionData.get + 
-          "</td><td><button class='btn btn-info' onclick='setData(this)'>Set</button></td></tr>";
-      }); // end of JSON iterator
-      document.querySelector("#tbody").innerHTML = tbodyInner;
-    });
-  }); // end of esss
 }
 
 function setData (element) {
@@ -135,10 +125,7 @@ function setData (element) {
   element.innerHTML = "Wait ...";
   setTimeout(function () {
     instance.get.call (function (e, r) {
-      if (e) {
-        console.log(e);
-        return;
-      } else {
+      if (!e) {
         element.closest("td").previousSibling.innerHTML = r;
         element.innerHTML = "Set";
       }
@@ -157,19 +144,16 @@ function compareItem (a, b) {
 }
 ```
 
-The `reload()` function in the JS code below calls the elastic search API to get all contracts with the ABI from the blockchain. It then constructs a table body to display those contracts. Notice that the current state, ie the stored number, of each contract is also contained in the search result. We can simply display this information without having to interact with the slower blockchain nodes.
+When the page loads, the JS code below calls the elastic search API to get all contracts with the ABI from the blockchain. It then constructs a table body to display those contracts. Notice that the current state, ie the stored number, of each contract is also contained in the search result. We can simply display this information without having to interact with the slower blockchain nodes.
 
 ```javascript
-function reload () {
-  esss.shaAbi(JSON.stringify(abi)).then((shaResult) => {
-    var sha = JSON.parse(shaResult).abiSha3;
-    esss.searchUsingAbi(sha).then((searchResult) => {
-      var items = JSON.parse(searchResult);
-        // Puts the items into the table
-      });
-    });
+esss.shaAbi(JSON.stringify(abi)).then((shaResult) => {
+  var sha = JSON.parse(shaResult).abiSha3;
+  esss.searchUsingAbi(sha).then((searchResult) => {
+    var items = JSON.parse(searchResult);
+    // Puts the items into the table
   });
-}
+});
 ```
 
 The **Set Data** buttons in the table trigger the `setData()` JS function, which in turn calls the contract’s `set()` function via web3.
