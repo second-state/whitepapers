@@ -12,7 +12,7 @@ The easiest way to get started is to use our pre-build Docker images. Please mak
 
 For example, on Ubuntu, you can use the following commands.
 
-```text
+```bash
 $ sudo apt install docker.io
 $ sudo usermod -a -G docker $USER
 ```
@@ -21,8 +21,8 @@ $ sudo usermod -a -G docker $USER
 
 Let’s initialize the DevChain configuration and genesis settings.
 
-```text
-docker run --rm -v $HOME/.devchain:/devchain secondstate/devchain:develop node init --home /devchain
+```bash
+$ docker run --rm -v $HOME/.devchain:/devchain secondstate/devchain:develop node init --home /devchain
 ```
 
 Note: If you are running a cluster, you should now copy over the cluster wide `genesis.json` and `config.toml` files to the `$HOME/.devchain/config` directory.
@@ -31,7 +31,7 @@ Note: If you are running a cluster, you should now copy over the cluster wide `g
 
 Now you can start the DevChain node in docker.
 
-```text
+```bash
 $ docker run --rm -v $HOME/.devchain:/devchain -p 26657:26657 -p 8545:8545 secondstate/devchain:develop node start --home /devchain
 ```
 
@@ -48,7 +48,7 @@ Next, open another terminal window to interact with the running node.
 
 You can get the ID of the running Docker container.
 
-```text
+```bash
 $ docker container ls
 CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS              PORTS                                                         NAMES
 0bcd9da5bf05        secondstate/devchain   "./devchain node sta…"   4 minutes ago       Up 4 minutes        0.0.0.0:8545->8545/tcp, 0.0.0.0:26657->26657/tcp, 26656/tcp   pedantic_mendeleev
@@ -56,7 +56,7 @@ CONTAINER ID        IMAGE                   COMMAND                  CREATED    
 
 Next, log into that container.
 
-```text
+```bash
 $ docker exec -i -t 0bcd9da5bf05 bash
 root@0bcd9da5bf05:/app# ls
 devchain  devchain.sha256  lib
@@ -64,7 +64,7 @@ devchain  devchain.sha256  lib
 
 Finally, you can attach a console to the node to run web3 commands.
 
-```text
+```bash
 root@0bcd9da5bf05:/app# ./devchain attach http://localhost:8545
 ...
 > cmt.syncing
@@ -81,14 +81,14 @@ root@0bcd9da5bf05:/app# ./devchain attach http://localhost:8545
 
 You can now send a transaction between accounts like the following.
 
-```text
+```typescript
 personal.unlockAccount("from_address")
 cmt.sendTransaction({"from": "from_address", "to": "to_address", "value": web3.toWei(0.001, "cmt")})
 ```
 
 Next, you can paste the following script into the client console, at the &gt; prompt.
 
-```text
+```typescript
 function checkAllBalances() {
   var totalBal = 0;
   for (var acctNum in cmt.accounts) {
@@ -103,7 +103,7 @@ function checkAllBalances() {
 
 You can now run the script in the console, and see the results.
 
-```text
+```typescript
 > checkAllBalances();
 cmt.accounts[0]:      0x6....................................230      balance: 466.798526 CMT
 cmt.accounts[1]:      0x6....................................244      balance: 1531 CMT

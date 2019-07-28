@@ -10,13 +10,13 @@ The binary executable `devchain` is the software that runs blockchain nodes.
 
 First, you need to initialize the configurations and settings on the node computer.
 
-```text
+```bash
 $ devchain node init --home $HOME/.devchain
 ```
 
 The `genesis.json` and `config.toml` files will be created under the `$HOME/.devchain/config` directory. You can make changes to those files to customize your blockchain. Then, `set env` variables for libENI.
 
-```text
+```bash
 $ mkdir -p $HOME/.devchain/eni/lib
 $ cd $HOME/.devchain/eni
 
@@ -32,13 +32,13 @@ export LD_LIBRARY_PATH=$HOME/.devchain/eni/lib
 
 Now you can start the node.
 
-```text
+```bash
 $ devchain node start --home $HOME/.devchain
 ```
 
 Next, in a new terminal window, run the following command to connect to the local DevChain node.
 
-```text
+```bash
 $ devchain attach http://localhost:8545
 > cmt.syncing
 {
@@ -54,7 +54,7 @@ $ devchain attach http://localhost:8545
 
 First, you need to initialize the configurations and settings on each of the node computer. Run the following command on each machine.
 
-```text
+```bash
 $ devchain node init --home $HOME/.devchain
 ```
 
@@ -63,13 +63,13 @@ $ devchain node init --home $HOME/.devchain
 
 Next, use [this tool](https://github.com/second-state/devchain-config) to generate a new set of `genesis.json` and `config.toml` files for the entire cluster. Enter all the public keys and seeds from the last step into the tool. For example, here is how to create a `genesis.json` with a custom `chain_id`, a custom `gas_price` and public keys from multiple nodes.
 
-```text
+```bash
 $ node index.js --type genesis --config_path ./genesis.json.template --chain_id test --params.gas_price 0 --validators.1.pub_key test1 --validators.1.power 101 --validators.2.pub_key test2 --validators.1.power 102
 ```
 
 Here is how to create a `config.toml` file with the seeds.
 
-```text
+```bash
 $ node index.js --type config --config_path ./config.toml.template --p2p.seeds seed1@ip1:26656,seed2@ip2:26656
 ```
 
@@ -77,7 +77,7 @@ Copy the generated `genesis.json` and `config.toml` files back into each node’
 
 Next, set env variables for libENI.
 
-```text
+```bash
 $ mkdir -p $HOME/.devchain/eni/lib
 $ cd $HOME/.devchain/eni
 
@@ -93,13 +93,13 @@ export LD_LIBRARY_PATH=$HOME/.devchain/eni/lib
 
 Now you can start each node, and they will form a cluster.
 
-```text
+```bash
 $ devchain node start --home $HOME/.devchain
 ```
 
 Next, in a new terminal window, run the following command to connect to a local DevChain node in the cluster.
 
-```text
+```bash
 $ devchain attach http://localhost:8545
 > cmt.syncing
 {
@@ -119,19 +119,19 @@ In the previous section, we have built a Docker image for the node software unde
 
 First, you need to initialize the configurations and settings on the node computer.
 
-```text
+```bash
 $ docker run --rm -v $HOME/.devchain:/devchain secondstate/devchain:develop node init --home /devchain
 ```
 
 The `genesis.json` and `config.toml` files will be created under the `$HOME/.devchain/config` directory. You can make changes to those files to customize your blockchain. You may need to `sudo su -` in order to edit those files since they are created by the root user. The libENI libraries have been built into the docker image so you don’t need to worry about it. Then, you can start the node.
 
-```text
+```bash
 $ docker run --rm -v $HOME/.devchain:/devchain -p 26657:26657 -p 8545:8545 secondstate/devchain:develop node start --home /devchain
 ```
 
 From a second terminal window, you can get the ID of the running Docker container.
 
-```text
+```bash
 $ docker container ls
 CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS              PORTS                                                         NAMES
 0bcd9da5bf05        secondstate/devchain   "./devchain node sta…"   4 minutes ago       Up 4 minutes        0.0.0.0:8545->8545/tcp, 0.0.0.0:26657->26657/tcp, 26656/tcp   pedantic_mendeleev
@@ -139,7 +139,7 @@ CONTAINER ID        IMAGE                   COMMAND                  CREATED    
 
 Next, log into that container.
 
-```text
+```bash
 $ docker exec -i -t 0bcd9da5bf05 bash
 root@0bcd9da5bf05:/app# ls
 devchain  devchain.sha256  lib
@@ -147,7 +147,7 @@ devchain  devchain.sha256  lib
 
 Finally, you can attach a console to the node to run web3 commands.
 
-```text
+```bash
 root@0bcd9da5bf05:/app# ./devchain attach http://localhost:8545
 ...
 > cmt.syncing
@@ -164,7 +164,7 @@ root@0bcd9da5bf05:/app# ./devchain attach http://localhost:8545
 
 First, you need to initialize the configurations and settings on each of the node computer. Run the following command on each machine.
 
-```text
+```bash
 $ docker run --rm -v $HOME/.devchain:/devchain secondstate/devchain:develop node init --home /devchain
 ```
 
@@ -173,13 +173,13 @@ $ docker run --rm -v $HOME/.devchain:/devchain secondstate/devchain:develop node
 
 Next, use [this tool](https://github.com/second-state/devchain-config) to generate a new set of `genesis.json` and `config.toml` files for the entire cluster. Enter all the public keys and seeds from the last step into the tool. For example, here is how to create a `genesis.json` with a custom `chain_id`, a custom `gas_price` and public keys from multiple nodes.
 
-```text
+```bash
 $ node index.js --type genesis --config_path ./genesis.json.template --chain_id test --params.gas_price 0 --validators.1.pub_key test1 --validators.1.power 101 --validators.2.pub_key test2 --validators.1.power 102
 ```
 
 Here is how to create a `config.toml` file with the seeds.
 
-```text
+```bash
 $ node index.js --type config --config_path ./config.toml.template --p2p.seeds seed1@ip1:26656,seed2@ip2:26656
 ```
 
@@ -187,13 +187,13 @@ Copy the generated `genesis.json` and `config.toml` files back into each node's 
 
 Now you can start each node, and they will form a cluster.
 
-```text
+```bash
 $ docker run --rm -v $HOME/.devchain:/devchain -p 26657:26657 -p 8545:8545 secondstate/devchain:develop node start --home /devchain
 ```
 
 On a second terminal window on each node, you can get the ID of the running Docker container.
 
-```text
+```bash
 $ docker container ls
 CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS              PORTS                                                         NAMES
 0bcd9da5bf05        secondstate/devchain   "./devchain node sta…"   4 minutes ago       Up 4 minutes        0.0.0.0:8545->8545/tcp, 0.0.0.0:26657->26657/tcp, 26656/tcp   pedantic_mendeleev
@@ -201,7 +201,7 @@ CONTAINER ID        IMAGE                   COMMAND                  CREATED    
 
 Next, log into that container on a node.
 
-```text
+```bash
 $ docker exec -i -t 0bcd9da5bf05 bash
 root@0bcd9da5bf05:/app# ls
 devchain  devchain.sha256  lib
@@ -209,7 +209,7 @@ devchain  devchain.sha256  lib
 
 Finally, you can attach a console to the node to run web3 commands.
 
-```text
+```bash
 root@0bcd9da5bf05:/app# ./devchain attach http://localhost:8545
 ...
 > cmt.syncing
