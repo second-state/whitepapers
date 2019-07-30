@@ -28,7 +28,7 @@ Click on the **Compile** button to compile the contract. A side bar will open to
 
 ![](../.gitbook/assets/buidl-getting_started-02.png)
 
-Next, you can instantiate and deploy the contract to the [Second State DevChain](../smart-contracts-search-engine/getting-started.md). You can interact with deployed contracts by calling its public methods from inside [BUIDL](http://buidl.secondstate.io/).
+Next, you can press the **Deploy to the chain** button on the left panel to instantiate and deploy the contract to the [Second State DevChain](../smart-contracts-search-engine/getting-started.md). You can interact with deployed contracts by calling its public methods from inside [BUIDL](http://buidl.secondstate.io/) -- you can **set** its value and click on the **Transact** button to save the value onto the blockchain, and then click on the **Call** button to see the value in the **LOG** panel.
 
 ![](../.gitbook/assets/buidl-getting_started-03.png)
 
@@ -48,7 +48,7 @@ Next, go to the JS tab. It shows JavaScript on how to interact with the smart co
 
 The JS has four sections. The first section is `Don't modify` as it is populated by the BUIDL tool itself. It contains code to instantiate the contract you just deployed via BUIDL.
 
-The second section shows you how to use the Second State smart contract search service. It takes the contract you just deployed, and finds all deployed contracts of the same type. It just logs the search results to the console right now. But in the [next example](access-contracts-data.md), I will show you how to use the search results.
+The second section shows you how to use the Second State smart contract search service. It takes the contract you just deployed, and finds all deployed contracts of the same type. It just logs the search results to the console right now. But in the [next example](access-contracts-data/), I will show you how to use the search results.
 
 The third section is the event handler for the **Set Data** button. It shows how to call the smart contract's `set()` function in a transaction from JavaScript.
 
@@ -75,7 +75,7 @@ Finally, click on the **Run** button to run the DApp. You will see the DApp UI i
 
 Congratulations. You now have a complete DApp deployed on a public blockchain! 
 
-Next, you could explore how to develop more complex DApps on BUIDL, such as [data driven DApps](access-contracts-data.md) or [rules-based DApps](rule-based-smart-contract.md).
+Next, you could explore how to develop more complex DApps on BUIDL, such as [data driven DApps](access-contracts-data/) or [rules-based DApps](rule-based-smart-contract.md).
 
 
 
