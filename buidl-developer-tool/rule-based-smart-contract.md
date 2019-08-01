@@ -4,6 +4,8 @@ Smart contracts a rule-based systems. The Second State smart contract platform s
 
 **Access the BUIDL IDE from your browser:** [**https://buidl.secondstate.io/**](https://buidl.secondstate.io/)\*\*\*\*
 
+{% embed url="https://www.youtube.com/watch?v=xIdelB4GG\_c" caption="The rule-based smart contract in BUIDL" %}
+
 Let’s first see how the DApp works. It show a contract that calculates rebates for a customer based on rules. The customer gets 5% rebate, up to $100, for every purchase that is $100 or more. You can click on the **Add** button to simulate a purchase made by this user. The contract automatically computes the rebate as soon as a new purchase is made.
 
 ![](../.gitbook/assets/buidl-rules-01.png)
