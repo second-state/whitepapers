@@ -64,8 +64,9 @@ harvester.getDataUsingAddressHash(_addressHash)
 
 The smart contract data is consumed on an ABI basis. The smart contract search engine creates a unique deterministic hash of the ABI of a given smart contract. If a DApp wants to access data which is related to an instantiation of that particular smart contract, it can query the indices using the hash as a filter. Consider the following example.
 
-The following smart contract called `ChildContract` produces code produces an ABI.
+The following smart contract called `ChildContract` produces an ABI.
 
+*Source code*
 ```javascript
 pragma solidity >=0.4.0 <0.6.0;
 
@@ -92,6 +93,7 @@ contract ChildContract is ParentContract{
 }
 ```
 
+*ABI*
 ```javascript
 [
   {
@@ -188,7 +190,8 @@ If we look closely at the `ChildContract` we can see that it inherits from the `
   }
 ]
 ```
-Nested ABIs, like the ones shown above, are very common. In order to provide the most flexibility, the smart contract search engine stores both of the ABIs against any smart contract address which houses an instance of the above deployed contract. The hash for the `ParentContract` is `0x5dc306fb7e9065cf256a57f077267b73491a0df567d2aa8c1e89250e96f87011` and the hash for the `ChildContract` is `0xfa13b708346165ef225d79a51acbc17c24b9a2f523b71272fc6160cd9d54ced7`. We can see these hashes in the raw smart contract data as shown below.
+
+Nested ABIs, like the ones shown above, are very common. In order to provide the most flexibility, the smart contract search engine stores both of the ABIs against any smart contract address which houses an instance of the above deployed `ChildContract`. The hash for the `ParentContract` is `0x5dc306fb7e9065cf256a57f077267b73491a0df567d2aa8c1e89250e96f87011` and the hash for the `ChildContract` is `0xfa13b708346165ef225d79a51acbc17c24b9a2f523b71272fc6160cd9d54ced7`. We can see these hashes in the `abiShaList` section of the raw smart contract data shown below.
 
 ```javascript
 {
@@ -239,3 +242,34 @@ Nested ABIs, like the ones shown above, are very common. In order to provide the
     }
 }
 ```
+
+If we would like to access all instances of the `ChildContract` we could query the search engine using the ABI hash of the `ChildContract`. We can [query using traditional client-side Javascript](https://github.com/second-state/es-ss.js/tree/master/traditional_non_node_js) or [query using server-side NodeJS Javascript](https://github.com/second-state/es-ss.js). Here is an example of both.
+
+#### Client-side Javascript
+```javascript
+var esss = new ESSS("https://devchain-es.secondstate.io")
+abi = '0xfa13b708346165ef225d79a51acbc17c24b9a2f523b71272fc6160cd9d54ced7';
+esss.searchUsingAbi(abi)
+    .then(function(result) {
+        console.log(result)
+    })
+    .catch(function() {
+        console.log("Error");
+    });
+```
+
+#### Server-side NodeJS Example
+```javascript
+let esss = require('./es-ss');  
+let ESSS = esss.ESSS;
+let searchEngineProvider = new ESSS('https://devchain-es.secondstate.io');
+abiHash = '0xfa13b708346165ef225d79a51acbc17c24b9a2f523b71272fc6160cd9d54ced7';
+var abiSearch = searchEngineProvider.searchUsingAbi(abiHash);
+abiSearch.then(function(result) {
+    console.log("Result is " + result);
+  })
+  .catch(function() {
+    console.log("Error");
+  });
+```
+
