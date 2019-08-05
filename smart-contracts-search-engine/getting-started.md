@@ -66,7 +66,8 @@ The smart contract data is consumed on an ABI basis. The smart contract search e
 
 The following smart contract called `ChildContract` produces an ABI.
 
-*Source code*
+<details><summary>Click here to see smart contract source code</summary>
+<p>
 ```javascript
 pragma solidity >=0.4.0 <0.6.0;
 
@@ -92,8 +93,11 @@ contract ChildContract is ParentContract{
     }
 }
 ```
+</p>
+</details>
 
-*ABI*
+<details><summary>Click here to see the ABI</summary>
+<p>
 ```javascript
 [
   {
@@ -154,9 +158,13 @@ contract ChildContract is ParentContract{
   }
 ]
 ```
+</p>
+</details>
 
 If we look closely at the `ChildContract` we can see that it inherits from the `ParentContract`. If you are thinking that there should technically be two ABIs in relation to the above source code you would be right! Here is the ABI of the `ParentContract`.
 
+<details><summary>Click here to see the ParentContract ABI</summary>
+<p>
 
 ```javascript
 [
@@ -190,9 +198,13 @@ If we look closely at the `ChildContract` we can see that it inherits from the `
   }
 ]
 ```
+</p>
+</details>
 
 Nested ABIs, like the ones shown above, are very common. In order to provide the most flexibility, the smart contract search engine stores both of the ABIs against any smart contract address which houses an instance of the above deployed `ChildContract`. The hash for the `ParentContract` is `0x5dc306fb7e9065cf256a57f077267b73491a0df567d2aa8c1e89250e96f87011` and the hash for the `ChildContract` is `0xfa13b708346165ef225d79a51acbc17c24b9a2f523b71272fc6160cd9d54ced7`. We can see these hashes in the `abiShaList` section of the raw smart contract data shown below.
 
+<details><summary>Click here to see the raw data example</summary>
+<p>
 ```javascript
 {
     "took": 0,
@@ -242,6 +254,8 @@ Nested ABIs, like the ones shown above, are very common. In order to provide the
     }
 }
 ```
+</p>
+</details>
 
 If we would like to access all instances of the `ChildContract` we could query the search engine using the ABI hash of the `ChildContract`. We can [query using traditional client-side Javascript](https://github.com/second-state/es-ss.js/tree/master/traditional_non_node_js) or [query using server-side NodeJS Javascript](https://github.com/second-state/es-ss.js). Here is an example of both.
 
