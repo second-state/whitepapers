@@ -62,4 +62,180 @@ harvester.getDataUsingAddressHash(_addressHash)
  
 ### Consuming smart contract data (reading blockchain data from the indices)
 
- * can be queried via client-side JS or server-side NodeJS
+The smart contract data is consumed on an ABI basis. The smart contract search engine creates a unique deterministic hash of the ABI of a given smart contract. If a DApp wants to access data which is related to an instantiation of that particular smart contract, it can query the indices using the hash as a filter. Consider the following example.
+
+The following smart contract called `ChildContract` produces code produces an ABI.
+
+```javascript
+pragma solidity >=0.4.0 <0.6.0;
+
+contract ParentContract {
+    uint parentContractData = 5;
+
+    function setParentContractData(uint _parentContractData) public {
+        parentContractData = _parentContractData;
+    }
+    function getParentContractData() public view returns (uint){
+        return parentContractData;
+    }
+}
+contract ChildContract is ParentContract{
+    uint childContractData;
+
+    function setChildContractData(uint _childContractData) public {
+        childContractData = _childContractData;
+    }
+
+    function getChildContractData() public view returns (uint) {
+        return childContractData;
+    }
+}
+```
+
+```javascript
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_parentContractData",
+        "type": "uint256"
+      }
+    ],
+    "name": "setParentContractData",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getChildContractData",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getParentContractData",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_childContractData",
+        "type": "uint256"
+      }
+    ],
+    "name": "setChildContractData",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
+```
+
+If we look closely at the `ChildContract` we can see that it inherits from the `ParentContract`. If you are thinking that there should technically be two ABIs in relation to the above source code you would be right! Here is the ABI of the `ParentContract`.
+
+
+```javascript
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_parentContractData",
+        "type": "uint256"
+      }
+    ],
+    "name": "setParentContractData",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getParentContractData",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
+```
+Nested ABIs, like the ones shown above, are very common. In order to provide the most flexibility, the smart contract search engine stores both of the ABIs against any smart contract address which houses an instance of the above deployed contract. The hash for the `ParentContract` is `0x5dc306fb7e9065cf256a57f077267b73491a0df567d2aa8c1e89250e96f87011` and the hash for the `ChildContract` is `0xfa13b708346165ef225d79a51acbc17c24b9a2f523b71272fc6160cd9d54ced7`. We can see these hashes in the raw smart contract data as shown below.
+
+```javascript
+{
+    "took": 0,
+    "timed_out": false,
+    "_shards": {
+        "total": 5,
+        "successful": 5,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": 1,
+        "max_score": 1.6739764,
+        "hits": [
+            {
+                "_index": "devchaintwo",
+                "_type": "_doc",
+                "_id": "0xDd27F736AC616141b72eb67D2d79D3f6b1eD7d6f",
+                "_score": 1.6739764,
+                "_source": {
+                    "TxHash": "0x2e8bab6c377a10747a78bad4cbcd4f56bc8789ad8e4f60848d1bcd6518cf6435",
+                    "abiShaList": [
+                        "0xfa13b708346165ef225d79a51acbc17c24b9a2f523b71272fc6160cd9d54ced7",
+                        "0x5dc306fb7e9065cf256a57f077267b73491a0df567d2aa8c1e89250e96f87011"
+                    ],
+                    "blockNumber": 2220917,
+                    "creator": "0xb0695b88e44c27c8a203bba5aed78e2ae475cc68",
+                    "contractAddress": "0xDd27F736AC616141b72eb67D2d79D3f6b1eD7d6f",
+                    "functionDataList": {
+                        "0": [
+                            {
+                                "functionDataId": "0x2ea80e958837c05ba351ea4d77e4247518f0ab9df296f632963417c79ceac7f4",
+                                "functionData": {
+                                    "getChildContractData": "0",
+                                    "getParentContractData": "5"
+                                },
+                                "uniqueAbiAndAddressHash": "0xe666c441714e77c45920a855b1e93c9306f0c8768769627637993c9ae4d15bac"
+                            }
+                        ]
+                    },
+                    "requiresUpdating": "yes",
+                    "quality": "50",
+                    "indexInProgress": "false"
+                }
+            }
+        ]
+    }
+}
+```
