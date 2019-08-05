@@ -346,6 +346,9 @@ Add the following command to cron using `crontab -e` command.
 
 The smart contract search engine will autonomously harvest upon bootup.
 
+### Detailed explaination of harvesting modes
+
+
 ### Flask
 
 ```text
