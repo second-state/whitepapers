@@ -273,3 +273,29 @@ abiSearch.then(function(result) {
   });
 ```
 
+The above request queries will return, deduplicated data from the smart contract, such as the following
+
+```javascript
+[
+  {
+    "TxHash": "0x2e8bab6c377a10747a78bad4cbcd4f56bc8789ad8e4f60848d1bcd6518cf6435", 
+    "abiShaList": [
+      "0xfa13b708346165ef225d79a51acbc17c24b9a2f523b71272fc6160cd9d54ced7", 
+      "0x5dc306fb7e9065cf256a57f077267b73491a0df567d2aa8c1e89250e96f87011"
+    ], 
+    "blockNumber": 2220917, 
+    "contractAddress": "0xDd27F736AC616141b72eb67D2d79D3f6b1eD7d6f", 
+    "creator": "0xb0695b88e44c27c8a203bba5aed78e2ae475cc68", 
+    "functionData": {
+      "getChildContractData": "0", 
+      "getParentContractData": "5"
+    }, 
+    "functionDataId": "0x2ea80e958837c05ba351ea4d77e4247518f0ab9df296f632963417c79ceac7f4", 
+    "indexInProgress": "false", 
+    "quality": "50", 
+    "requiresUpdating": "yes", 
+    "uniqueAbiAndAddressHash": "0xe666c441714e77c45920a855b1e93c9306f0c8768769627637993c9ae4d15bac"
+  }
+]
+```
+
