@@ -349,9 +349,20 @@ The smart contract search engine will autonomously harvest upon bootup.
 ### Detailed explanation of harvesting modes
 
 #### Full
+
 The `harvest.py -m full` mode operates in the following way. It divides the number of blocks in the blockchain by the `max_threads` setting in the [config.ini](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L27) file, to create chunks of blocks. It then starts a separate thread for each of those chunks. Each chunk is harvested in parallel. For example, if the blockchain has 1 million blocks and the `max_threads` value is 500, there will be 500 individual threads processing 2, 000 blocks each.
 
 The `harvest.py -m full` mode quickly and efficiently traverses the entire blockchain with its sole purpose being to find transactions which involve smart contracts. Transactions which involve smart contract creation i.e. have a contract address in the transaction receipt are stored in the smart contract search engine's [masterindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L9).
+
+#### Topup
+
+The `harvest.py -m topup` mode operates in the following way. It uses the following formular to determine how many of the most recent blocks to harvest.
+```python
+stopAtBlock = latestBlockNumber - math.floor(100 / int(self.secondsPerBlock))
+```
+For example if the blockchain has 1 million blocks and the `seconds_per_block` [in the config.ini](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L3) is set to 10, the system will process the most recent block `1000000` and stop at block `999990` (harvest only the 10 most recent blocks).
+
+The `harvest.py -m topup` mode quickly and efficiently traverses only a few of the latest blocks with its sole purpose being to find only the most recent transactions which involve smart contracts. These are stored in the smart contract search engine's [masterindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L9).
 
 
 ### Flask
