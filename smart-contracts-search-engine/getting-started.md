@@ -26,7 +26,11 @@ All of the configuration for the harvesting is stored in [a single, config.ini, 
 
 ### Harvesting smart contract data (writing blockchain data to the indices)
 
-The core of the smart contract search engine is [a single, harvest.py, Python file](https://github.com/second-state/smart-contract-search-engine/blob/master/python/harvest.py). All of the harvesting functionality resides in the harvest.py file. 
+The core of the smart contract search engine is [a single, harvest.py, Python file](https://github.com/second-state/smart-contract-search-engine/blob/master/python/harvest.py). All of the harvesting functionality resides in the harvest.py file.
+
+#### Recommended usage - running the harvest.py file once at startup
+
+The harvest.py file is designed to manage all of the tasks associated with harvesting. However, due to the vast differences in blockchains (block intervals, number of blocks, number of ABIs, number of contracts etc.) the harvest.py is designed so that each of the separate tasks can be individually called, using the `-m` mode flag.
 
 
 #### Using the harvest.py file as a library (useful for testing in certain circumstances)
