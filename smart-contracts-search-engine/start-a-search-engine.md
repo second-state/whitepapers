@@ -346,7 +346,12 @@ Add the following command to cron using `crontab -e` command.
 
 The smart contract search engine will autonomously harvest upon bootup.
 
-### Detailed explaination of harvesting modes
+### Detailed explanation of harvesting modes
+
+#### Full
+The `harvest.py -m full` mode operates in the following way. It divides the number of blocks in the blockchain by the `max_threads` setting in the [config.ini](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L27) file, to create chunks of blocks. It then starts a separate thread for each of those chunks. Each chunk is harvested in parallel. For example, if the blockchain has 1 million blocks and the `max_threads` value is 500, there will be 500 individual threads processing 2, 000 blocks each.
+
+The `harvest.py -m full` mode quickly and efficiently traverses the entire blockchain with its sole purpose being to find transactions which involve smart contracts. Transactions which involve smart contract creation i.e. have a contract address in the transaction receipt are stored in the smart contract search engine's [masterindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L9).
 
 
 ### Flask
