@@ -171,7 +171,9 @@ if (searchEngineNetwork == "18") {
 }
 ```
 
-**Blockchain -&gt; rpc variable in config.ini** It is important that the search engine is pointing to the correct RPC endpoint i.e. CMT TestNet vs MainNet. It is also important that you set the average block time \(this will make the system run more efficiently\).
+#### Configuring the Python harvester (a single config.ini file)
+
+It is important that the search engine is pointing to the correct RPC endpoint i.e. CMT TestNet vs MainNet. It is also important that you set the average block time (this will make the system run more efficiently).
 
 ```text
 [blockchain]
@@ -209,6 +211,10 @@ network = network
 # Ignore stores ABI and contract address Sha3 values which are not contract instantiations. This improves performance greatly because an ABI hash mixed with a contract address hash will either be a contract instance or not and this will never change once set.
 [ignoreindex]
 ignore = ignore
+
+# The default number of threads is set to 500. However, this value can be raised if you also raise the ulimit when starting the harvest.py scripts i.e. adding ulimit -n 1000 will facilitate a setting here of max_threads = 1000
+[system]
+max_threads = 500
 ```
 
 ### SSL \(HTTPS\) using "lets encrypt"
