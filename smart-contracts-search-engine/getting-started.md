@@ -68,6 +68,7 @@ The following smart contract called `ChildContract` produces an ABI.
 
 <details><summary>Click here to see smart contract source code</summary>
 <p>
+ 
 ```javascript
 pragma solidity >=0.4.0 <0.6.0;
 
@@ -98,6 +99,7 @@ contract ChildContract is ParentContract{
 
 <details><summary>Click here to see the ABI</summary>
 <p>
+ 
 ```javascript
 [
   {
@@ -205,6 +207,7 @@ Nested ABIs, like the ones shown above, are very common. In order to provide the
 
 <details><summary>Click here to see the raw data example</summary>
 <p>
+ 
 ```javascript
 {
     "took": 0,
