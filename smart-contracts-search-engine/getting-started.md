@@ -323,6 +323,7 @@ The following Javascript code is from the [Data Drive DApp documentation](https:
 
 <details><summary>Click here to see the front-end Javascript</summary>
 <p>
+ 
 ```javascript
 function displayTotal() {
     esss.shaAbi(JSON.stringify(abi)).then((shaResult) => {
@@ -341,6 +342,7 @@ function displayTotal() {
     }); // end of esss
 }
 ```
+
 </p>
 </details>
 
