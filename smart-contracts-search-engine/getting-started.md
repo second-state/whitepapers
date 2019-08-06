@@ -319,7 +319,7 @@ The above request queries will return, deduplicated data from the smart contract
 
 The strength of this system lies in the fact that there is no display configuration or schema required. In addition to this benefit, front-end developers are not required to learn any new skills, other than their existing HTML, JS and CSS. This system only requires that the front-end developer is aware of the smart contract which is driving the DApp which is under construction. Specifically, the frontend developer only needs to know what the ABI hash is. From there the frontend developer can go ahead and create HTML, JS and CSS to suit the requirements of the DApp. Here is an example.
 
-The following Javascript code is from the [Data Drive DApp documentation](https://docs.secondstate.io/buidl-developer-tool/access-contracts-data). 
+The following Javascript code queries the smart contract search engine using an ABI hash. Once all instances of smart contracts which adhere to that hash are returned, the Javascript iterates through the contracts and sums the total of every contract's individual account balance.
 
 <details><summary>Click here to see the front-end Javascript</summary>
 <p>
@@ -350,8 +350,4 @@ This code (which uses the ABI hash as a filter) demonstrates that the front-end 
 
 ![](../.gitbook/assets/SCSE-getting_started-02.png)
 
-You can use the [Data Drive DApp's source code](https://github.com/second-state/buidl/tree/master/demo/data-v2) and try this demonstration in the [SecondState BUIDL tool](http://buidl.secondstate.io/). It literally only takes a few minutes to complete and does not require you to have any cryptocurrency or a wallet. The BUIDL tool works in any browser and even handheld devices such as iPads.
-
-
-
-
+You can use the [Data Drive DApp's source code](https://github.com/second-state/buidl/tree/master/demo/data-v2) and try [this demonstration](https://docs.secondstate.io/buidl-developer-tool/access-contracts-data) inside the [SecondState BUIDL tool](http://buidl.secondstate.io/). It literally only takes a few minutes to complete and does not require you to have any cryptocurrency or a wallet. The BUIDL tool works in any browser and even handheld devices such as iPads.
