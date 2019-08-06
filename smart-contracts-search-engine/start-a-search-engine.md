@@ -171,9 +171,9 @@ if (searchEngineNetwork == "18") {
 }
 ```
 
-#### Configuring the Python harvester (a single config.ini file)
+#### Configuring the Python harvester \(a single config.ini file\)
 
-It is important that the search engine is pointing to the correct RPC endpoint i.e. CMT TestNet vs MainNet. It is also important that you set the average block time (this will make the system run more efficiently).
+It is important that the search engine is pointing to the correct RPC endpoint i.e. CMT TestNet vs MainNet. It is also important that you set the average block time \(this will make the system run more efficiently\).
 
 ```text
 [blockchain]
@@ -357,28 +357,32 @@ The `harvest.py -m full` mode quickly and efficiently traverses the entire block
 #### Topup
 
 The `harvest.py -m topup` mode operates in the following way. It uses the following formular to determine how many of the most recent blocks to harvest.
+
 ```python
 stopAtBlock = latestBlockNumber - math.floor(100 / int(self.secondsPerBlock))
 ```
-For example if the blockchain has 1 million blocks and the `seconds_per_block` [in the config.ini](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L3) is set to 10, the system will process the most recent block `1000000` and stop at block `999990` (harvest only the 10 most recent blocks). Once executed, this topup will run repeatedly i.e. it does not have to be run using cron because it already uses Python `time.sleep` and will repeat as required.
+
+For example if the blockchain has 1 million blocks and the `seconds_per_block` [in the config.ini](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L3) is set to 10, the system will process the most recent block `1000000` and stop at block `999990` \(harvest only the 10 most recent blocks\). Once executed, this topup will run repeatedly i.e. it does not have to be run using cron because it already uses Python `time.sleep` and will repeat as required.
 
 The `harvest.py -m topup` mode quickly and efficiently traverses only a few of the latest blocks with its sole purpose being to find only the most recent transactions which involve smart contracts. These are stored in the smart contract search engine's [masterindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L9).
 
-Both of the above modes have only identified (and saved to the masterindex) transactions which involve the creation of smart contracts. None of this data is searchable via the API. These full and topup modes are run at all times as they provide the definitive list of transactions which the search engine has to process on an ongoing basis.
+Both of the above modes have only identified \(and saved to the masterindex\) transactions which involve the creation of smart contracts. None of this data is searchable via the API. These full and topup modes are run at all times as they provide the definitive list of transactions which the search engine has to process on an ongoing basis.
 
-#### Transaction (tx)
-The `harvest.py -m tx` mode operates in the following way. It takes all of the known ABIs which are stored in the [abiindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L15) and all of the known smart contract related transactions which are stored in the smart contract search engine's [masterindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L9). It then creates a web3 smart contract instantiation for every combination and tests to see if web3 can sucessfully call all of the contract's public view functions. 
+#### Transaction \(tx\)
+
+The `harvest.py -m tx` mode operates in the following way. It takes all of the known ABIs which are stored in the [abiindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L15) and all of the known smart contract related transactions which are stored in the smart contract search engine's [masterindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L9). It then creates a web3 smart contract instantiation for every combination and tests to see if web3 can sucessfully call all of the contract's public view functions.
 
 If the contract address is not already in the commonindex, and the contract instance returns valid data for all of the public/view functions defined in the ABI, then a new entry is created in the [commonindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L12).
 
-If the contract instance is unable to return valid data for each of the public view functions of the ABI in question, then it is assumed that the contract address and the ABI were never related. This combination goes into the [ignoreindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L21) because this will never change. 
+If the contract instance is unable to return valid data for each of the public view functions of the ABI in question, then it is assumed that the contract address and the ABI were never related. This combination goes into the [ignoreindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L21) because this will never change.
 
 #### Faster State
-The `harvest.py -m faster_state` mode operates in the following way. It traverses only the most recent blocks, calls the public/view functions of the contracts in those blocks and updates the [commonindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L12). Rememberibg that the commonindex is the index which provides the smart contract state data to the API. 
 
-*Note* This `-m faster_state` mode requires that the smart contract instantiation is already known to the smart contract search engine indices. This requires work. This mode was created for a special case whereby the search engine was required to provide real-time data for a blockchain with 1 second block intervals. Part of this special use case required that the software which was responsible for instantiating new contracts explicitly indexed the contract's ABIs and also the transaction hash of the contract instantiation. This was achieved via the [submitManyAbis](https://github.com/second-state/es-ss.js#submit-many-abis-in-conjuntion-with-a-single-tx-hash-for-indexing) API call.
+The `harvest.py -m faster_state` mode operates in the following way. It traverses only the most recent blocks, calls the public/view functions of the contracts in those blocks and updates the [commonindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L12). Rememberibg that the commonindex is the index which provides the smart contract state data to the API.
 
-This mode provides the fastest data updates available. However, as mentioned above, it also needs to have each contract's ABIs and transaction hash to be purposely indexed asap. This mode is not about self discovery, but rather about explicit indexing in real-time. The system can perform self discovery but the self discovery process (testing combinations of many ABIs and many contract addresses i.e. millions of combinations) takes longer than 1 second.
+_Note_ This `-m faster_state` mode requires that the smart contract instantiation is already known to the smart contract search engine indices. This requires work. This mode was created for a special case whereby the search engine was required to provide real-time data for a blockchain with 1 second block intervals. Part of this special use case required that the software which was responsible for instantiating new contracts explicitly indexed the contract's ABIs and also the transaction hash of the contract instantiation. This was achieved via the [submitManyAbis](https://github.com/second-state/es-ss.js#submit-many-abis-in-conjuntion-with-a-single-tx-hash-for-indexing) API call.
+
+This mode provides the fastest data updates available. However, as mentioned above, it also needs to have each contract's ABIs and transaction hash to be purposely indexed asap. This mode is not about self discovery, but rather about explicit indexing in real-time. The system can perform self discovery but the self discovery process \(testing combinations of many ABIs and many contract addresses i.e. millions of combinations\) takes longer than 1 second.
 
 ### Flask
 

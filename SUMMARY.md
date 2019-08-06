@@ -10,6 +10,7 @@
 
 ## BUIDL developer tool
 
+* [Why BUIDL](buidl-developer-tool/why-buidl.md)
 * [Getting started](buidl-developer-tool/getting-started.md)
 * [Data-driven DApps](buidl-developer-tool/access-contracts-data/README.md)
   * [Create and index contracts](buidl-developer-tool/access-contracts-data/example-contract-indexing.md)
