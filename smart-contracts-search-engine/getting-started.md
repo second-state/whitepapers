@@ -315,4 +315,41 @@ The above request queries will return, deduplicated data from the smart contract
   }
 ]
 ```
+### Displaying smart contract data in your DApp
+
+The strength of this system lies in the fact that there is no display configuration or schema required. In addition to this benefit, front-end developers are not required to learn any new skills, other than their existing HTML, JS and CSS. This system only requires that the front-end developer is aware of the smart contract which is driving the DApp which is under construction. Specifically, the frontend developer only needs to know what the ABI hash is. From there the frontend developer can go ahead and create HTML, JS and CSS to suit the requirements of the DApp. Here is an example.
+
+The following Javascript code is from the [Data Drive DApp documentation](https://docs.secondstate.io/buidl-developer-tool/access-contracts-data). 
+
+<details><summary>Click here to see the front-end Javascript</summary>
+<p>
+```javascript
+function displayTotal() {
+    esss.shaAbi(JSON.stringify(abi)).then((shaResult) => {
+        var sha = JSON.parse(shaResult).abiSha3;
+        esss.searchUsingAbi(sha).then((searchResult) => {
+            var items = JSON.parse(searchResult);
+            var totalBodyInner = "";
+            var total = 0;
+            items.forEach(function(item) {
+                total = total + parseInt(item.functionData.getAccountBalance);
+            });
+            console.log(total)
+            totalBodyInner = totalBodyInner + "<tr id='total'><td>" + total + "</tr>";
+            document.querySelector("#totalBody").innerHTML = totalBodyInner;
+        });
+    }); // end of esss
+}
+```
+</p>
+</details>
+
+This code (which uses the ABI hash as a filter) demonstrates that the front-end is only required to parse and iterate through the smallest amount of data. The smart contract search engine does all of the work on the server side and only passes the appropriate slices of filtered data to the DApp's JS and subsequently the HTML output.
+
+![](../.gitbook/assets/SCSE-getting_started-02.png)
+
+You can use the [Data Drive DApp's source code](https://github.com/second-state/buidl/tree/master/demo/data-v2) and try this demonstration in the [SecondState BUIDL tool](http://buidl.secondstate.io/). It literally only takes a few minutes to complete and does not require you to have any cryptocurrency or a wallet. The BUIDL tool works in any browser and even handheld devices such as iPads.
+
+
+
 
