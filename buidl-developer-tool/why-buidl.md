@@ -35,7 +35,7 @@ Below are the steps for deploying an DApp on a public blockchain before BUIDL. I
 * Test and debug 
   * Response time is in minutes
 
-### The BUIDL Advantage
+### After BUIDL
 
 **Go to** [**http://buidl.secondstate.io**](http://buidl.secondstate.io) **from any browser, including smartphones.**
 
@@ -47,7 +47,7 @@ Below are the steps for deploying an DApp on a public blockchain before BUIDL. I
 
 {% page-ref page="rule-based-smart-contract.md" %}
 
-### After BUIDL
+### The BUIDL advantage
 
 * Very fast [underlying blockchain](../devchain/getting-started.md) with 1s confirmation time
 * Support all [Ethereum compatible blockchains](working-with-ethereum.md)
