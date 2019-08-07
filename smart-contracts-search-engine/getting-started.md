@@ -69,25 +69,185 @@ The smart contract data is consumed on an ABI basis. The smart contract search e
 
 The following smart contract called `ChildContract` produces an ABI.
 
-Click here to see smart contract source code
+Solidity 
 
- \`\`\`javascript pragma solidity &gt;=0.4.0
+```javascript
+pragma solidity >=0.4.0 <0.6.0;
 
-Click here to see the ABI
+contract ParentContract {
+    uint parentContractData = 5;
 
- \`\`\`javascript \[ { "constant": false, "inputs": \[ { "name": "\_parentContractData", "type": "uint256" } \], "name": "setParentContractData", "outputs": \[\], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": \[\], "name": "getChildContractData", "outputs": \[ { "name": "", "type": "uint256" } \], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": \[\], "name": "getParentContractData", "outputs": \[ { "name": "", "type": "uint256" } \], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": \[ { "name": "\_childContractData", "type": "uint256" } \], "name": "setChildContractData", "outputs": \[\], "payable": false, "stateMutability": "nonpayable", "type": "function" } \] \`\`\`
+    function setParentContractData(uint _parentContractData) public {
+        parentContractData = _parentContractData;
+    }
+    function getParentContractData() public view returns (uint){
+        return parentContractData;
+    }
+}
+contract ChildContract is ParentContract{
+    uint childContractData;
+
+    function setChildContractData(uint _childContractData) public {
+        childContractData = _childContractData;
+    }
+
+    function getChildContractData() public view returns (uint) {
+        return childContractData;
+    }
+}
+```
+
+ChildContract ABI 
+
+```javascript
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_parentContractData",
+        "type": "uint256"
+      }
+    ],
+    "name": "setParentContractData",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getChildContractData",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getParentContractData",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_childContractData",
+        "type": "uint256"
+      }
+    ],
+    "name": "setChildContractData",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
+```
 
 If we look closely at the `ChildContract` we can see that it inherits from the `ParentContract`. If you are thinking that there should technically be two ABIs in relation to the above source code you would be right! Here is the ABI of the `ParentContract`.
 
-Click here to see the ParentContract ABI
+ParentContract ABI
 
- \`\`\`javascript \[ { "constant": false, "inputs": \[ { "name": "\_parentContractData", "type": "uint256" } \], "name": "setParentContractData", "outputs": \[\], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": \[\], "name": "getParentContractData", "outputs": \[ { "name": "", "type": "uint256" } \], "payable": false, "stateMutability": "view", "type": "function" } \] \`\`\`
+```javascript
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_parentContractData",
+        "type": "uint256"
+      }
+    ],
+    "name": "setParentContractData",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getParentContractData",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
+```
 
 Nested ABIs, like the ones shown above, are very common. In order to provide the most flexibility, the smart contract search engine stores both of the ABIs against any smart contract address which houses an instance of the above deployed `ChildContract`. The hash for the `ParentContract` is `0x5dc306fb7e9065cf256a57f077267b73491a0df567d2aa8c1e89250e96f87011` and the hash for the `ChildContract` is `0xfa13b708346165ef225d79a51acbc17c24b9a2f523b71272fc6160cd9d54ced7`. We can see these hashes in the `abiShaList` section of the raw smart contract data shown below.
 
-Click here to see the raw data example
-
- \`\`\`javascript { "took": 0, "timed\_out": false, "\_shards": { "total": 5, "successful": 5, "skipped": 0, "failed": 0 }, "hits": { "total": 1, "max\_score": 1.6739764, "hits": \[ { "\_index": "devchaintwo", "\_type": "\_doc", "\_id": "0xDd27F736AC616141b72eb67D2d79D3f6b1eD7d6f", "\_score": 1.6739764, "\_source": { "TxHash": "0x2e8bab6c377a10747a78bad4cbcd4f56bc8789ad8e4f60848d1bcd6518cf6435", "abiShaList": \[ "0xfa13b708346165ef225d79a51acbc17c24b9a2f523b71272fc6160cd9d54ced7", "0x5dc306fb7e9065cf256a57f077267b73491a0df567d2aa8c1e89250e96f87011" \], "blockNumber": 2220917, "creator": "0xb0695b88e44c27c8a203bba5aed78e2ae475cc68", "contractAddress": "0xDd27F736AC616141b72eb67D2d79D3f6b1eD7d6f", "functionDataList": { "0": \[ { "functionDataId": "0x2ea80e958837c05ba351ea4d77e4247518f0ab9df296f632963417c79ceac7f4", "functionData": { "getChildContractData": "0", "getParentContractData": "5" }, "uniqueAbiAndAddressHash": "0xe666c441714e77c45920a855b1e93c9306f0c8768769627637993c9ae4d15bac" } \] }, "requiresUpdating": "yes", "quality": "50", "indexInProgress": "false" } } \] } } \`\`\`
+```javascript
+{
+    "took": 0,
+    "timed_out": false,
+    "_shards": {
+        "total": 5,
+        "successful": 5,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": 1,
+        "max_score": 1.6739764,
+        "hits": [
+            {
+                "_index": "devchaintwo",
+                "_type": "_doc",
+                "_id": "0xDd27F736AC616141b72eb67D2d79D3f6b1eD7d6f",
+                "_score": 1.6739764,
+                "_source": {
+                    "TxHash": "0x2e8bab6c377a10747a78bad4cbcd4f56bc8789ad8e4f60848d1bcd6518cf6435",
+                    "abiShaList": [
+                        "0xfa13b708346165ef225d79a51acbc17c24b9a2f523b71272fc6160cd9d54ced7",
+                        "0x5dc306fb7e9065cf256a57f077267b73491a0df567d2aa8c1e89250e96f87011"
+                    ],
+                    "blockNumber": 2220917,
+                    "creator": "0xb0695b88e44c27c8a203bba5aed78e2ae475cc68",
+                    "contractAddress": "0xDd27F736AC616141b72eb67D2d79D3f6b1eD7d6f",
+                    "functionDataList": {
+                        "0": [
+                            {
+                                "functionDataId": "0x2ea80e958837c05ba351ea4d77e4247518f0ab9df296f632963417c79ceac7f4",
+                                "functionData": {
+                                    "getChildContractData": "0",
+                                    "getParentContractData": "5"
+                                },
+                                "uniqueAbiAndAddressHash": "0xe666c441714e77c45920a855b1e93c9306f0c8768769627637993c9ae4d15bac"
+                            }
+                        ]
+                    },
+                    "requiresUpdating": "yes",
+                    "quality": "50",
+                    "indexInProgress": "false"
+                }
+            }
+        ]
+    }
+}
+```
 
 If we would like to access all instances of the `ChildContract` we could query the search engine using the ABI hash of the `ChildContract`. We can [query using traditional client-side Javascript](https://github.com/second-state/es-ss.js/tree/master/traditional_non_node_js) or [query using server-side NodeJS Javascript](https://github.com/second-state/es-ss.js). Here is an example of both.
 
@@ -155,7 +315,24 @@ The following Javascript code queries the smart contract search engine using an 
 
 Click here to see the front-end Javascript
 
- \`\`\`javascript function displayTotal\(\) { esss.shaAbi\(JSON.stringify\(abi\)\).then\(\(shaResult\) =&gt; { var sha = JSON.parse\(shaResult\).abiSha3; esss.searchUsingAbi\(sha\).then\(\(searchResult\) =&gt; { var items = JSON.parse\(searchResult\); var totalBodyInner = ""; var total = 0; items.forEach\(function\(item\) { total = total + parseInt\(item.functionData.getAccountBalance\); }\); console.log\(total\) totalBodyInner = totalBodyInner + "" + total + ""; document.querySelector\("\#totalBody"\).innerHTML = totalBodyInner; }\); }\); // end of esss } \`\`\`
+```javascript
+function displayTotal() {
+    esss.shaAbi(JSON.stringify(abi)).then((shaResult) => {
+        var sha = JSON.parse(shaResult).abiSha3;
+        esss.searchUsingAbi(sha).then((searchResult) => {
+            var items = JSON.parse(searchResult);
+            var totalBodyInner = "";
+            var total = 0;
+            items.forEach(function(item) {
+                total = total + parseInt(item.functionData.getAccountBalance);
+            });
+            console.log(total)
+            totalBodyInner = totalBodyInner + "<tr id='total'><td>" + total + "</tr>";
+            document.querySelector("#totalBody").innerHTML = totalBodyInner;
+        });
+    }); // end of esss
+}
+```
 
 This code \(which uses the ABI hash as a filter\) demonstrates that the front-end is only required to parse and iterate through the smallest amount of data. The smart contract search engine does all of the work on the server side and only passes the appropriate slices of filtered data to the DApp's JS and subsequently the HTML output.
 
