@@ -14,9 +14,17 @@ SecondState provides a handy demonstration which assists you in evaluating your 
 
 ### Configure the SecondState BUIDL tool
 
+#### Code
+
 Firstly open the[SecondState BUIDL tool](http://buidl.secondstate.io/). Then go to the DApp tab and paste in [this Javascript](https://raw.githubusercontent.com/second-state/buidl/master/demo/search-engine/demo.js) and [this HTML](https://raw.githubusercontent.com/second-state/buidl/master/demo/search-engine/demo.html).
 Open the contract tab and paste in [this smart contract code](https://raw.githubusercontent.com/second-state/buidl/master/demo/search-engine/demo.sol).
 
+#### Provider
+
 From here you will need to configure the provider settings. Specifically pasting in the URL of your smart contract search engine instance and the RPC endpoint of your blockchain. Please note that you can use [SecondState's Blockchain as a Service](http://baas-mvp.secondstate.io/) (BaaS) to create both a new blockchain and a search engine. It is free and is achieved with a few clicks in as little as 5 minutes. Alternatively you can [install your own smart contract search engine](https://docs.secondstate.io/smart-contracts-search-engine/getting-started#installation) and use this in the SecondState BUIDL tool's provider section.
+
+#### Resources
+
+The BUIDL tool allows you to utilize external resources. Simply click on the resources tab (on the left hand side of your screen) and paste this JQuery CDN URL `https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js` into the Javascript section and this Bootstrap CDN URL `https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css` into the CSS section of the SecondState BUIDL tool.
 
 
