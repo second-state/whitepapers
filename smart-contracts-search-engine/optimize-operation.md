@@ -29,4 +29,5 @@ The BUIDL tool allows you to utilize external resources. Simply click on the res
 * this JQuery CDN URL `https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js` into the Javascript section and 
 * this Bootstrap CDN URL `https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css` into the CSS section of the SecondState BUIDL tool.
 
+![](../.gitbook/assets/scse-optimize_operation-01.png)
 
