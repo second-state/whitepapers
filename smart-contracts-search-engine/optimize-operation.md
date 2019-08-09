@@ -8,4 +8,15 @@ The ultimate goal of the smart contract search engine is to provide your DApp wi
 
 ## Optimization evaluation
 
-SecondState provides a handy demonstration which assists you in evaluating your usage of the smart contract search engine. The demonstration can be run from inside the [SecondState BUIDL tool](http://buidl.secondstate.io/). The demonstration allows you to manually deploy and then interact with a series of pre-written smart contracts. The BUIDL tool allows you to set the blockchain RPC endpoint and smart contract search engine endpoint in its providers section. This will facilitate a pragmatic evaluation of the smart contract search engine; evaluating response behaviour in relation to your blockchain's native operation.
+SecondState provides a handy demonstration which assists you in evaluating your usage of the smart contract search engine. The demonstration can be run from inside the [SecondState BUIDL tool](http://buidl.secondstate.io/). The demonstration allows you to manually deploy and then interact with a series of pre-written smart contracts. The SecondState BUIDL tool allows you to set the blockchain RPC endpoint and smart contract search engine endpoint in its providers section. This will facilitate a pragmatic evaluation of the smart contract search engine; evaluating response behaviour in relation to your blockchain's native operation.
+
+## Running the optimization
+
+### Configure the SecondState BUIDL tool
+
+Firstly open the[SecondState BUIDL tool](http://buidl.secondstate.io/). Then go to the DApp tab and paste in [this Javascript](https://raw.githubusercontent.com/second-state/buidl/master/demo/search-engine/demo.js) and [this HTML](https://raw.githubusercontent.com/second-state/buidl/master/demo/search-engine/demo.html).
+Open the contract tab and paste in [this smart contract code](https://raw.githubusercontent.com/second-state/buidl/master/demo/search-engine/demo.sol).
+
+From here you will need to configure the provider settings. Specifically pasting in the URL of your smart contract search engine instance and the RPC endpoint of your blockchain. Please note that you can use [SecondState's Blockchain as a Service](http://baas-mvp.secondstate.io/) (BaaS) to create both a new blockchain and a search engine. It is free and is achieved with a few clicks in as little as 5 minutes. Alternatively you can [install your own smart contract search engine](https://docs.secondstate.io/smart-contracts-search-engine/getting-started#installation) and use this in the SecondState BUIDL tool's provider section.
+
+
