@@ -25,6 +25,8 @@ From here you will need to configure the provider settings. Specifically pasting
 
 #### Resources
 
-The BUIDL tool allows you to utilize external resources. Simply click on the resources tab (on the left hand side of your screen) and paste this JQuery CDN URL `https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js` into the Javascript section and this Bootstrap CDN URL `https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css` into the CSS section of the SecondState BUIDL tool.
+The BUIDL tool allows you to utilize external resources. Simply click on the resources tab (on the left hand side of your screen) and paste
+* this JQuery CDN URL `https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js` into the Javascript section and 
+* this Bootstrap CDN URL `https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css` into the CSS section of the SecondState BUIDL tool.
 
 
