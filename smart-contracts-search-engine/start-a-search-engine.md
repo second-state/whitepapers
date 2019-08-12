@@ -391,6 +391,9 @@ The `harvest.py -m abi` mode operates in the following way. It fetches the alrea
 
 The primary purpose of the ABI mode is to introduce newly uploaded ABIs to pre-existing contract addresses of which they may be associated with.
 
+#### State
+The `harvest.py -m state` mode operates in the following way. It fetches all indexed contracts from the [commonindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L12). It reads their abiShaList and creates a web3 contract instance for each of the ABI / address combinations. Now the ABI address combinations are not questionable because they have already been through a process of making sure that they are a real relationship which can yield real data. The state mode fetches the public view data from the contract and updates the index if the data is different to what was originally stored. It also creates a local hash of the data so that when it repeats this process over and over it can compare hashes on local disk rather than remotely issuing queries to the index.
+
 ### Flask
 
 ```text
