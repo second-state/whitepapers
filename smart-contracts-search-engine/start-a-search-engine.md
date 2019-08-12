@@ -394,6 +394,12 @@ The primary purpose of the ABI mode is to introduce newly uploaded ABIs to pre-e
 #### State
 The `harvest.py -m state` mode operates in the following way. It fetches all indexed contracts from the [commonindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L12). It reads their abiShaList and creates a web3 contract instance for each of the ABI / address combinations. Now the ABI address combinations are not questionable because they have already been through a process of making sure that they are a real relationship which can yield real data. The state mode fetches the public view data from the contract and updates the index if the data is different to what was originally stored. It also creates a local hash of the data so that when it repeats this process over and over it can compare hashes on local disk rather than remotely issuing queries to the index.
 
+#### Bytecode
+The `harvest.py -m bytecode` mode operates in the following way. It fetches all indexed contracts and matches their bytecode (which is in theie transaction instance input) with any individual bytecode entries in the [bytecodeindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L18)
+
+#### Indexed
+The `harvest.py -m indexed` mode operates in the following way. It loops through all of the indexed contracts from the [commonindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L12) and sets the `indexed` value of any item in the [masterindex](https://github.com/second-state/smart-contract-search-engine/blob/45ea54d0217fff0973a40f95c688ac03eedc2e1c/python/config.ini#L9) to `true` if the contract addresses from the two indices match. This is an independent script which does not have to be run, however it does help speed up performance slightly by excluding any already indexed items when the tx mode is executed.
+
 ### Flask
 
 ```text
