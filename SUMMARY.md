@@ -18,7 +18,6 @@
 * [Sharing your DApp](buidl-developer-tool/sharing-your-dapp.md)
 * [Working with BaaS](buidl-developer-tool/working-with-baas.md)
 * [Working with Ethereum](buidl-developer-tool/working-with-ethereum.md)
-* [Options and config](buidl-developer-tool/options-and-config.md)
 
 ## DevChain
 

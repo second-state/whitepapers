@@ -69,7 +69,7 @@ The smart contract data is consumed on an ABI basis. The smart contract search e
 
 The following smart contract called `ChildContract` produces an ABI.
 
-Solidity 
+Solidity
 
 ```javascript
 pragma solidity >=0.4.0 <0.6.0;
@@ -97,7 +97,7 @@ contract ChildContract is ParentContract{
 }
 ```
 
-ChildContract ABI 
+ChildContract ABI
 
 ```javascript
 [

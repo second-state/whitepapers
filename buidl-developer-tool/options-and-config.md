@@ -1,2 +1,0 @@
-# Options and config
-
