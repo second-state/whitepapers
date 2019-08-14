@@ -1,5 +1,7 @@
 # Getting started
 
+{% embed url="https://youtu.be/0m6fiNzukbM" caption="Checkout a video demo of the smart contract search engine" %}
+
 ## Overview
 
 The following image illustrates how the smart contract search engine integrates with a\) a blockchain, b\) a decentralized application \(DApp\) and any potential c\) third-party application and service.
