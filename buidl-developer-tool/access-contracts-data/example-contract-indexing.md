@@ -84,65 +84,71 @@ var instance = contract.at('');
 
 reload();
 
-function reload () {
-  document.querySelector("#create").innerHTML = "Create a new storage contract";
-  var tbodyInner = "";
-  esss.shaAbi(JSON.stringify(abi)).then((shaResult) => {
-    var sha = JSON.parse(shaResult).abiSha3;
-    esss.searchUsingAbi(sha).then((searchResult) => {
-      var items = JSON.parse(searchResult);
-      items.sort(compareItem);
-      items.forEach(function(item) {
-        tbodyInner = tbodyInner + 
-          "<tr id='" + item.contractAddress + "'><td>" + item.blockNumber + 
-          "</td><td>" + item.functionData.get + 
-          "</td><td><button class='btn btn-info' onclick='setData(this)'>Set</button></td></tr>";
-      }); // end of JSON iterator
-      document.querySelector("#tbody").innerHTML = tbodyInner;
-    });
-  }); // end of esss
+function reload() {
+    document.querySelector("#create").innerHTML = "Create a new storage contract";
+    var tbodyInner = "";
+    esss.shaAbi(JSON.stringify(abi)).then((shaResult) => {
+        var sha = JSON.parse(shaResult).abiSha3;
+        esss.searchUsingAbi(sha).then((searchResult) => {
+            var items = JSON.parse(searchResult);
+            items.sort(compareItem);
+            items.forEach(function(item) {
+                tbodyInner = tbodyInner +
+                    "<tr id='" + item.contractAddress + "'><td>" + item.blockNumber +
+                    "</td><td>" + item.functionData.get +
+                    "</td><td><button class='btn btn-info' onclick='setData(this)'>Set</button></td></tr>";
+            }); // end of JSON iterator
+            document.querySelector("#tbody").innerHTML = tbodyInner;
+        });
+    }); // end of esss
 }
 
-function create (element) {
-  element.innerHTML = "Wait ...";
-  var data = '0x' + contract.new.getData({data:bytecode});
-  contract.new({
-    data: data
-  }, function (ee, i) {
-    if (!ee && i.address != null) {
-      esss.submitAbi(JSON.stringify(abi), i.transactionHash);
-      setTimeout(function () {
-        reload ();
-      }, 5 * 1000);
+function create(element) {
+    element.innerHTML = "Wait ...";
+    var data = '0x' + contract.new.getData({
+        data: bytecode
+    });
+    contract.new({
+        data: data
+    }, function(ee, i) {
+        if (!ee && i.address != null) {
+            esss.submitAbi(JSON.stringify(abi), i.transactionHash).then((submitResults) => {
+                setTimeout(function() {
+                    reload();
+                }, 3 * 1000);
+            });
+        }
+    });
+}
+
+function setData(element) {
+    var tr = element.closest("tr");
+    instance = contract.at(tr.id);
+    var n = window.prompt("Input a number:");
+    n && instance.set(n);
+    setTimeout(function() {
+        esss.updateStateOfContractAddress(JSON.stringify(abi), instance.address).then((c2i) => {
+            setTimeout(function() {
+                esss.searchUsingAddress(instance.address).then((r) => {
+                    var data = JSON.parse(r);
+                    resultToDisplay = JSON.stringify(data.functionData.get);
+                    element.closest("td").previousSibling.innerHTML = resultToDisplay.replace(/['"]+/g, '');
+                    element.innerHTML = "Set";
+                });
+            }, 1 * 1000);
+        });
+    }, 1 * 1000);
+    element.innerHTML = "Wait ...";
+}
+
+function compareItem(a, b) {
+    let comparison = 0;
+    if (a.blockNumber < b.blockNumber) {
+        comparison = 1;
+    } else if (a.blockNumber > b.blockNumber) {
+        comparison = -1;
     }
-  });
-}
-
-function setData (element) {
-  var tr = element.closest("tr");
-  console.log("Set Data " + tr.id);
-  instance = contract.at(tr.id);
-  var n = window.prompt("Input a number:");
-  n && instance.set(n);
-  element.innerHTML = "Wait ...";
-  setTimeout(function () {
-    instance.get.call (function (e, r) {
-      if (!e) {
-        element.closest("td").previousSibling.innerHTML = r;
-        element.innerHTML = "Set";
-      }
-    });
-  }, 2 * 1000);
-}
-
-function compareItem (a, b) {
-  let comparison = 0;
-  if (a.blockNumber < b.blockNumber) {
-    comparison = 1;
-  } else if (a.blockNumber > b.blockNumber) {
-    comparison = -1;
-  }
-  return comparison;
+    return comparison;
 }
 ```
 

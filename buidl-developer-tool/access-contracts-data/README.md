@@ -140,10 +140,15 @@ function setNumber(element) {
     instance = contract.at(tr.id);
     var n = window.prompt("Input a number:");
     n && instance.setAccountBalance(n);
-    element.innerHTML = "Wait ...";
     setTimeout(function() {
-        reload();
-    }, 5 * 1000);
+        element.innerHTML = "Sending ...";
+        esss.updateStateOfContractAddress(JSON.stringify(abi), instance.address).then((c2i) => {
+            element.innerHTML = "Calculating ...";
+            setTimeout(function() {
+                reload();
+            }, 5 * 1000);
+        });
+    }, 1 * 1000);
 }
 
 function compareItem(a, b) {
@@ -191,7 +196,7 @@ function displayTotal() {
 }
 ```
 
-The **Update balance** buttons in the table trigger the `setNumber()` JS function, which in turn call the contract’s `setAccountBalance()` function via web3. It waits a short time before calling the `reload()` JS function to reload and display all contracts and the total from the search engine again. Notice that the search engine works in near real-time, as the account balance you just updated is reflected in the search results in seconds.
+The **Update balance** buttons in the table trigger the `setNumber()` JS function, which in turn call the contract’s `setAccountBalance()` function via web3. It then calls the `esss.updateStateOfContractAddress()` function to explicitly inform the search engine that this contract has changed. It then waits a short time before calling the `reload()` JS function to reload and display all contracts and the total from the search engine again. Notice that the search engine works in near real-time, as the account balance you just updated is reflected in the search results in seconds.
 
 ```javascript
 function setNumber(element) {
@@ -199,10 +204,15 @@ function setNumber(element) {
     instance = contract.at(tr.id);
     var n = window.prompt("Input a number:");
     n && instance.setAccountBalance(n);
-    element.innerHTML = "Wait ...";
     setTimeout(function() {
-        reload();
-    }, 5 * 1000);
+        element.innerHTML = "Sending ...";
+        esss.updateStateOfContractAddress(JSON.stringify(abi), instance.address).then((c2i) => {
+            element.innerHTML = "Calculating ...";
+            setTimeout(function() {
+                reload();
+            }, 5 * 1000);
+        });
+    }, 1 * 1000);
 }
 ```
 
