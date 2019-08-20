@@ -471,38 +471,6 @@ RewriteCond %{REQUEST_METHOD} OPTIONS
 RewriteRule ^(.*)$ $1 [R=200,L]
 ```
 
-## Uploading your first ABI
-
-The system requires that at least one ABI is uploaded before the harvesting is started. Please perform the following Python code from within the `/var/www/ethereum.search.secondstate.io/html/python` directory \(the same directory as the harvest.py file\). Please note, you will need your [ABI to be stored in a file as raw text like this](https://raw.githubusercontent.com/tpmccallum/test_endpoint2/master/erc20abi.txt).
-
-```python
-import re
-import json
-import time
-import requests
-from harvest import Harvest
-
-harvester = Harvest()
-
-abiUrl1 = "http://A_raw_text_file_which_contains_only_an_abi's_text"
-abiData1 = requests.get(abiUrl1).content
-abiData1JSON = json.loads(abiData1)
-theDeterministicHash1 = harvester.shaAnAbi(abiData1JSON)
-cleanedAndOrderedAbiText1 = harvester.cleanAndConvertAbiToText(abiData1JSON)
-
-data1 = {}
-data1['indexInProgress'] = "false"
-data1['epochOfLastUpdate'] = int(time.time())
-data1['abi'] = cleanedAndOrderedAbiText1
-harvester.es.index(index=harvester.abiIndex, id=theDeterministicHash1, body=data1)
-```
-
-Put the above content into a file called `init_abi.py` and then run
-
-```text
-python3.6 init_abi.py
-```
-
 Also once all of this is done, please just give the server a quick reboot; during this time all of the processes will fire off as per the cron etc.
 
 ```text
