@@ -67,7 +67,7 @@ $ cd smart-contract-search-engine
 Fill in the following configuration options.
 
 * `ServerName` in apache config `config/site.conf`. This could be your public IP address for now.
-* `blockchain`, `elasticsearch` configs in `python/config.ini`.
+* `blockchain`, `elasticsearch` , and the initial ABI configs in `python/config.ini`.
 * `publicIp` in `js/secondStateJS.js`. This could be your IP address for now.
 * Check [here](https://github.com/second-state/whitepapers/tree/2d68282b29af48f62e2075a36bd229f10fe51aa3/smart-contracts-search-engine/start-a-search-engine/README.md#javascript) for details about configurations.
 
@@ -83,9 +83,11 @@ $ docker build -f docker/Dockerfile -t search-engine .
 $ docker run -d -it --rm -p 80:80 -v $HOME/.aws:/root/.aws search-engine
 ```
 
-Now you can visit `http://<your_host>` to check your smart contract search engine.
+Now you can visit `http://<your_host>` to check your smart contract search engine. Be patient, as it may take hours before the results show up on that page.
 
-## Upload an ABI
+## Upload more ABIs
+
+Your search engine is started with a single ABI to index from the `config.ini` file. You can add more ABIs to the index by executing the following script from inside the Docker instance.
 
 You can find the `container_id` for your docker instance on your host OS, by running
 
@@ -99,7 +101,7 @@ Next, logging into your docker container using the `container_id`
 $ docker exec -it container_id bash
 ```
 
-Once logged, in the `/app` directory, create a file `init_abi.py` like the following.
+Once logged, in the `/app` directory, create a file `upload_abi.py` like the following.
 
 ```python
 import re
@@ -126,7 +128,7 @@ harvester.es.index(index=harvester.abiIndex, id=theDeterministicHash1, body=data
 Then run
 
 ```bash
-$ python3.6 init_abi.py
+$ python3.6 upload_abi.py
 ```
 
 Also once all of this is done, please just exit docker and give it a reboot.
@@ -135,13 +137,9 @@ Also once all of this is done, please just exit docker and give it a reboot.
 $ docker restart container_id
 ```
 
-## Check progress
-
-Now, you should be able to go to `http://<your ip address>` to check the progress of the indexing. Be patient, as it may take hours before the results show up on that page.
-
 ## Enable SSL and HTTPS
 
-Finally, in many applications, you will need to use HTTPS to access the search engine. First, you must map the domain name, `search.domain.com`, to the public IP address of the host running docker. Then, log into docker.
+Finally, in many applications, you will need to use HTTPS to access the search engine. First, you must map the domain name, `search.domain.com`, to the public IP address of the host running docker. Next, log into Docker.
 
 ```bash
 $ docker exec -it container_id bash
