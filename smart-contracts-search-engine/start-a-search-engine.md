@@ -215,10 +215,13 @@ ignore = ignore
 # The default number of threads is set to 500. However, this value can be raised if you also raise the ulimit when starting the harvest.py scripts i.e. adding ulimit -n 1000 will facilitate a setting here of max_threads = 1000
 [system]
 max_threads = 500
+
+# Please provide a raw GitHub URL which contains your first ABI. This is required for the search engine to initialize
+[abi_code]
+initial_abi_url = https://raw.githubusercontent.com/tpmccallum/test_endpoint2/master/erc20_transfer_function_only_abi.txt
 ```
 
 ### SSL \(HTTPS\) using "lets encrypt"
-
 ```text
 sudo wget https://dl.eff.org/certbot-auto -O /usr/sbin/certbot-auto
 ```
@@ -323,13 +326,15 @@ while true
 do
   STATUS=$(curl --max-time 30 -s -o /dev/null -w '%{http_code}' https://YOUR RPC NODE GOES HERE)
   if [ $STATUS -eq 200 ]; then
-    cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m tx >/dev/null 2>&1 &
+    cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m init >/dev/null 2>&1 &
     cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m abi >/dev/null 2>&1 &
-    cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m state >/dev/null 2>&1 &
-    cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m bytecode >/dev/null 2>&1 &
     cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m full >/dev/null 2>&1 &
     cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m topup >/dev/null 2>&1 &
+    cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m tx >/dev/null 2>&1 &
+    cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m state >/dev/null 2>&1 &
+    cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m bytecode >/dev/null 2>&1 &
     cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m indexed >/dev/null 2>&1 &
+    cd /var/www/search-engine.com/html/python && ulimit -n 10000 && nohup /usr/bin/python3.6 harvest.py -m faster_state >/dev/null 2>&1 &
     break
   else
     echo "Got $STATUS please wait"
