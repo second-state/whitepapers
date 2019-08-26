@@ -92,7 +92,7 @@ The Second State smart contract search engine not only enables new modular DApp 
 
 The blockchain explorers for legacy blockchains \(eg [EtherScan.io](https://etherscan.io/) and [blockchain.com](https://www.blockchain.com/)\) are focused on providing data for coin transactions. But for enterprise blockchains, coin transactions are often not important. Method calls, events, and state changes in smart contracts are important for enterprise users. The search engine allows us to find contracts of a specific type, examine their current states, and look into the state change history of individual contracts. The data can then be aggregated, graphed, and reported to users.
 
-To see such smart contract search engines in action, check out our live demos on the [Ethereum](https://ethereum.search.secondstate.io/) and [CyberMiles](https://cmt.search.secondstate.io/) public blockchains.
+To see such smart contract search engines in action, check out our live demos on the [Ethereum](https://eth.search.secondstate.io/) and [CyberMiles](https://cmt.search.secondstate.io/) public blockchains.
 
 ## Developer tools
 
