@@ -36,7 +36,7 @@ Now, let’s look into how the search engine gives business insights into smart 
 
 ## USE cases
 
-Second State’s new[ public search engine for the Ethereum blockchain ](https://eth.search.secondstate.io/)is based on our open source software. Compared with Ethereum blockchain explorers \(such as EtherScan.org\), the Second State public search engine specifically focuses on the data inside smart contracts as opposed to just coin transactions. Here are some more interesting use cases.
+Second State’s new [public search engine for the Ethereum blockchain ](https://eth.search.secondstate.io/)is based on our open source software. Compared with Ethereum blockchain explorers \(such as EtherScan.org\), the Second State public search engine specifically focuses on the data inside smart contracts as opposed to just coin transactions. Here are some more interesting use cases.
 
 ### Crypto assets
 
