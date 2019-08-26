@@ -36,7 +36,7 @@ Now, let’s look into how the search engine gives business insights into smart 
 
 ## USE cases
 
-Second State’s new [public search engine for the Ethereum ](https://ethereum.search.secondstate.io/)blockchain is based on our open source software. Compared with Ethereum blockchain explorers \(such as EtherScan.org\), the Second State public search engine specifically focuses on the data inside smart contracts as opposed to just coin transactions. Here are some more interesting use cases.
+Second State’s new[ public search engine for the Ethereum blockchain ](https://eth.search.secondstate.io/)is based on our open source software. Compared with Ethereum blockchain explorers \(such as EtherScan.org\), the Second State public search engine specifically focuses on the data inside smart contracts as opposed to just coin transactions. Here are some more interesting use cases.
 
 ### Crypto assets
 
@@ -121,7 +121,7 @@ The presentation layer is built using standard and ubiquitous HTML/CSS/JavaScrip
 
 The smart contract search engine is specifically designed to run in many modes. For example, it can be run on localhost \(using HTML/JS and without the need for a web server\). In contrast to this, it can also be run as a global public facing HTTPS website and/or as a public facing HTTPS API data endpoint.
 
-The smart contract search engine allows you to upload one or many smart contract Application Binary Interface \(ABI\) files. Once an ABI is present, the system will sweep through the blockchain and index every contract instance which uses that ABI. Some use cases only require that one or two ABIs be indexed. For example the [FairPlay Product Giveaway DApp ](www.fairplaydapp.com)which currently has both a [version 1](https://github.com/CyberMiles/smart_contracts/tree/master/FairPlay/v1) and [version 2 ](https://github.com/CyberMiles/smart_contracts/tree/master/FairPlay/v2)of its smart contract. Perhaps in some other use cases many more ABIs are required. For example, the [Ethereum Search Engine Demonstration ](https://ethereum.search.secondstate.io/)which has over 100 ABIs. 
+The smart contract search engine allows you to upload one or many smart contract Application Binary Interface \(ABI\) files. Once an ABI is present, the system will sweep through the blockchain and index every contract instance which uses that ABI. Some use cases only require that one or two ABIs be indexed. For example the [FairPlay Product Giveaway DApp ](www.fairplaydapp.com)which currently has both a [version 1](https://github.com/CyberMiles/smart_contracts/tree/master/FairPlay/v1) and [version 2 ](https://github.com/CyberMiles/smart_contracts/tree/master/FairPlay/v2)of its smart contract. Perhaps in some other use cases many more ABIs are required. For example, the [Ethereum Search Engine Demonstration](https://eth.search.secondstate.io/) which has over 100 ABIs. 
 
 ### Control and efficiency 
 

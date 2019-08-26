@@ -222,6 +222,7 @@ initial_abi_url = https://raw.githubusercontent.com/tpmccallum/test_endpoint2/ma
 ```
 
 ### SSL \(HTTPS\) using "lets encrypt"
+
 ```text
 sudo wget https://dl.eff.org/certbot-auto -O /usr/sbin/certbot-auto
 ```
