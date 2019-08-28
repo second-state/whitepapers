@@ -2,6 +2,8 @@
 
 [Second State](https://www.secondstate.io) has released an [open source blockchain search engine](https://github.com/second-state/smart-contract-search-engine) for smart contracts. It is modular by design; providing flexibility and versatility, as well as scalability. It is the world’s first search engine to provide deep insights into smart contract data and transactions, and hence enable new types of innovative DApps to be developed and supported.
 
+![](../.gitbook/assets/scse-getting_started-01.png)
+
 ## Background
 
 Blockchain technology is continually gaining popularity in diverse industries. This technology is poised to revolutionize both financial services and e-commerce industries, at a minimum.
