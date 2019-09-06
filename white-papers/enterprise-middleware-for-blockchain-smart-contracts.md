@@ -108,11 +108,7 @@ Besides the [web3-ss.js ](https://github.com/second-state/web3-ss.js)and [search
 
 For beginners, Second State hosts a [web-based IDE,](https://buidl.secondstate.io/) called BUIDL, to develop and deploy Lity smart contracts. You can create Lity smart contracts directly in any modern web browser, compile it to bytecode and ABI, and then deploy to a test blockchain \(ie the[ DevChain](https://github.com/second-state/devchain), see below\).
 
-IMAGE
-
 BUIDL also provides a JavaScript playground to write DApps that interact with the deployed contracts, and the search engine for the test environment. The BUIDL JavaScript playground already has [web3-ss.js](https://github.com/second-state/web3-ss.js) and [search-ss.js](https://github.com/second-state/es-ss.js) configured, and you can immediately start building.
-
-IMAGE
 
 You can access [the public BUIDL tool here](https://buidl.secondstate.io/).
 
