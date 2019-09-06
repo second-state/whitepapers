@@ -29,7 +29,8 @@
 ## Data services for contracts <a id="smart-contracts-search-engine"></a>
 
 * [Getting started](smart-contracts-search-engine/getting-started.md)
-* [Start a search engine \(Docker\)](smart-contracts-search-engine/start-a-search-engine-docker.md)
+* [Start a search engine \(Docker\)](smart-contracts-search-engine/start-a-search-engine-docker/README.md)
+  * [Notes on SSL with Docker](smart-contracts-search-engine/start-a-search-engine-docker/notes-on-ssl-with-docker.md)
 * [Start a search engine \(Ubuntu\)](smart-contracts-search-engine/start-a-search-engine.md)
 * [Demos](smart-contracts-search-engine/demos.md)
 

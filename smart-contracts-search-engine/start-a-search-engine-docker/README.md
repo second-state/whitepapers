@@ -4,7 +4,7 @@ description: Start a smart contract search engine for your own DApp
 
 # Start a search engine \(Docker\)
 
-This documentation details how you can start, and host, your own [smart contract search engine](https://github.com/second-state/smart-contract-search-engine) using [Docker](https://www.docker.com/). If you would like to build from scratch from a fresh Ubuntu install, please refer to [this document](start-a-search-engine.md).
+This documentation details how you can start, and host, your own [smart contract search engine](https://github.com/second-state/smart-contract-search-engine) using [Docker](https://www.docker.com/). If you would like to build from scratch from a fresh Ubuntu install, please refer to [this document](../start-a-search-engine.md).
 
 ## Prerequisite
 
