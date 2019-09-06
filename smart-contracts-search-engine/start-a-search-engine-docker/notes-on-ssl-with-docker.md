@@ -39,14 +39,23 @@ Third, add the following in the `config/site.conf` file. You can also edit the `
 Fourth, build and then start Docker with the following command to turn on port 443.
 
 ```text
-docker run -d -it --rm -p 80:80 -p 443:443 -v $HOME/.aws:/root/.aws search-engine
+$ docker run -d -it --rm -p 80:80 -p 443:443 -v $HOME/.aws:/root/.aws search-engine
 ```
 
-Fifth, start Docker and login. Create the `certificate.crt`, `private.key`, and `ca_bundle.crt` files under directory `/etc/apache/`
+Fifth, start Docker and login. Create the `certificate.crt`, `private.key`, and `ca_bundle.crt` files under directory `/etc/apache2/`
+
+Sixth, enable SSL modules.
+
+```text
+root# cd /etc/apache2/sites-enabled
+root# ln -s ../mods-available/socache_shmcb.load socache_shmcb.load
+root# ln -s ../mods-available/ssl.load ssl.load
+root# ln -s ../mods-available/ssl.conf ssl.conf
+```
 
 Finally, restart Apache from inside Docker.
 
 ```text
-apachectl restart
+root# apachectl restart
 ```
 
