@@ -47,7 +47,7 @@ Fifth, start Docker and login. Create the `certificate.crt`, `private.key`, and 
 Sixth, enable SSL modules.
 
 ```text
-root# cd /etc/apache2/sites-enabled
+root# cd /etc/apache2/mods-enabled
 root# ln -s ../mods-available/socache_shmcb.load socache_shmcb.load
 root# ln -s ../mods-available/ssl.load ssl.load
 root# ln -s ../mods-available/ssl.conf ssl.conf
