@@ -7,7 +7,7 @@ Setting up SSL with Docker requires multiple steps. First, get your domain ready
 
 Second, make sure that you have the https link for `publicIp` in the `js/secondStateJS.js` file. You can also edit the `/var/www/html/js/secondStateJS.js` file inside Docker.
 
-Third, add the following in the `config/site.conf` file. You can also edit the `/etc/apache2/site-enabled/search-engine.conf` file inside Docker.
+Third, add the following in the `config/site.conf` file. You can also edit the `/etc/apache2/sites-enabled/search-engine.conf` file inside Docker.
 
 ```text
 <VirtualHost *:443>
