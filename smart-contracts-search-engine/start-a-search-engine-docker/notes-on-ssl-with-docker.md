@@ -14,7 +14,7 @@ Third, add the following in the `config/site.conf` file. You can also edit the `
     ProxyPreserveHost On
     ProxyPass /api http://127.0.0.1:8080/api
     ProxyPassReverse /api http://127.0.0.1:8080/api
-    ServerName openbay.search.secondstate.co
+    ServerName localhost
     DocumentRoot /var/www/html
     ErrorLog ${APACHE_LOG_DIR}/error-ssl.log
     CustomLog ${APACHE_LOG_DIR}/access-ssl.log combined

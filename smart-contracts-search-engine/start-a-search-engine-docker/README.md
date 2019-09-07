@@ -83,6 +83,10 @@ $ docker build -f docker/Dockerfile -t search-engine .
 $ docker run -d -it --rm -p 80:80 -v $HOME/.aws:/root/.aws search-engine
 ```
 
+{% hint style="info" %}
+If the above command failed because the host port 80 is already taken, try the following command `sudo apachectl stop` to stop the host apache server.
+{% endhint %}
+
 Now you can visit `http://<your_host>` to check your smart contract search engine. Be patient, as it may take hours before the results show up on that page.
 
 ## Upload more ABIs
