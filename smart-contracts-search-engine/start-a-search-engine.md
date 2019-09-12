@@ -124,21 +124,24 @@ sudo chown -R $USER:$USER /var/www/search-engine.com/*
 
 This system uses a single Javascript file which passes events and data back and forth between the HTML and Python. The code repository currently has one Javascript file `secondStateJS.js` which services the [FairPlay - Product Giveaway site](https://cmt.search.secondstate.io/) and one Javascript file `ethJS.js` which services the [Ethereum Search Engine Demonstration](https://ethereum.search.secondstate.io/). One of the strong points of this search engine is that it allows you to create your own custom HTML/JS so that you can render your data in any way.
 
-##### publicIp
+**publicIp**
+
 **publicIp** If running this in global mode, please make sure that the `var publicIp = "";` in the [secondStateJS.js file](https://github.com/second-state/whitepapers/tree/47778a98d431c2d32819ec8b263d8094a73bf390/js/secondStateJS.js) is set to the public domain name of the server which is hosting the search engine \(including the protocol\) i.e.
 
 ```text
 var publicIp = "https://www.search-engine.com"; //No trailing slash please
 ```
 
-##### searchEngineNetwork
+**searchEngineNetwork**
+
 **searchEngineNetwork** in secondStateJS.js Please ensure that the correct network id is set in the "searchEngineNetwork" variable in the secondStateJS.js file i.e.
 
 ```text
 var searchEngineNetwork = "18"; // CyberMiles MainNet
 ```
 
-##### esIndexName
+**esIndexName**
+
 **esIndexName** name in secondStateJS.js Please ensure that the appropriate index name will be set \(depending on which network you selected in the previous step\) The logic is as follows.
 
 ```text
