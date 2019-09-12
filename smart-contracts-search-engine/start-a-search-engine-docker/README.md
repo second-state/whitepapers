@@ -141,51 +141,5 @@ Also once all of this is done, please just exit docker and give it a reboot.
 $ docker restart container_id
 ```
 
-## Enable SSL and HTTPS
 
-Finally, in many applications, you will need to use HTTPS to access the search engine. First, you must map the domain name, `search.domain.com`, to the public IP address of the host running docker. Next, log into Docker.
-
-```bash
-$ docker exec -it container_id bash
-```
-
-Next, use Let's Encrypt services to setup SSL.
-
-```bash
-$ apt update && apt upgrade
-$ apt install wget
-$ wget https://dl.eff.org/certbot-auto -O /usr/sbin/certbot-auto
-$ chmod a+x /usr/sbin/certbot-auto
-$ certbot-auto --apache -d search.domain.com
-```
-
-Next, please open the `/etc/apache2/sites-enabled/*-ssl.conf` file \(which was created automatically by the above command\) and add the following code inside the `VirtualHost` section.
-
-```text
-<VirtualHost *:443>
-    ... ...
-    <Location "/">
-        Header always set Access-Control-Allow-Origin "*"
-        Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS"
-        Header always set Access-Control-Max-Age "1000"
-        Header always set Access-Control-Allow-Headers "x-requested-with, Content-Type, origin, authorization, accept, client-security-token"
-        RewriteEngine On
-        RewriteCond %{REQUEST_METHOD} OPTIONS
-        RewriteRule ^(.*)$ $1 [R=200,L]
-    </Location>
-</VirtualHost>
-```
-
-Replace the HTTP IP address below with your new HTTPS domain name.
-
-* `ServerName` in apache config `config/site.conf`. 
-* `publicIp` in `js/secondStateJS.js`.
-
-Exit docker and give it a reboot.
-
-```bash
-$ docker restart container_id
-```
-
-Now, you should be able access the search engine from `https://search.domain.com` now.
 
