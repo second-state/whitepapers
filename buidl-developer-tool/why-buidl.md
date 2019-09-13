@@ -10,9 +10,9 @@ description: Create and deploy your first public blockchain-based app in 5 minut
 
 {% page-ref page="getting-started.md" %}
 
-### Before BUIDL
+## Before BUIDL
 
-Below are the steps for deploying an DApp on a public blockchain before BUIDL. It takes **4-8 hours** to complete the whole setup.
+Before BUIDL came along, developers would have to endure many steps in order to deploy a DApp on a public blockchain. The old way was time consuming, taking between **4 to 8 hours** to complete the entire setup. The following steps are an example of what developers used to do in the past.
 
 * Install the [Chrome browser](https://www.google.com/chrome/)
 * Install [metamask Chrome extension](https://metamask.io/) 
@@ -35,7 +35,8 @@ Below are the steps for deploying an DApp on a public blockchain before BUIDL. I
 * Test and debug 
   * Response time is in minutes
 
-### After BUIDL
+## After BUIDL
+Now with BUIDL, you can write and deploy your DApp in just minutes.
 
 **Go to** [**http://buidl.secondstate.io**](http://buidl.secondstate.io) **from any browser, including smartphones.**
 
