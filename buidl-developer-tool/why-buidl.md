@@ -6,7 +6,7 @@ description: Create and deploy your first public blockchain-based app in 5 minut
 
 [BUIDL](https://buidl.secondstate.io/) is a browser-based IDE that enables developers to create and deploy Decentralized Applications \(DApps\) on blockchains with ease. For the impatient, watch the [Getting started](getting-started.md) video below.
 
-{% embed url="https://www.youtube.com/watch?v=K8gMUeOwz1s" %}
+{% embed url="https://www.youtube.com/watch?v=K8gMUeOwz1s" caption="" %}
 
 {% page-ref page="getting-started.md" %}
 
@@ -36,15 +36,16 @@ Before BUIDL came along, developers would have to endure many steps in order to 
   * Response time is in minutes
 
 ## After BUIDL
+
 Now with BUIDL, you can write and deploy your DApp in just minutes.
 
 **Go to** [**http://buidl.secondstate.io**](http://buidl.secondstate.io) **from any browser, including smartphones.**
 
-{% embed url="https://www.youtube.com/watch?v=6sQHDUkbz6k" %}
+{% embed url="https://www.youtube.com/watch?v=6sQHDUkbz6k" caption="" %}
 
 {% page-ref page="access-contracts-data/" %}
 
-{% embed url="https://www.youtube.com/watch?v=xIdelB4GG\_c" %}
+{% embed url="https://www.youtube.com/watch?v=xIdelB4GG\_c" caption="" %}
 
 {% page-ref page="rule-based-smart-contract.md" %}
 
@@ -56,8 +57,4 @@ Now with BUIDL, you can write and deploy your DApp in just minutes.
 * [Built-in](access-contracts-data/) real-time [smart contract search engine](../white-papers/google-for-smart-contracts.md) based on ElasticSearch
 
 What are you waiting for? [Getting started now](getting-started.md)!
-
-
-
-
 

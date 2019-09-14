@@ -1,6 +1,6 @@
-# Middleware for blockchain
+# Infrastructure for application protocols
 
-Blockchain smart contracts enable enterprises to automate business decisions and processes in a transparent and collaborative environment. Second State creates a suite of open source middleware solutions, including [blockchai](https://github.com/second-state/devchain)n, [virtual machine](https://github.com/second-state/lityvm), [rules engine](https://www.litylang.org/business_rules/), [search engine](https://github.com/second-state/smart-contract-search-engine), data analytics services, together with [development and DevOps tools](https://buidl.secondstate.io/), to support enterprise deployment of smart contracts.
+Blockchain smart contracts enable enterprises to automate business decisions and processes in a transparent and collaborative environment. Second State creates a suite of open source infrastructure for application protocols, including [blockchai](https://github.com/second-state/devchain)n, [virtual machine](https://github.com/second-state/lityvm), [rules engine](https://www.litylang.org/business_rules/), [search engine](https://github.com/second-state/smart-contract-search-engine), data analytics services, together with [development and DevOps tools](https://buidl.secondstate.io/), to support enterprise deployment of smart contracts.
 
 ## Smart contracts in enterprises
 
@@ -25,11 +25,11 @@ Computing tasks performed on the blockchain are completely transparent to partic
 
 The blockchain virtual machine is the key infrastructure component to enable diverse smart contracts. Virtual machine-based smart contracts can be written and deployed by any participant at any time without stopping the blockchain. An enterprise could make thousands of business decisions between parties every day, and all those decisions can be codified into smart contracts for automated and guaranteed enforcement.
 
-At Second State, we take an enterprise middleware approach to blockchain infrastructure. While [the decentralized ledger](https://github.com/second-state/devchain) is analogous to a database, [the virtual machine](https://github.com/second-state/lityvm) is analogous to the application server. Smart contracts and blockchain data services are analogous to application services deployed on the application servers.
+At Second State, we provide blockchain infrastructure for application protocols. While [the decentralized ledger](https://github.com/second-state/devchain) is analogous to a database, [the virtual machine](https://github.com/second-state/lityvm) is analogous to the application server. Smart contracts and blockchain data services are analogous to application services deployed on the application servers.
 
 ![](../.gitbook/assets/0%20%281%29.png)
 
-In the rest of this paper, we will explore how the Second State open source middleware empowers enterprise developers to solve real-world business problems. We will cover topics such as
+In the rest of this paper, we will explore how the Second State open source infrastructure for application protocols empower enterprise developers to solve real-world business problems. We will cover topics such as
 
 * [Virtual machine](https://github.com/second-state/lityvm) \(application server\) with enterprise features and optimizations
 * Smart contract application services such as [rules engine](https://www.litylang.org/business_rules/) and [search engine](https://github.com/second-state/smart-contract-search-engine)
@@ -134,5 +134,5 @@ As we had discussed before, a key feature of the Second State blockchain system 
 
 ## Conclusions
 
-Second State provides a full stack of open source middleware to support enterprise applications on blockchains. Try our solutions, and get in touch if you are interested in further collaborations!
+Second State provides a full stack of open source infrastructure for application protocols to support enterprise applications on blockchains. Try our solutions, and get in touch if you are interested in further collaborations!
 
