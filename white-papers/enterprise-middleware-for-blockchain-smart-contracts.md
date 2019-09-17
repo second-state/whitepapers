@@ -27,7 +27,7 @@ The blockchain virtual machine is the key infrastructure component to enable div
 
 At Second State, we provide blockchain infrastructure for application protocols. While [the decentralized ledger](https://github.com/second-state/devchain) is analogous to a database, [the virtual machine](https://github.com/second-state/lityvm) is analogous to the application server. Smart contracts and blockchain data services are analogous to application services deployed on the application servers.
 
-![](../.gitbook/assets/0%20%281%29.png)
+![](../.gitbook/assets/protocol-arch.png)
 
 In the rest of this paper, we will explore how the Second State open source infrastructure for application protocols empower enterprise developers to solve real-world business problems. We will cover topics such as
 
@@ -82,7 +82,7 @@ For example, the [FairPlay DApp](https://www.fairplaydapp.com/) is a product pro
 
 The FairPlay DApp home screen is the search engine. It allows users to find giveaways containing specific keywords or tags, as well as the user’s previously participated giveaways. The search engine indexes information from all FairPlay contracts deployed on the blockchain.
 
-![](../.gitbook/assets/1.png)
+![](../.gitbook/assets/protocol-fairplay.png)
 
 The search engine-based DApps do not require monolithic smart contracts. Instead, each smart contract in the DApp is designed to complete a limited set of specific business transactions. All related smart contracts are aggregated in the search engine. This pattern allows smart contracts to be modular and focused, while still providing a good end user experience.
 
