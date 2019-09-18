@@ -1,6 +1,6 @@
 # Data-driven DApps
 
-The [Getting started guide](../getting-started.md) showcased a number storage contract and DApp. In this section, we will use a similar smart contract, but to develop a new DApp that highlights data capabilities of the Second State platform, which supports [web3](https://github.com/second-state/web3-ss.js) for transactional data and [elastic search](https://github.com/second-state/es-ss.js) for state data. The complete source code for this example is [available here](https://github.com/second-state/buidl/tree/master/demo/data-v2).
+The [Getting started guide](../getting-started/) showcased a number storage contract and DApp. In this section, we will use a similar smart contract, but to develop a new DApp that highlights data capabilities of the Second State platform, which supports [web3](https://github.com/second-state/web3-ss.js) for transactional data and [elastic search](https://github.com/second-state/es-ss.js) for state data. The complete source code for this example is [available here](https://github.com/second-state/buidl/tree/master/demo/data-v2).
 
 **Access the BUIDL IDE from your browser:** [**https://buidl.secondstate.io/**](https://buidl.secondstate.io/)\*\*\*\*
 
@@ -38,7 +38,7 @@ contract AccountBalanceDemo {
 }
 ```
 
-Compile and deploy the smart contract via the **Compile** and **Deploy on the chain** buttons as we did in the [Getting started guide](../getting-started.md). 
+Compile and deploy the smart contract via the **Compile** and **Deploy on the chain** buttons as we did in the [Getting started guide](../getting-started/). 
 
 > Make sure that you give the account a name in the `_accountName` field above the **Deploy on the chain** button.
 

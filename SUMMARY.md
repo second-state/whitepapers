@@ -11,7 +11,8 @@
 ## BUIDL developer tool
 
 * [Why BUIDL](buidl-developer-tool/why-buidl.md)
-* [Getting started](buidl-developer-tool/getting-started.md)
+* [Getting started](buidl-developer-tool/getting-started/README.md)
+  * [Develop for Ethereum Classic](buidl-developer-tool/getting-started/develop-for-ethereum-classic.md)
 * [Data-driven DApps](buidl-developer-tool/access-contracts-data/README.md)
   * [Create and index contracts](buidl-developer-tool/access-contracts-data/example-contract-indexing.md)
 * [Rule-based smart contract](buidl-developer-tool/rule-based-smart-contract.md)

@@ -30,7 +30,7 @@ contract SimpleStorage {
 }
 ```
 
-Compile and deploy the smart contract via the **Compile** and **Deploy to the chain** buttons as we did in the [Getting started guide](../getting-started.md).
+Compile and deploy the smart contract via the **Compile** and **Deploy to the chain** buttons as we did in the [Getting started guide](../getting-started/).
 
 ![](../../.gitbook/assets/buidl-access_data-02.png)
 

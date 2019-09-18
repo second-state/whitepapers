@@ -4,11 +4,11 @@ description: Create and deploy your first public blockchain-based app in 5 minut
 
 # Why BUIDL
 
-[BUIDL](https://buidl.secondstate.io/) is a browser-based IDE that enables developers to create and deploy Decentralized Applications \(DApps\) on blockchains with ease. For the impatient, watch the [Getting started](getting-started.md) video below.
+[BUIDL](https://buidl.secondstate.io/) is a browser-based IDE that enables developers to create and deploy Decentralized Applications \(DApps\) on blockchains with ease. For the impatient, watch the [Getting started](getting-started/) video below.
 
 {% embed url="https://www.youtube.com/watch?v=K8gMUeOwz1s" caption="" %}
 
-{% page-ref page="getting-started.md" %}
+{% page-ref page="getting-started/" %}
 
 ## Before BUIDL
 
@@ -56,5 +56,5 @@ Now with BUIDL, you can write and deploy your DApp in just minutes.
 * [Lity](http://www.litylang.org) language extension to Solidity \(e.g., [Rule-based smart contracts](https://www.litylang.org/business_rules/)\)
 * [Built-in](access-contracts-data/) real-time [smart contract search engine](../white-papers/google-for-smart-contracts.md) based on ElasticSearch
 
-What are you waiting for? [Getting started now](getting-started.md)!
+What are you waiting for? [Getting started now](getting-started/)!
 

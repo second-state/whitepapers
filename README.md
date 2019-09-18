@@ -13,7 +13,7 @@ The BUIDL tool is the best way for developers to experience the full feature of 
 * Allow other people to run your H5 JavaScript DApp
 * Interact with your own Second State blockchain
 
-{% page-ref page="buidl-developer-tool/getting-started.md" %}
+{% page-ref page="buidl-developer-tool/getting-started/" %}
 
 
 
