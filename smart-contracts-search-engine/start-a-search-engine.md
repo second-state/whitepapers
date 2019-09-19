@@ -241,6 +241,27 @@ sudo chmod a+x /usr/sbin/certbot-auto
 sudo certbot-auto --apache -d search-engine.com  -d www.search-engine.com
 ```
 
+### Potential issues with SSL
+There is [a known issue](https://github.com/certbot/certbot/issues/6824) which results in the following error message...
+```
+subprocess.CalledProcessError: Command '['virtualenv', '--no-site-packages', '--python', '/usr/bin/python2.7', '/opt/eff.org/certbot/venv']' returned non-zero exit status 1
+```
+If you experience this, please use [this alternative solution](https://certbot.eff.org/lets-encrypt/ubuntubionic-apache) for certbot-auto
+```
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo add-apt-repository universe
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+```
+```
+sudo apt-get install certbot python-certbot-apache
+```
+```
+sudo certbot --apache
+```
+Then follow the prompts.
+
 ### Harvesting
 
 Please follow the instructions below so that your system can automatically execute all of the search engine's scripts.
