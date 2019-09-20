@@ -12,7 +12,7 @@ The CyberMiles blockchain is fully compatible with the Ethereum protocol. It is 
 
 The easy way is to just click the link below to launch BUIDL in your browser. It pre-loads all the configurations for you. 
 
-[https://buidl.secondstate.io/?es\_provider=https%3A%2F%2Fcmt.search.secondstate.io&web3\_provider=https%3A%2F%2Frpc.cybermiles.io%3A8545&web3\_chainId=18&gas\_price=5000000000&gas\_limit=8000000](https://buidl.secondstate.io/?es_provider=https%3A%2F%2Fcmt.search.secondstate.io&web3_provider=https%3A%2F%2Frpc.cybermiles.io%3A8545&web3_chainId=18&gas_price=5000000000&gas_limit=8000000)
+[https://buidl.secondstate.io/cmt](https://buidl.secondstate.io/cmt)
 
 Of course, you can also manually setup the configurations from the **Providers** tab at the lower left panel of BUIDL.
 

@@ -16,7 +16,7 @@ That said, to develop decentralized applications \(dapps\) on Ethereum using BUI
 
 The easy way is to just click the link below to launch BUIDL in your browser. It pre-loads all the configurations for you. 
 
-[https://buidl.secondstate.io/?es\_provider=https%3A%2F%2Feth.search.secondstate.io&web3\_provider=https%3A%2F%2Fmainnet.infura.io&web3\_chainId=1&gas\_price=10000000000&gas\_limit=8000000](https://buidl.secondstate.io/?es_provider=https%3A%2F%2Feth.search.secondstate.io&web3_provider=https%3A%2F%2Fmainnet.infura.io&web3_chainId=1&gas_price=10000000000&gas_limit=8000000)
+[https://buidl.secondstate.io/eth](https://buidl.secondstate.io/eth)
 
 Of course, you can also manually setup the configurations from the **Providers** tab at the lower left panel of BUIDL.
 

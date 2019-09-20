@@ -14,7 +14,7 @@ To develop decentralized applications \(dapps\) on Ethereum Classic using BUIDL 
 
 The easy way is to just click the link below to launch BUIDL in your browser. It pre-loads all the configurations for you. 
 
-[https://buidl.secondstate.io/?es\_provider=https%3A%2F%2Fetc.search.secondstate.io&web3\_provider=https%3A%2F%2Fwww.ethercluster.com%2Fetc&web3\_chainId=61&gas\_price=10000000000&gas\_limit=8000000](https://buidl.secondstate.io/?es_provider=https%3A%2F%2Fetc.search.secondstate.io&web3_provider=https%3A%2F%2Fwww.ethercluster.com%2Fetc&web3_chainId=61&gas_price=10000000000&gas_limit=8000000)
+[https://buidl.secondstate.io/etc](https://buidl.secondstate.io/etc)
 
 Of course, you can also manually setup the configurations from the **Providers** tab at the lower left panel of BUIDL.
 
@@ -25,8 +25,8 @@ Of course, you can also manually setup the configurations from the **Providers**
 ) |
 | Chain ID | 61 |
 | Custom Tx Gas | Checked |
-| Gas Price | 10000000000 |
-| Gas Limit | 8000000 |
+| Gas Price | 15000000000 |
+| Gas Limit | 7000000 |
 
 The gas price and limit are the default values when you use BUIDL to deploy or call contracts. They are also used when you call `web3.ss` functions in the JavaScript application without specifying gas.
 
