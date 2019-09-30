@@ -75,14 +75,13 @@ The HTML renders a button to create new storage contracts, as well as a table th
 #### Step 3: Copy and paste the following into the dapp -&gt; JS tab
 
 ```javascript
-/* Don't modify */
-var abi = [{"constant":false,"inputs":[{"name":"x","type":"uint256"}],"name":"set","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"get","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}];
-var bytecode = '608060405234801561001057600080fd5b5060df8061001f6000396000f3006080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806360fe47b114604e5780636d4ce63c146078575b600080fd5b348015605957600080fd5b5060766004803603810190808035906020019092919050505060a0565b005b348015608357600080fd5b50608a60aa565b6040518082815260200191505060405180910390f35b8060008190555050565b600080549050905600a165627a7a72305820059f37cec42b77564cde89caa635fe7ef4cc9b16595b3c715387bd950e3ed2490029';
-var contract = web3.ss.contract(abi);
-var instance = contract.at('');
-/* Don't modify */
-
-reload();
+var contract = window.web3 && web3.ss && web3.ss.contract(abi);
+var instance = contract && contract.at(cAddr);
+window.addEventListener('web3Ready', function() {
+  contract = web3.ss.contract(abi);
+  instance = contract.at(cAddr);
+  reload();
+});
 
 function reload() {
     document.querySelector("#create").innerHTML = "Create a new storage contract";

@@ -13,7 +13,7 @@ In this section, we will walk through the default example that comes with the [B
 {% embed url="https://www.youtube.com/watch?v=K8gMUeOwz1s" caption="Watch a 4-min video on how to create your first DApp in BUIDL" %}
 
 {% hint style="info" %}
-BUIDL works with the [Second State DevChain](../../devchain/getting-started.md) by default. It could also work with any [blockchain started by the Second BaaS](../working-with-baas.md) service, as well as any [Ethereum compatible blockchains](../working-with-ethereum.md).
+BUIDL works with the [Second State DevChain](../../devchain/getting-started.md) by default. It could also work with any [blockchain started by the Second BaaS](../working-with-baas.md) service, as well as any [Ethereum compatible blockchains]().
 {% endhint %}
 
 #### Step 1: Create and deploy a simple Solidity smart contract
@@ -44,11 +44,20 @@ The HTML tab above shows a simple HTML page with two buttons.
 
 Next, go to the JS tab. It shows JavaScript on how to interact with the smart contract.
 
-![](../../.gitbook/assets/buidl-getting_started-05.png)
+![](../../.gitbook/assets/screen-shot-2019-09-30-at-2.25.50-pm.png)
 
-The JS has four sections. The first section is `Don't modify` as it is populated by the BUIDL tool itself. It contains code to instantiate the contract you just deployed via BUIDL.
+The JS has four sections. The first section is `Don't modify` as it is populated by the BUIDL tool itself. It contains information about the contract you just deployed via BUIDL.
 
-The second section shows you how to use the Second State smart contract search service. It takes the contract you just deployed, and finds all deployed contracts of the same type. It just logs the search results to the console right now. But in the [next example](../access-contracts-data/), I will show you how to use the search results.
+The second section shows you the boilerplate to instantiate the `contract` and `instance` objects using data from the first section.
+
+```javascript
+var contract = window.web3 && web3.ss && web3.ss.contract(abi);
+var instance = contract && contract.at(cAddr);
+window.addEventListener('web3Ready', function() {
+  contract = web3.ss.contract(abi);
+  instance = contract.at(cAddr);
+});
+```
 
 The third section is the event handler for the **Set Data** button. It shows how to call the smart contract's `set()` function in a transaction from JavaScript.
 

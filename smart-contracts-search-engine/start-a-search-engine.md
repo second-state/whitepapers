@@ -296,7 +296,8 @@ sudo apt-get -y install python3-pip
 ```
 
 Eth-Abi
-```
+
+```text
 python3.6 -m pip install eth-abi --user
 ```
 

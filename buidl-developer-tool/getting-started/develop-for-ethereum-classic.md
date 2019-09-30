@@ -30,6 +30,8 @@ Of course, you can also manually setup the configurations from the **Providers**
 
 The gas price and limit are the default values when you use BUIDL to deploy or call contracts. They are also used when you call `web3.ss` functions in the JavaScript application without specifying gas.
 
+Furthermore, since the Ethereum Classic requires bytecode generated from Solidity compiler version 0.4.2, you will need to append a `/?s042` URL parameter to BUIDL. All these are done for you at [https://buidl.secondstate.io/etc](https://buidl.secondstate.io/etc)
+
 ## Step 2 Get some ETCs for gas
 
 In the **Accounts** tab, you will see 5 auto-generated ETC addresses, and you can set any of them as default. The default address is used to sign transactions from both BUIDL and `web3.ss` applications. Because of that, you will need to send a little ETC \(0.1 ETC is enough\) into that account to pay for gas fees.

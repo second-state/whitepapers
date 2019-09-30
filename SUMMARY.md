@@ -15,12 +15,13 @@
   * [Develop for Ethereum Classic](buidl-developer-tool/getting-started/develop-for-ethereum-classic.md)
   * [Develop for CyberMiles](buidl-developer-tool/getting-started/develop-for-cybermiles.md)
   * [Develop for Ethereum](buidl-developer-tool/getting-started/develop-for-ethereum.md)
+  * [MetaMask notes](buidl-developer-tool/getting-started/metamask-notes.md)
 * [Data-driven DApps](buidl-developer-tool/access-contracts-data/README.md)
   * [Create and index contracts](buidl-developer-tool/access-contracts-data/example-contract-indexing.md)
 * [Rule-based smart contract](buidl-developer-tool/rule-based-smart-contract.md)
 * [Sharing your DApp](buidl-developer-tool/sharing-your-dapp.md)
 * [Working with BaaS](buidl-developer-tool/working-with-baas.md)
-* [Working with Ethereum](buidl-developer-tool/working-with-ethereum.md)
+* [DEMO: A voting dapp](buidl-developer-tool/demo-a-voting-dapp.md)
 
 ## DevChain
 
