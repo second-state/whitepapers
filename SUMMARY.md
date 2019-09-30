@@ -21,7 +21,10 @@
 * [Rule-based smart contract](buidl-developer-tool/rule-based-smart-contract.md)
 * [Sharing your DApp](buidl-developer-tool/sharing-your-dapp.md)
 * [Working with BaaS](buidl-developer-tool/working-with-baas.md)
-* [DEMO: A voting dapp](buidl-developer-tool/demo-a-voting-dapp.md)
+* [DEMO: A voting dapp](buidl-developer-tool/demo-a-voting-dapp/README.md)
+  * [DevChain](buidl-developer-tool/demo-a-voting-dapp/devchain.md)
+  * [Ethereum Classic](buidl-developer-tool/demo-a-voting-dapp/ethereum-classic.md)
+  * [CyberMiles](buidl-developer-tool/demo-a-voting-dapp/cybermiles.md)
 
 ## DevChain
 

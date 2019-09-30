@@ -1,2 +1,0 @@
-# DEMO: A voting dapp
-
