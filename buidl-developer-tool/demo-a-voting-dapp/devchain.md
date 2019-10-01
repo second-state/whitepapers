@@ -4,9 +4,13 @@ description: No gas needed. Accounts are only for identification purposes.
 
 # DevChain
 
+## See the dapp in action
+
+{% page-ref page="./" %}
+
 ## **Step 1** 
 
-Open the BUIDL IDE tool in any browser. http://buidl.secondstate.io/
+Open the BUIDL IDE tool in any browser. [http://buidl.secondstate.io/](http://buidl.secondstate.io/)
 
 ## **Step 2** 
 

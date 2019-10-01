@@ -6,9 +6,13 @@ description: >-
 
 # CyberMiles
 
+## See the dapp in action
+
+{% page-ref page="./" %}
+
 ## **Step 1** 
 
-Open the BUIDL IDE tool in any browser. http://buidl.secondstate.io/cmt
+Open the BUIDL IDE tool in any browser. [http://buidl.secondstate.io/cmt](http://buidl.secondstate.io/cmt)
 
 ## **Step 2** 
 

@@ -6,6 +6,10 @@ description: >-
 
 # Ethereum Classic
 
+## See the dapp in action
+
+{% page-ref page="./" %}
+
 ## **Step 1** 
 
 Open the BUIDL IDE tool in any browser. [http://buidl.secondstate.io/etc](http://buidl.secondstate.io/etc)
@@ -80,6 +84,7 @@ The contract is now deployed on the ETC blockchain, and you can call its functio
 ```markup
 <div class="container">
    <br/>
+   <div class="alert alert-primary" role="alert">If you have MetaMask for ETC, select MetaMask in the accounts widget at bottom right.</div>
    <div class="jumbotron">
       <p class="lead" id="greeting"></p>
       <div id="imageDiv" style="display:none">
@@ -98,6 +103,8 @@ The contract is now deployed on the ETC blockchain, and you can call its functio
       <div id="myVoteUp" style="display:none">You have already voted 👍</div>
       <div id="myVoteDown" style="display:none">You have already voted 👎</div>
    </div>
+   <p>You need to pay a tiny amount of ETCs to vote. Make sure that you have at least 0.1 ETC at your current account address: <a target="_blank" href="" id="myAddr"></a></p>
+   <p style="text-align:center">Created with <a target="_blank" href="https://www.secondstate.io/etc/">BUIDL for ETC</a>. Checkout the <a target="_blank" href="https://docs.secondstate.io/buidl-developer-tool/demo-a-voting-dapp/ethereum-classic">tutorial</a> to create your own!</p>
 </div>
 ```
 
@@ -142,6 +149,8 @@ function reload() {
                     $("#form").css("display", "block");
                 }
             });
+            $("#myAddr").text(address);
+            $("#myAddr").attr("href", "https://blockscout.com/etc/mainnet/address/" + address);
         }
     });
 }
