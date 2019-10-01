@@ -73,9 +73,10 @@ The contract is now deployed on the DevChain, and you can call its functions dir
          <span id="downs"></span> voted 👎
       </p>
       <form id="form" class="form-inline" style="display:none">
-         <button id="voteUp" onclick="vote(1);" class="btn btn-primary mb-2">👍</button>
-         <button id="voteDown" onclick="vote(-1);" class="btn btn-primary mb-2">👎</button>
+         <button id="voteUp" type="button" onclick="return vote(1);" class="btn btn-secondary mb-2">👍</button>
+         <button id="voteDown" type="button" onclick="return vote(-1);" class="btn btn-secondary mb-2">👎</button>
       </form>
+      <div id="formSubmitted" style="display:none">Please wait 2 seconds ...</div>
       <div id="myVoteUp" style="display:none">You have already voted 👍</div>
       <div id="myVoteDown" style="display:none">You have already voted 👎</div>
    </div>
@@ -85,10 +86,9 @@ The contract is now deployed on the DevChain, and you can call its functions dir
 ### 2.5 Copy and paste the following JavaScript code into the JS editor.
 
 ```javascript
-var contract = window.web3 && web3.ss && web3.ss.contract(abi);
-var instance = contract && contract.at(cAddr);
+var instance = null;
 window.addEventListener('web3Ready', function() {
-  contract = web3.ss.contract(abi);
+  var contract = web3.ss.contract(abi);
   instance = contract.at(cAddr);
   reload();
 });
@@ -111,10 +111,11 @@ function reload() {
         }
     });
 
+    $("#form").css("display", "none");
+    $("#formSubmitted").css("display", "none");
     web3.ss.getAccounts(function (e, address) {
         if (!e) {
             instance.getVote(address, function (ee, r) {
-                $("#form").css("display", "none");
                 if (r == 1) {
                     $("#myVoteUp").css("display", "block");
                 } else if (r == -1) {
@@ -130,15 +131,16 @@ function reload() {
 function vote (choice) {
     web3.ss.getAccounts(function (e, address) {
         if (!e) {
-            $("#form").html("<p>Wait for 20 seconds ...</p>");
-            instance.vote(choice, function (e, result) {
-                if (e) {
-                    window.alert("Failed. Check if there is at least 0.1 ETC (for gas fee) in your account " + address);
+            $("#form").css("display", "none");
+            $("#formSubmitted").css("display", "block");
+            instance.vote(choice, function (ee, result) {
+                if (ee) {
+                    window.alert("Failed for " + address);
                 }
             });
             setTimeout(function () {
                 reload ();
-            }, 20 * 1000);
+            }, 2 * 1000);
         }
     });
     return false;
