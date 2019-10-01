@@ -1,3 +1,9 @@
+---
+description: >-
+  Both developers and users need accounts with little ETC for gas. Metamask for
+  ETC is supported for both developers and users.
+---
+
 # Ethereum Classic
 
 ## **Step 1** 

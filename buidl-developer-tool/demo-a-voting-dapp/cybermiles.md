@@ -1,3 +1,9 @@
+---
+description: >-
+  Developers require CMT to deploy contracts. Users can access contracts without
+  gas.
+---
+
 # CyberMiles
 
 ## **Step 1** 
@@ -6,7 +12,7 @@ Open the BUIDL IDE tool in any browser. http://buidl.secondstate.io/cmt
 
 ## **Step 2** 
 
-Open the Accounts tab and send a little CMTs to your default account. If you do not have CMT, you can ask for some from etc@secondstate.io
+Open the Accounts tab and send a little CMTs to your default account. If you do not have CMT, you can ask for some from cmt@secondstate.io
 
 {% hint style="info" %}
 If you have CyberMiles' Venus wallet, you could opt to use Venus in the Providers tab. BUIDL and dapps it creates will now use the default account in Venus to make contract calls and to pay for gas.

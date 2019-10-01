@@ -6,5 +6,11 @@ The example dapp is a web application where people can vote thumb up or thumb do
 
 ![](../../.gitbook/assets/screen-shot-2019-09-30-at-1.27.20-pm.png)
 
+How to deploy and publish this application on different public blockchains.
 
+{% page-ref page="devchain.md" %}
+
+{% page-ref page="ethereum-classic.md" %}
+
+{% page-ref page="cybermiles.md" %}
 

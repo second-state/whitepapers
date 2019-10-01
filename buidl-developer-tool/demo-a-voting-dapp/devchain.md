@@ -1,3 +1,7 @@
+---
+description: No gas needed. Accounts are only for identification purposes.
+---
+
 # DevChain
 
 ## **Step 1** 
