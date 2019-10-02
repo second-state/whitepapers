@@ -99,7 +99,7 @@ The contract is now deployed on the ETC blockchain, and you can call its functio
          <button id="voteUp" type="button" onclick="return vote(1);" class="btn btn-secondary mb-2">👍</button>
          <button id="voteDown" type="button" onclick="return vote(-1);" class="btn btn-secondary mb-2">👎</button>
       </form>
-      <div id="formSubmitted" style="display:none">Please wait 20 seconds ...</div>
+      <div id="formSubmitted" style="display:none">Please wait up to 42 seconds for confirmation ...</div>
       <div id="myVoteUp" style="display:none">You have already voted 👍</div>
       <div id="myVoteDown" style="display:none">You have already voted 👎</div>
    </div>
@@ -170,7 +170,7 @@ function vote (choice) {
             });
             setTimeout(function () {
                 reload ();
-            }, 20 * 1000);
+            }, 42 * 1000);
         }
     });
     return false;
