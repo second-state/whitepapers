@@ -25,8 +25,8 @@ Of course, you can also manually setup the configurations from the **Providers**
 ) |
 | Chain ID | 61 |
 | Custom Tx Gas | Checked |
-| Gas Price | 15000000000 |
-| Gas Limit | 7000000 |
+| Gas Price | 3000000000 |
+| Gas Limit | 5000000 |
 
 The gas price and limit are the default values when you use BUIDL to deploy or call contracts. They are also used when you call `web3.ss` functions in the JavaScript application without specifying gas.
 
