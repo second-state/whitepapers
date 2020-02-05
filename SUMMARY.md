@@ -41,3 +41,11 @@
 * [Start a search engine \(Ubuntu\)](smart-contracts-search-engine/start-a-search-engine.md)
 * [Demos](smart-contracts-search-engine/demos.md)
 
+## Beginners guide to WebAssembly
+
+* [Why WebAssembly](beginners-guide-to-webassembly/why-webassembly.md)
+* [A Rusty hello world](beginners-guide-to-webassembly/a-rusty-hello-world.md)
+* [My first WebAssembly app](beginners-guide-to-webassembly/my-first-webassembly-app.md)
+* [WASM hello world](beginners-guide-to-webassembly/wasm-hello-world.md)
+* [WASM on the server-side](beginners-guide-to-webassembly/wasm-on-the-server-side.md)
+
