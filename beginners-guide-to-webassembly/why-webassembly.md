@@ -6,6 +6,14 @@ description: >-
 
 # Why WebAssembly
 
+{% page-ref page="a-rusty-hello-world.md" %}
+
+{% page-ref page="my-first-webassembly-app.md" %}
+
+{% page-ref page="wasm-hello-world.md" %}
+
+{% page-ref page="wasm-on-the-server-side.md" %}
+
 In this tutorial series, I will use short and concise code recipes to show you how WebAssembly technology could enhance your applications. Before we start coding, here are some FAQs.
 
 > WebAssembly aims to drastically improve your application performance, safety, and developer productivity.
@@ -42,4 +50,12 @@ You can also write WebAssembly programs in a variety of different programming la
 Rust has been voted the most beloved programming language for the past 4 years in a row. It is the hottest programming language right now. It has many exciting features. For example, it is powerful and flexible like C, but much safer and without Java’s performance overhead. It supports both object-oriented and functional programming paradigms. It is one of the fastest-growing programming languages in the world and is now used in the entire software stack from front end to backend to infrastructure.
 
 Now stay tuned for our WebAssembly tutorials!
+
+{% page-ref page="a-rusty-hello-world.md" %}
+
+{% page-ref page="my-first-webassembly-app.md" %}
+
+{% page-ref page="wasm-hello-world.md" %}
+
+{% page-ref page="wasm-on-the-server-side.md" %}
 
