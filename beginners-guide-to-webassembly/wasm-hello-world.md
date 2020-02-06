@@ -1,5 +1,5 @@
 ---
-description: How to pass string values from JavaScript to WASM / Rust
+description: How to pass string values from JavaScript to WASM / Rust.
 ---
 
 # WASM hello world

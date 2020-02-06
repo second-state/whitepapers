@@ -1,3 +1,7 @@
+---
+description: Call WebAssembly functions from a node.js web application.
+---
+
 # WASM on the server-side
 
 In previous tutorials, we discussed how to access WebAssembly functions from JavaScript applications hosted inside web browsers. However, as we also noted, there are great use cases for [WebAssembly on the server-side](https://medium.com/wasm/webassembly-on-the-server-side-c584f874b4a3), especially for AI, blockchain, and big data applications. In this example, I will show you how to incorporate WebAssembly functions, written in Rust, into node.js applications on the server. We can provide WebAssembly functions as a microservice.

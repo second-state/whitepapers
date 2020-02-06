@@ -1,5 +1,7 @@
 ---
-description: Getting started with the Rust programming language
+description: >-
+  Getting started with the Rust programming language - Rust is the
+  best-supported language on WebAssembly today.
 ---
 
 # A Rusty hello world
