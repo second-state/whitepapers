@@ -1,5 +1,5 @@
 ---
-description: A series of beginner's tutorials for WebAssembly.
+description: A series of beginners tutorials for WebAssembly and related technologies.
 ---
 
 # Beginners guide to WebAssembly

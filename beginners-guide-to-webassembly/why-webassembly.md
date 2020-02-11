@@ -6,9 +6,19 @@ description: >-
 
 # Why WebAssembly
 
-WebAssembly aims to drastically improve your application performance, safety, and developer productivity. It replaces native code with a managed container and finely grained security model. 
+In this tutorial series, I will use short and concise code recipes to show you how WebAssembly technology could enhance your applications.
 
-#### **Why do we program in native code in 2020?**
+> WebAssembly aims to drastically improve your application performance, safety, and developer productivity.
+
+{% page-ref page="a-rusty-hello-world.md" %}
+
+{% page-ref page="my-first-webassembly-app.md" %}
+
+{% page-ref page="wasm-hello-world.md" %}
+
+{% page-ref page="wasm-on-the-server-side.md" %}
+
+#### **Why do we need to squeeze performance from our code?**
 
 In the past several years, CPU speed has pretty much stopped improving. At the same time, AI, big data, and blockchain have all create huge demands for more computing power. So far, the solution has been more and more native code in our software. Native code is efficient, close to the hardware, and can access specialized hardware such as GPU and AI chips.
 
@@ -39,7 +49,13 @@ You can also write WebAssembly programs in a variety of different programming la
 
 Rust has been voted the most beloved programming language for the past 4 years in a row. It is the hottest programming language right now. It has many exciting features. For example, it is powerful and flexible like C, but much safer and without Java’s performance overhead. It supports both object-oriented and functional programming paradigms. It is one of the fastest-growing programming languages in the world and is now used in the entire software stack from front end to backend to infrastructure.
 
-Our first tutorial is to get you set up with Rust tools to write WebAssembly programs!
+Now stay tuned for our WebAssembly tutorials!
 
 {% page-ref page="a-rusty-hello-world.md" %}
+
+{% page-ref page="my-first-webassembly-app.md" %}
+
+{% page-ref page="wasm-hello-world.md" %}
+
+{% page-ref page="wasm-on-the-server-side.md" %}
 
