@@ -4,6 +4,8 @@ description: How to pass string values from JavaScript to WASM / Rust.
 
 # WASM hello world
 
+{% embed url="https://github.com/second-state/wasm-learning/tree/master/browser/hello" caption="Click on the box above to go to Github repo of the tutorial source code" %}
+
 In the [previous tutorial](my-first-webassembly-app.md), we mentioned that a WebAssembly application typically has two parts.
 
 * The bytecode program that runs inside the WebAssembly virtual machine

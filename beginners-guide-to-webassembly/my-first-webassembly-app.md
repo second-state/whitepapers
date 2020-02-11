@@ -4,6 +4,8 @@ description: 'Create a simple WebAssembly app in Rust, and then call it from Jav
 
 # My first WebAssembly app
 
+{% embed url="https://github.com/second-state/wasm-learning/tree/master/browser/triple" caption="Click on the box above to go to Github repo of the tutorial source code" %}
+
 In this tutorial, we will create a very simple but complete WebAssembly application. A WebAssembly application typically has two parts.
 
 * The bytecode program that runs inside the WebAssembly virtual machine to perform computing tasks
