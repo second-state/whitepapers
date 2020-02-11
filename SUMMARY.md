@@ -2,8 +2,9 @@
 
 * [What is Second State](README.md)
 
-## Beginners guide to WebAssembly
+## WebAssembly guide <a id="beginners-guide-to-webassembly"></a>
 
+* [Beginners guide to WebAssembly](beginners-guide-to-webassembly/beginners-guide-to-webassembly.md)
 * [Why WebAssembly](beginners-guide-to-webassembly/why-webassembly.md)
 * [A Rusty hello world](beginners-guide-to-webassembly/a-rusty-hello-world.md)
 * [My first WebAssembly app](beginners-guide-to-webassembly/my-first-webassembly-app.md)
