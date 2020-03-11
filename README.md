@@ -1,5 +1,7 @@
 # What is Second State
 
+Second State  builds WebAssembly execution engines, frameworks, and developer toolchain for the cloud. The Second State Virtual Machine \(SSVM\) is a WebAssembly runtime optimized for server-side applications. It replaces un-managed and unsafe code on the server side, such as native code for high performance, AI, or big data operations.
+
 Second State provides turn-key blockchain and smart contract solutions for businesses. Second State blockchains are programmable by its enterprise customers, optimized for business use cases, and completely open source. They are supported by commercial service agreements. The paper below describes our approach.
 
 {% page-ref page="white-papers/enterprise-middleware-for-blockchain-smart-contracts.md" %}
