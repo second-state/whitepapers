@@ -4,7 +4,7 @@ description: >-
   best-supported language on WebAssembly today.
 ---
 
-# A Rusty hello world
+# A Rusty Hello World
 
 {% embed url="https://github.com/second-state/wasm-learning/tree/master/rust" caption="Click on the box above to go to Github repo of the tutorial source code" %}
 

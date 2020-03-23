@@ -2,7 +2,7 @@
 description: How to pass string values from JavaScript to WASM / Rust.
 ---
 
-# WASM hello world
+# WASM Hello World
 
 {% embed url="https://github.com/second-state/wasm-learning/tree/master/browser/hello" caption="Click on the box above to go to Github repo of the tutorial source code" %}
 

@@ -2,7 +2,7 @@
 description: 'Create a simple WebAssembly app in Rust, and then call it from JavaScript!'
 ---
 
-# My first WebAssembly app
+# My First WebAssembly App
 
 {% embed url="https://github.com/second-state/wasm-learning/tree/master/browser/triple" caption="Click on the box above to go to Github repo of the tutorial source code" %}
 

@@ -2,7 +2,7 @@
 description: Call WebAssembly functions from a node.js web application.
 ---
 
-# WASM on the server-side
+# WASM on the Server-side
 
 {% embed url="https://github.com/second-state/wasm-learning/tree/master/nodejs/hello" caption="Click on the box above to go to Github repo of the tutorial source code" %}
 

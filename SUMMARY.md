@@ -2,14 +2,18 @@
 
 * [What is Second State](README.md)
 
-## WebAssembly guide <a id="beginners-guide-to-webassembly"></a>
+## Serverless Cloud
 
-* [Beginners guide to WebAssembly](beginners-guide-to-webassembly/beginners-guide-to-webassembly.md)
-* [Why WebAssembly](beginners-guide-to-webassembly/why-webassembly.md)
-* [A Rusty hello world](beginners-guide-to-webassembly/a-rusty-hello-world.md)
-* [My first WebAssembly app](beginners-guide-to-webassembly/my-first-webassembly-app.md)
-* [WASM hello world](beginners-guide-to-webassembly/wasm-hello-world.md)
-* [WASM on the server-side](beginners-guide-to-webassembly/wasm-on-the-server-side.md)
+* [The Case for WebAssembly on the Server-side](serverless-cloud/the-case-for-webassembly-on-the-server-side.md)
+* [WebAssembly vs Native Code](serverless-cloud/why-webassembly.md)
+
+## WebAssembly Guides <a id="beginners-guide-to-webassembly"></a>
+
+* [Beginners Guide to WebAssembly](beginners-guide-to-webassembly/beginners-guide-to-webassembly.md)
+* [A Rusty Hello World](beginners-guide-to-webassembly/a-rusty-hello-world.md)
+* [My First WebAssembly App](beginners-guide-to-webassembly/my-first-webassembly-app.md)
+* [WASM Hello World](beginners-guide-to-webassembly/wasm-hello-world.md)
+* [WASM on the Server-side](beginners-guide-to-webassembly/wasm-on-the-server-side.md)
 
 ## White Papers
 
