@@ -12,5 +12,7 @@ In this tutorial series, I will use short and concise code recipes to show you h
 
 {% page-ref page="wasm-hello-world.md" %}
 
+{% page-ref page="webassembly-on-the-server-side.md" %}
+
 
 
