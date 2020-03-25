@@ -10,11 +10,7 @@ In this tutorial series, I will use short and concise code recipes to show you h
 
 {% page-ref page="a-rusty-hello-world.md" %}
 
-{% page-ref page="my-first-webassembly-app.md" %}
-
 {% page-ref page="wasm-hello-world.md" %}
-
-{% page-ref page="wasm-on-the-server-side.md" %}
 
 
 

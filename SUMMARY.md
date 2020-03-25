@@ -11,9 +11,8 @@
 
 * [Beginners Guide to WebAssembly](beginners-guide-to-webassembly/beginners-guide-to-webassembly.md)
 * [A Rusty Hello World](beginners-guide-to-webassembly/a-rusty-hello-world.md)
-* [My First WebAssembly App](beginners-guide-to-webassembly/my-first-webassembly-app.md)
-* [WASM Hello World](beginners-guide-to-webassembly/wasm-hello-world.md)
-* [WASM on the Server-side](beginners-guide-to-webassembly/wasm-on-the-server-side.md)
+* [WebAssembly in the Browser](beginners-guide-to-webassembly/wasm-hello-world.md)
+* [WebAssembly on the Server-side](beginners-guide-to-webassembly/webassembly-on-the-server-side.md)
 
 ## White Papers
 
@@ -53,4 +52,9 @@
   * [Notes on SSL with Docker](smart-contracts-search-engine/start-a-search-engine-docker/notes-on-ssl-with-docker.md)
 * [Start a search engine \(Ubuntu\)](smart-contracts-search-engine/start-a-search-engine.md)
 * [Demos](smart-contracts-search-engine/demos.md)
+
+## Related Technologies
+
+* [Rust and WebAssembly](related-technologies/my-first-webassembly-app.md)
+* [WebAssembly and nodejs](related-technologies/wasm-on-the-server-side.md)
 

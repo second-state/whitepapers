@@ -97,7 +97,7 @@ Hello Rust
 
 #### **What about WebAssembly?**
 
-Now we have seen how to create build native executable programs from Rust source code. The executable program can only run on your build machine and could be unsafe. In the next tutorials, I will show you. 
+Now we have seen how to create build native executable programs from Rust source code. The executable program can only run on your build machine and could be unsafe. In the next tutorial, I will show you. 
 
 * How to build WebAssembly bytecode programs instead of native executable files from Rust source code.
 * How to interact with WebAssembly programs via a web browser instead of the cumbersome command line.

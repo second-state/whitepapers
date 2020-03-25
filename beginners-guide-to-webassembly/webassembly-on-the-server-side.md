@@ -1,0 +1,136 @@
+---
+description: Run high performance Rust code safely inside nodejs
+---
+
+# WebAssembly on the Server-side
+
+There are great use cases for [WebAssembly on the server-side](https://medium.com/wasm/webassembly-on-the-server-side-c584f874b4a3), especially for AI, blockchain, and big data applications. In this tutorial, I will show you how to incorporate WebAssembly functions, written in Rust, into nodejs applications on the server. We can therefore provide WebAssembly functions as a microservice \(FaaS\).
+
+In this tutorial, we use the Second State Virtual Machine \(SSVM\) , an open source WebAssembly runtime optimized for server-side applications, together with nodejs. The SSVM provides not only a WebAssembly runtime in nodejs, but also a compiler toolchain for Rust and JavaScript.
+
+> While nodejs comes with a default WebAssmebly runtime inside its V8 JavaScript engine, V8 is not designed to handle the performance and complex integration requirements of server-side applications. Compared with V8, the server-optimized SSVM is more performant, integrates better with JavaScript, provides access to external enterprise resources, and supports finely grained metering.
+
+The demo application is structured as follows.
+
+* The host application is a nodejs web application written in JavaScript. It makes WebAssembly function calls.
+* The WebAssembly bytecode program is written in Rust. It runs inside the SSVM, and is called from the nodejs web application.
+
+The source code of the tutorial is [here](https://github.com/second-state/wasm-learning/blob/master/nodejs/hello.md).
+
+#### **Setup**
+
+The `ssvmup` npm module installs the Second State Virtual Machine \(SSVM\) into nodejs as a native `addon`, and provides the necessary compiler tools. Follow the steps below to install Rust and the `ssvmup` tool.
+
+```text
+# Install Rust
+
+$ sudo apt-get update
+$ sudo apt-get -y upgrade
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+$ source $HOME/.cargo/env
+```
+
+```text
+# Install wasm-pack tools
+
+$ curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+```
+
+#### **WebAssembly program in Rust**
+
+In this example, our Rust program appends the input string after “hello”. Let’s create a new `cargo` project. Since this program is intended to be called from a host application, not to run as a stand-alone executable, we will create a `hello` project.
+
+```text
+$ cargo new --lib hello
+$ cd hello
+```
+
+Edit the `Cargo.toml` file to add a `[lib]` section. It tells the compiler where to find the source code for the library and how to generate the bytecode output. We also need to add a dependency of `wasm-bindgen` here. It is the utility `wasm-pack` uses to generate the JavaScript binding for the Rust WebAssembly program.
+
+```text
+[lib]
+name = "hello_lib"
+path = "src/lib.rs"
+crate-type =["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.50"
+```
+
+Below is the content of the Rust program `src/lib.rs`. You can actually define multiple external functions in this library file, and all of them will be available to the host JaveScript app via WebAssembly.
+
+```text
+use wasm_bindgen::prelude::*;
+
+#[wasm_bindgen]
+pub fn say(s: String) -> String {
+  let r = String::from("hello ");
+  return r + &s;
+}
+```
+
+Next, you can compile the Rust source code into WebAssembly bytecode and generate the accompanying JavaScript module for the nodejs host environment.
+
+```text
+$ ssvmup build
+```
+
+The result are the following three files. the `.wasm` file is the WebAssembly bytecode program, and the `.js` files are for the JavaScript module.
+
+```text
+pkg/hello_lib_bg.wasm
+pkg/hello_lib_bg.js
+pkg/hello_lib.js
+```
+
+#### **The nodejs host application**
+
+Next, let’s create a node folder for the nodejs web application. Copy over the generated JavaScript module files.
+
+```text
+$ mkdir node
+$ cp pkg/hello_lib_bg.wasm node/
+$ cp pkg/hello_lib_bg.js node/
+$ cp pkg/hello_lib.js node/
+```
+
+With the generated `hello_lib.js` module, it is very easy to write JavaScript to call WebAssembly functions. Below is the node application `app.js`. It simply imports the `say()` function from the generated module. The node application takes the `name` parameter from incoming an HTTP GET request, and responds with “hello `name`”.
+
+```text
+const { say } = require('./hello_lib.js');
+
+const http = require('http');
+const url = require('url');
+const hostname = '127.0.0.1';
+const port = 8080;
+
+const server = http.createServer((req, res) => {
+  const queryObject = url.parse(req.url,true).query;
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end(say(queryObject['name']));
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+```
+
+Start the nodejs application server as follows.
+
+```text
+$ node app.js
+Server running at http://127.0.0.1:8080/
+```
+
+Then, you can test it.
+
+```text
+$ curl http://127.0.0.1:8080/?name=Wasm
+hello Wasm
+```
+
+#### **What’s next?**
+
+Rust developers rejoice! Web services can now offload computationally intensive, unsafe, and novel hardware access tasks to WebAssembly. More examples and use cases to come. Stay tuned!
+

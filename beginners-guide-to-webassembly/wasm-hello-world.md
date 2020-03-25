@@ -1,30 +1,27 @@
 ---
-description: How to pass string values from JavaScript to WASM / Rust.
+description: 'Create a simple WebAssembly app in Rust, and then call it from JavaScript!'
 ---
 
-# WASM Hello World
+# WebAssembly in the Browser
 
 {% embed url="https://github.com/second-state/wasm-learning/tree/master/browser/hello" caption="Click on the box above to go to Github repo of the tutorial source code" %}
 
-In the [previous tutorial](my-first-webassembly-app.md), we mentioned that a WebAssembly application typically has two parts.
+WebAssembly was [originally invented](https://medium.com/wasm/webassembly-on-the-server-side-c584f874b4a3) as a technology solution to speed up code execution inside web browsers. It does not provide a full replacement for JavaScript, but rather works side-by-side with JavaScript. The idea is that JavaScript functions could pass computationally intensive tasks to WebAssembly functions. In this tutorial, we will demonstrate how a simple WebAssembly in-browser application works.
 
-* The bytecode program that runs inside the WebAssembly virtual machine
-* The host application that calls the WebAssembly program
+A WebAssembly application typically has two parts.
 
-However, the lightweight WebAssembly virtual machine only supports very limited numeric data types. The host application, on the other hand, probably needs to handle complex data types. One such complex data type is the string. The string is complicated because it contains data of unknown size and of unknown structure \(i.e., encoding\). The host application cannot directly pass string data to and from WebAssembly. It must convert string values to and from numeric values and arrays. You can [read more about it here](https://medium.com/wasm/strings-in-webassembly-wasm-57a05c1ea333).
+* The bytecode program that runs inside the WebAssembly virtual machine. This program is compiled from high level languages such as Rust, TypeScript, and Go. So far, Rust provides the most comprehensive tooling support for WebAssembly, and hence it is the most widely used language for WebAssembly modules.
+* The host application that provides UI, networking, database, and calls the WebAssembly program to perform key computing tasks or business logic. In the web browser setting, the host is the browser itself.
+
+In this tutorial, the host application is written in JavaScript and runs inside a web browser. The source code of the tutorial is [here](https://github.com/second-state/wasm-learning/blob/master/browser/triple.md). The WebAssembly bytecode program is written in Rust. Now, let’s check out the Rust program. 
 
 ![](../.gitbook/assets/01_first_module.png)
 
-In this tutorial, I will show you how to construct a real “hello world” that handles strings in WebAssembly. 
-
-* The host application is written in JavaScript and runs inside a web browser. It passes strings to and from WebAssembly function calls.
-* The WebAssembly bytecode program is written in Rust. It receives and returns strings as Rust String structs.
-
-The source code of the tutorial is [here](https://github.com/second-state/wasm-learning/blob/master/browser/hello.md).
+> The lightweight WebAssembly virtual machine only supports very limited numeric data types. The host application, on the other hand, probably needs to handle complex data types. One such complex data type is the string. The string is complicated because it contains data of unknown size and of unknown structure \(i.e., encoding\). The host application cannot directly pass string data to and from WebAssembly. It must convert string values to and from numeric values and arrays. You can [read more about it here](https://medium.com/wasm/strings-in-webassembly-wasm-57a05c1ea333).
 
 #### **Setup**
 
-The important development tool we introduce in this example is the `wasm-pack`. It compiles Rust source code into a WebAssembly bytecode program, and then generates a JavaScript module that can interact with the WebAssembly program. The generated code takes care of input / output data encoding and management. This makes it much easier for JavaScript developer to call WebAssembly functions. Follow the steps below to install Rust and the `wasm-pack` tool.
+The important development tool we introduce in this tutorial is the `wasm-pack`. It compiles Rust source code into a WebAssembly bytecode program, and then generates a JavaScript module that can interact with the WebAssembly program. The generated code takes care of input / output data encoding and management. This makes it much easier for JavaScript developer to call WebAssembly functions. Follow the steps below to install Rust and the `wasm-pack` tool.
 
 ```text
 # Install Rust
@@ -110,5 +107,5 @@ The `hello_lib_bg.wasm` program is loaded by the `hello_lib.js` module. Put this
 
 #### **What’s next?**
 
-So far, we have seen how to access WebAssembly programs from JavaScript hosted in browsers. But as you know, we believe that WebAssembly’s real potential is on the server-side. From the next tutorial, we will focus on server-side WebAssembly examples. Stay tuned!
+So far, we have seen how to access WebAssembly programs from JavaScript hosted in browsers. But as you know, we believe that WebAssembly’s [real potential is on the server-side](https://docs.secondstate.io/serverless-cloud/the-case-for-webassembly-on-the-server-side). From the next tutorial, we will focus on server-side WebAssembly examples. Stay tuned!
 
