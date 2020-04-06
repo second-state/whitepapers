@@ -15,6 +15,7 @@ For example, on Ubuntu, you can use the following commands.
 ```bash
 $ sudo apt install docker.io
 $ sudo usermod -a -G docker $USER
+$ docker pull secondstate/devchain:devchain
 ```
 
 ### Initialize
@@ -22,7 +23,7 @@ $ sudo usermod -a -G docker $USER
 Let’s initialize the DevChain configuration and genesis settings.
 
 ```bash
-$ docker run --rm -v $HOME/.devchain:/devchain secondstate/devchain:develop node init --home /devchain
+$ docker run --rm -v $HOME/.devchain:/devchain secondstate/devchain:devchain node init --home /devchain
 ```
 
 Note: If you are running a cluster, you should now copy over the cluster wide `genesis.json` and `config.toml` files to the `$HOME/.devchain/config` directory.
@@ -32,7 +33,7 @@ Note: If you are running a cluster, you should now copy over the cluster wide `g
 Now you can start the DevChain node in docker.
 
 ```bash
-$ docker run --rm -v $HOME/.devchain:/devchain -p 26657:26657 -p 8545:8545 secondstate/devchain:develop node start --home /devchain
+$ docker run --rm -v $HOME/.devchain:/devchain -p 26657:26657 -p 8545:8545 secondstate/devchain:devchain node start --home /devchain
 ```
 
 You should see blocks like the following in the log.

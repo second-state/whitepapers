@@ -1,10 +1,10 @@
 # What is Second State
 
-Second State  builds WebAssembly execution engines, frameworks, and developer toolchain for the cloud. The Second State Virtual Machine \(SSVM\) is a WebAssembly runtime optimized for server-side applications. It provides a managed alternative to unsafe code on the server side, such as native code for high performance, AI, or big data operations, or user submitted code for serverless or SaaS services.
+Second State builds the next generation open source “operating system” for the cloud and the decentralized web. The Second State Virtual Machine \(SSVM\) is a WebAssembly runtime optimized for server-side applications. It works seamlessly with existing application frameworks, such as Node.js, but provides a secure and lightweight runtime at native performance. It is a managed alternative to native code, and is ideal for building AI and big data microservices.
 
 {% page-ref page="serverless-cloud/the-case-for-webassembly-on-the-server-side.md" %}
 
-{% page-ref page="beginners-guide-to-webassembly/beginners-guide-to-webassembly.md" %}
+The SSVM also powers decentralized applications as the execution engine for leading public blockchains, such as Ethereum 2.0, Ethereum Classic, Polkadot / Web3, Oasis, and CyberMiles.
 
 The Second State BUIDL IDE brings the cloud experience to decentralized apps \(DApps\) developers. It is an entirely browser-based IDE that enables you to
 
@@ -17,9 +17,5 @@ The Second State BUIDL IDE brings the cloud experience to decentralized apps \(D
 
 {% page-ref page="buidl-developer-tool/getting-started/" %}
 
-Second State provides turn-key blockchain and smart contract solutions for businesses. Second State blockchains are programmable by its enterprise customers, optimized for business use cases, and completely open source. They are supported by commercial service agreements. The paper below describes our approach.
-
-{% page-ref page="white-papers/enterprise-middleware-for-blockchain-smart-contracts.md" %}
-
-
+Second State is a Venture Capital backed startup with offices in USA, Taiwan, China, and Australia.
 

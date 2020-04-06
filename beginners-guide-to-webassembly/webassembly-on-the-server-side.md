@@ -22,18 +22,27 @@ The source code of the tutorial is [here](https://github.com/second-state/wasm-l
 The `ssvmup` npm module installs the Second State Virtual Machine \(SSVM\) into nodejs as a native `addon`, and provides the necessary compiler tools. Follow the steps below to install Rust and the `ssvmup` tool.
 
 ```text
-# Install Rust
+# Prerequisite
+$ apt-get update
+$ apt install -y build-essential curl wget git vim libboost-all-dev
 
-$ sudo apt-get update
-$ sudo apt-get -y upgrade
+# Install rust
 $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 $ source $HOME/.cargo/env
-```
 
-```text
-# Install wasm-pack tools
+# Install nvm
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+# Follow the on-screen instructions to logout and then log in
 
-$ curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+# Install node
+$ nvm install v10.19.0
+$ nvm use v10.19.0
+
+# Install ssvmup toolchain
+$ npm install -g ssvmup # Append --unsafe-perm if permission denied
+
+# Install the nodejs addon for SSVM
+$ npm install ssvm
 ```
 
 #### **WebAssembly program in Rust**
@@ -45,7 +54,7 @@ $ cargo new --lib hello
 $ cd hello
 ```
 
-Edit the `Cargo.toml` file to add a `[lib]` section. It tells the compiler where to find the source code for the library and how to generate the bytecode output. We also need to add a dependency of `wasm-bindgen` here. It is the utility `wasm-pack` uses to generate the JavaScript binding for the Rust WebAssembly program.
+Edit the `Cargo.toml` file to add a `[lib]` section. It tells the compiler where to find the source code for the library and how to generate the bytecode output. We also need to add a dependency of `wasm-bindgen` here. It is the utility `ssvmup` uses to generate the JavaScript binding for the Rust WebAssembly program.
 
 ```text
 [lib]
@@ -54,7 +63,7 @@ path = "src/lib.rs"
 crate-type =["cdylib"]
 
 [dependencies]
-wasm-bindgen = "0.2.50"
+wasm-bindgen = "0.2.59"
 ```
 
 Below is the content of the Rust program `src/lib.rs`. You can actually define multiple external functions in this library file, and all of them will be available to the host JaveScript app via WebAssembly.
@@ -75,13 +84,7 @@ Next, you can compile the Rust source code into WebAssembly bytecode and generat
 $ ssvmup build
 ```
 
-The result are the following three files. the `.wasm` file is the WebAssembly bytecode program, and the `.js` files are for the JavaScript module.
-
-```text
-pkg/hello_lib_bg.wasm
-pkg/hello_lib_bg.js
-pkg/hello_lib.js
-```
+The result are files in the `pkg/` directory. the `.wasm` file is the WebAssembly bytecode program, and the `.js` files are for the JavaScript module.
 
 #### **The nodejs host application**
 
@@ -90,7 +93,6 @@ Next, let’s create a node folder for the nodejs web application. Copy over the
 ```text
 $ mkdir node
 $ cp pkg/hello_lib_bg.wasm node/
-$ cp pkg/hello_lib_bg.js node/
 $ cp pkg/hello_lib.js node/
 ```
 
@@ -132,5 +134,5 @@ hello Wasm
 
 #### **What’s next?**
 
-Rust developers rejoice! Web services can now offload computationally intensive, unsafe, and novel hardware access tasks to WebAssembly. More examples and use cases to come. Stay tuned!
+Now we have seen a very simple example to call a Rust function from JavaScript in a nodejs application. In the next several tutorials, we will look into more complex examples of Rust JavaScript interaction using the SSVM.
 

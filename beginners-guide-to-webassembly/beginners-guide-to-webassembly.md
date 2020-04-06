@@ -14,5 +14,7 @@ In this tutorial series, I will use short and concise code recipes to show you h
 
 {% page-ref page="webassembly-on-the-server-side.md" %}
 
+{% page-ref page="rust-javascript-data-exchange.md" %}
+
 
 

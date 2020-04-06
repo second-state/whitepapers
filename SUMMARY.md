@@ -13,12 +13,7 @@
 * [A Rusty Hello World](beginners-guide-to-webassembly/a-rusty-hello-world.md)
 * [WebAssembly in the Browser](beginners-guide-to-webassembly/wasm-hello-world.md)
 * [WebAssembly on the Server-side](beginners-guide-to-webassembly/webassembly-on-the-server-side.md)
-
-## White Papers
-
-* [Enterprise middleware for blockchain smart contracts](white-papers/enterprise-middleware-for-blockchain-smart-contracts.md)
-* [Google for smart contracts](white-papers/google-for-smart-contracts.md)
-* [FairPlay: a new type of DApp](white-papers/fairplay-a-new-type-of-dapp.md)
+* [Rust JavaScript Data Exchange](beginners-guide-to-webassembly/rust-javascript-data-exchange.md)
 
 ## BUIDL developer tool
 
@@ -52,6 +47,12 @@
   * [Notes on SSL with Docker](smart-contracts-search-engine/start-a-search-engine-docker/notes-on-ssl-with-docker.md)
 * [Start a search engine \(Ubuntu\)](smart-contracts-search-engine/start-a-search-engine.md)
 * [Demos](smart-contracts-search-engine/demos.md)
+
+## White Papers
+
+* [Enterprise middleware for blockchain smart contracts](white-papers/enterprise-middleware-for-blockchain-smart-contracts.md)
+* [Google for smart contracts](white-papers/google-for-smart-contracts.md)
+* [FairPlay: a new type of DApp](white-papers/fairplay-a-new-type-of-dapp.md)
 
 ## Related Technologies
 
