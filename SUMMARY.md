@@ -35,7 +35,8 @@
 
 ## DevChain
 
-* [Getting started](devchain/getting-started.md)
+* [Getting started](devchain/getting-started/README.md)
+  * [Run an ewasm smart contract](devchain/getting-started/run-an-ewasm-smart-contract.md)
 * [Build](devchain/build.md)
 * [Run](devchain/run.md)
 * [BaaS](devchain/baas.md)

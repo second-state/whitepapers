@@ -13,7 +13,7 @@ In this section, we will walk through the default example that comes with the [B
 {% embed url="https://www.youtube.com/watch?v=K8gMUeOwz1s" caption="Watch a 4-min video on how to create your first DApp in BUIDL" %}
 
 {% hint style="info" %}
-BUIDL works with the [Second State DevChain](../../devchain/getting-started.md) by default. It could also work with any [blockchain started by the Second BaaS](../working-with-baas.md) service, as well as any [Ethereum compatible blockchains]().
+BUIDL works with the [Second State DevChain](../../devchain/getting-started/) by default. It could also work with any [blockchain started by the Second BaaS](../working-with-baas.md) service, as well as any [Ethereum compatible blockchains]().
 {% endhint %}
 
 #### Step 1: Create and deploy a simple Solidity smart contract

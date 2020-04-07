@@ -51,7 +51,7 @@ Now with BUIDL, you can write and deploy your DApp in just minutes.
 
 ### The BUIDL advantage
 
-* Very fast [underlying blockchain](../devchain/getting-started.md) with 1s confirmation time
+* Very fast [underlying blockchain](../devchain/getting-started/) with 1s confirmation time
 * Support all [Ethereum compatible blockchains]()
 * [Lity](http://www.litylang.org) language extension to Solidity \(e.g., [Rule-based smart contracts](https://www.litylang.org/business_rules/)\)
 * [Built-in](access-contracts-data/) real-time [smart contract search engine](../white-papers/google-for-smart-contracts.md) based on ElasticSearch
