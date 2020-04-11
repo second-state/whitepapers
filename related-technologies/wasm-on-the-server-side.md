@@ -2,18 +2,18 @@
 description: Call WebAssembly functions from a nodejs web application.
 ---
 
-# WebAssembly and nodejs
+# WebAssembly and Node.js
 
-{% embed url="https://github.com/second-state/wasm-learning/tree/master/nodejs/hello" caption="Click on the box above to go to Github repo of the tutorial source code" %}
-
-In previous tutorials, we discussed how to access WebAssembly functions from JavaScript applications hosted inside web browsers. However, as we also noted, there are great use cases for [WebAssembly on the server-side](https://medium.com/wasm/webassembly-on-the-server-side-c584f874b4a3), especially for AI, blockchain, and big data applications. In this example, I will show you how to incorporate WebAssembly functions, written in Rust, into nodejs applications on the server. We can provide WebAssembly functions as a microservice.
+In previous tutorials, we discussed how to access WebAssembly functions from JavaScript applications hosted inside web browsers. However, as we also noted, there are great use cases for [WebAssembly on the server-side](https://medium.com/wasm/webassembly-on-the-server-side-c584f874b4a3), especially for AI, blockchain, and big data applications. In this example, I will show you how to incorporate WebAssembly functions, written in Rust, into Node.js applications on the server. We can provide WebAssembly functions as a microservice.
 
 The demo application is structured as follows.
 
-* The host application is a nodejs web application written in JavaScript. It makes WebAssembly function calls.
-* The WebAssembly bytecode program is written in Rust. It is called from the nodejs web application.
+* The host application is a Node.js web application written in JavaScript. It makes WebAssembly function calls.
+* The WebAssembly bytecode program is written in Rust. It is called from the Node.js web application.
 
-The source code of the tutorial is [here](https://github.com/second-state/wasm-learning/blob/master/nodejs/hello.md).
+{% hint style="success" %}
+The source code of the tutorial is [here](https://github.com/second-state/wasm-learning/tree/master/nodejs/hello-v8).
+{% endhint %}
 
 #### **Setup**
 
@@ -67,7 +67,7 @@ pub fn say(s: String) -> String {
 }
 ```
 
-Next, you can compile the Rust source code into WebAssembly bytecode and generate the accompanying JavaScript module for the nodejs host environment.
+Next, you can compile the Rust source code into WebAssembly bytecode and generate the accompanying JavaScript module for the Node.js host environment.
 
 ```text
 $ wasm-pack build --target nodejs
@@ -81,9 +81,9 @@ pkg/hello_lib_bg.js
 pkg/hello_lib.js
 ```
 
-#### **The nodejs host application**
+#### **The Node.js host application**
 
-Next, let’s create a node folder for the nodejs web application. Copy over the generated JavaScript module files.
+Next, let’s create a node folder for the Node.js web application. Copy over the generated JavaScript module files.
 
 ```text
 $ mkdir node
@@ -114,7 +114,7 @@ server.listen(port, hostname, () => {
 });
 ```
 
-Start the nodejs application server as follows.
+Start the Node.js application server as follows.
 
 ```text
 $ node app.js

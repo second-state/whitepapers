@@ -58,5 +58,5 @@
 ## Related Technologies
 
 * [Rust and WebAssembly](related-technologies/my-first-webassembly-app.md)
-* [WebAssembly and nodejs](related-technologies/wasm-on-the-server-side.md)
+* [WebAssembly and Node.js](related-technologies/wasm-on-the-server-side.md)
 

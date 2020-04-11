@@ -4,14 +4,16 @@ description: Run Rust programs in WebAssembly
 
 # Rust and WebAssembly
 
-{% embed url="https://github.com/second-state/wasm-learning/tree/master/browser/triple" caption="Click on the box above to go to Github repo of the tutorial source code" %}
-
 In this tutorial, we will create a very simple but complete WebAssembly application. A WebAssembly application typically has two parts.
 
 * The bytecode program that runs inside the WebAssembly virtual machine to perform computing tasks
 * The host application that provides UI, networking, database, and calls the WebAssembly program to perform key computing tasks or business logic
 
-In this tutorial, the host application is written in JavaScript and runs inside a web browser. The source code of the tutorial is [here](https://github.com/second-state/wasm-learning/blob/master/browser/triple.md). The WebAssembly bytecode program is written in Rust. Now, let’s check out the Rust program. 
+In this tutorial, the host application is written in JavaScript and runs inside a web browser. The WebAssembly bytecode program is written in Rust. Now, let’s check out the Rust program. 
+
+{% hint style="success" %}
+The source code of the tutorial is [here](https://github.com/second-state/wasm-learning/tree/master/browser/triple).
+{% endhint %}
 
 #### **WebAssembly program in Rust**
 

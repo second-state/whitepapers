@@ -21,19 +21,12 @@ In this tutorial, we will show more examples on how the Rust program in WebAssem
 As you will see in the examples, we believe that SSVM can support the vast majority of Rust applications and libraries, and make them available in Node.js.
 
 {% hint style="success" %}
-The source code of the tutorial is [here](https://github.com/second-state/wasm-learning/blob/master/nodejs/functions.md). 
+The source code of the tutorial is [here](https://github.com/second-state/wasm-learning/tree/master/nodejs/functions). 
 {% endhint %}
 
 #### **WebAssembly program in Rust**
 
-Let’s create a new `cargo` project called `functions` to showcase several different functions. 
-
-```text
-$ cargo new --lib functions
-$ cd functions
-```
-
-Edit the `Cargo.toml` file to add a `[lib]` section and a `[dependencies]` section. Besides the `wasm-bindgen` dependency, notice the `serde` and `serde_json` dependencies. They allow us to serialize and deserialize complex Rust types to and from JSON strings, so that the data can be passed to and from JavaScript.
+In the `cargo` project called `functions`, edit the `Cargo.toml` file to add a `[lib]` section and a `[dependencies]` section. Besides the `wasm-bindgen` dependency, notice the `serde` and `serde_json` dependencies. They allow us to serialize and deserialize complex Rust types to and from JSON strings, so that the data can be passed to and from JavaScript.
 
 ```text
 [lib]

@@ -16,7 +16,7 @@ The demo application is structured as follows.
 * The WebAssembly bytecode program is written in Rust. It runs inside the SSVM, and is called from the Node.js web application.
 
 {% hint style="success" %}
-The source code of the tutorial is [here](https://github.com/second-state/wasm-learning/blob/master/nodejs/hello.md).
+The source code of the tutorial is [here](https://github.com/second-state/wasm-learning/tree/master/nodejs/hello).
 {% endhint %}
 
 #### **Setup**
