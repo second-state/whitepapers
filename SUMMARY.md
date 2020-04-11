@@ -12,7 +12,8 @@
 * [Beginners guide to WebAssembly](beginners-guide-to-webassembly/beginners-guide-to-webassembly.md)
 * [A Rusty hello world](beginners-guide-to-webassembly/a-rusty-hello-world.md)
 * [WebAssembly in the browser](beginners-guide-to-webassembly/wasm-hello-world.md)
-* [WebAssembly on the server-side](beginners-guide-to-webassembly/webassembly-on-the-server-side.md)
+* [WebAssembly on the server-side](beginners-guide-to-webassembly/webassembly-on-the-server-side/README.md)
+  * [The no software approach](beginners-guide-to-webassembly/webassembly-on-the-server-side/the-no-software-approach.md)
 * [Rust to JavaScript](beginners-guide-to-webassembly/rust-javascript-data-exchange.md)
 
 ## BUIDL developer tool

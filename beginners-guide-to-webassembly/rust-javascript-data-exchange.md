@@ -9,7 +9,7 @@ description: >-
 The role of WebAssembly is not \(yet\) to replace JavaScript, but to enhance JavaScript by taking over computationally intensive tasks. Similarly, it is not \(yet\) to replace native applications or libraries, but to provide a safe sandbox for native and user submitted code. In server side Node.js applications, that translates to functions written in Rust that can be called from a JavaScript host program.
 
 {% hint style="info" %}
-Before you start, make sure that you have gone through the [previous tutorial to set up a Node.js application in Rust](webassembly-on-the-server-side.md). You should have [`ssvmup`](https://www.npmjs.com/package/ssvmup) and [`ssvm`](https://www.npmjs.com/package/ssvm) NPM modules installed through the last tutorial.
+Before you start, make sure that you have gone through the [previous tutorial to set up a Node.js application in Rust](webassembly-on-the-server-side/). You should have [`ssvmup`](https://www.npmjs.com/package/ssvmup) and [`ssvm`](https://www.npmjs.com/package/ssvm) NPM modules installed through the last tutorial.
 {% endhint %}
 
 In this tutorial, we will show more examples on how the Rust program in WebAssembly / SSVM can exchange data with the Node.js JavaScript host app. Currently, the SSVM's JavaScript to Rust bridge has the following constraints. 
