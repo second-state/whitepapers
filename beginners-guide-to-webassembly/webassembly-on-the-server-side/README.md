@@ -20,7 +20,7 @@ The source code of the tutorial is [here](https://github.com/second-state/wasm-l
 {% endhint %}
 
 {% hint style="info" %}
-If you just want to try it out and do not wish to setup dev tools on your own machine, you can [fork this repository](https://github.com/second-state/ssvm-nodejs-starter) and have GitHub [build and test](https://github.com/second-state/ssvm-nodejs-starter/actions) your code for you! See instructions here.
+If you just want to try it out and do not wish to setup dev tools on your own machine, you can [fork this repository](https://github.com/second-state/ssvm-nodejs-starter) and have GitHub [build and test](https://github.com/second-state/ssvm-nodejs-starter/actions) your code for you! [See instructions here](the-no-software-approach.md).
 {% endhint %}
 
 #### **Setup**
@@ -140,5 +140,5 @@ hello Wasm
 
 #### **What’s next?**
 
-Now we have seen a very simple example to call a Rust function from JavaScript in a Node.js application. In the next several tutorials, we will look into more complex examples of Rust JavaScript interaction using the SSVM. Let's start with [a review of all input output data types](../rust-javascript-data-exchange.md) supported in the SSVM Rust JavaScript bridge.
+Now we have seen a very simple example to call a Rust function from JavaScript in a Node.js application. In the next several tutorials, we will look into more complex examples of Rust JavaScript interaction using the SSVM. Let's start with [a review of all input output data types](../rust-javascript-data-exchange.md) supported in the SSVM Rust JavaScript bridge. After that, we will cover examples of cryptography, machine learning, data management, and artificial intelligence.
 
