@@ -4,22 +4,24 @@ description: Run high performance Rust code safely inside nodejs
 
 # WebAssembly on the Server-side
 
-There are great use cases for [WebAssembly on the server-side](https://medium.com/wasm/webassembly-on-the-server-side-c584f874b4a3), especially for AI, blockchain, and big data applications. In this tutorial, I will show you how to incorporate WebAssembly functions, written in Rust, into nodejs applications on the server. We can therefore provide WebAssembly functions as a microservice \(FaaS\).
+There are great use cases for [WebAssembly on the server-side](https://medium.com/wasm/webassembly-on-the-server-side-c584f874b4a3), especially for AI, blockchain, and big data applications. In this tutorial, I will show you how to incorporate WebAssembly functions, written in Rust, into Node.js applications on the server. We can therefore provide WebAssembly functions as a microservice \(FaaS\).
 
-In this tutorial, we use the Second State Virtual Machine \(SSVM\) , an open source WebAssembly runtime optimized for server-side applications, together with nodejs. The SSVM provides not only a WebAssembly runtime in nodejs, but also a compiler toolchain for Rust and JavaScript.
+In this tutorial, we use the Second State Virtual Machine \(SSVM\) , an open source WebAssembly runtime optimized for server-side applications, together with Node.js. The SSVM provides not only a WebAssembly runtime in Node.js, but also a compiler toolchain for Rust and JavaScript.
 
-> While nodejs comes with a default WebAssmebly runtime inside its V8 JavaScript engine, V8 is not designed to handle the performance and complex integration requirements of server-side applications. Compared with V8, the server-optimized SSVM is more performant, integrates better with JavaScript, provides access to external enterprise resources, and supports finely grained metering.
+> While Node.js comes with a default WebAssmebly runtime inside its V8 JavaScript engine, V8 is not designed to handle the performance and complex integration requirements of server-side applications. Compared with V8, the server-optimized SSVM is more performant, integrates better with JavaScript, provides access to external enterprise resources, and supports finely grained metering.
 
 The demo application is structured as follows.
 
-* The host application is a nodejs web application written in JavaScript. It makes WebAssembly function calls.
-* The WebAssembly bytecode program is written in Rust. It runs inside the SSVM, and is called from the nodejs web application.
+* The host application is a Node.js web application written in JavaScript. It makes WebAssembly function calls.
+* The WebAssembly bytecode program is written in Rust. It runs inside the SSVM, and is called from the Node.js web application.
 
+{% hint style="success" %}
 The source code of the tutorial is [here](https://github.com/second-state/wasm-learning/blob/master/nodejs/hello.md).
+{% endhint %}
 
 #### **Setup**
 
-The `ssvmup` npm module installs the Second State Virtual Machine \(SSVM\) into nodejs as a native `addon`, and provides the necessary compiler tools. Follow the steps below to install Rust and the `ssvmup` tool.
+The `ssvmup` npm module installs the Second State Virtual Machine \(SSVM\) into Node.js as a native `addon`, and provides the necessary compiler tools. Follow the steps below to install Rust and the `ssvmup` tool.
 
 ```text
 # Prerequisite
@@ -78,7 +80,7 @@ pub fn say(s: String) -> String {
 }
 ```
 
-Next, you can compile the Rust source code into WebAssembly bytecode and generate the accompanying JavaScript module for the nodejs host environment.
+Next, you can compile the Rust source code into WebAssembly bytecode and generate the accompanying JavaScript module for the Node.js host environment.
 
 ```text
 $ ssvmup build
@@ -86,9 +88,9 @@ $ ssvmup build
 
 The result are files in the `pkg/` directory. the `.wasm` file is the WebAssembly bytecode program, and the `.js` files are for the JavaScript module.
 
-#### **The nodejs host application**
+#### **The Node.js host application**
 
-Next, let’s create a node folder for the nodejs web application. Copy over the generated JavaScript module files.
+Next, let’s create a `node` folder for the Node.js web application. Copy over the generated JavaScript module files.
 
 ```text
 $ mkdir node
@@ -118,7 +120,7 @@ server.listen(port, hostname, () => {
 });
 ```
 
-Start the nodejs application server as follows.
+Start the Node.js application server as follows.
 
 ```text
 $ node app.js
@@ -134,5 +136,5 @@ hello Wasm
 
 #### **What’s next?**
 
-Now we have seen a very simple example to call a Rust function from JavaScript in a nodejs application. In the next several tutorials, we will look into more complex examples of Rust JavaScript interaction using the SSVM.
+Now we have seen a very simple example to call a Rust function from JavaScript in a Node.js application. In the next several tutorials, we will look into more complex examples of Rust JavaScript interaction using the SSVM. Let's start with [a review of all input output data types](rust-javascript-data-exchange.md) supported in the SSVM Rust JavaScript bridge.
 
