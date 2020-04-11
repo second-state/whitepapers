@@ -4,16 +4,16 @@
 
 ## Serverless Cloud
 
-* [The Case for WebAssembly on the Server-side](serverless-cloud/the-case-for-webassembly-on-the-server-side.md)
-* [WebAssembly vs Native Code](serverless-cloud/why-webassembly.md)
+* [The case for WebAssembly on the server-side](serverless-cloud/the-case-for-webassembly-on-the-server-side.md)
+* [WebAssembly vs native code](serverless-cloud/why-webassembly.md)
 
 ## WebAssembly Guides <a id="beginners-guide-to-webassembly"></a>
 
-* [Beginners Guide to WebAssembly](beginners-guide-to-webassembly/beginners-guide-to-webassembly.md)
-* [A Rusty Hello World](beginners-guide-to-webassembly/a-rusty-hello-world.md)
-* [WebAssembly in the Browser](beginners-guide-to-webassembly/wasm-hello-world.md)
-* [WebAssembly on the Server-side](beginners-guide-to-webassembly/webassembly-on-the-server-side.md)
-* [Rust JavaScript Data Exchange](beginners-guide-to-webassembly/rust-javascript-data-exchange.md)
+* [Beginners guide to WebAssembly](beginners-guide-to-webassembly/beginners-guide-to-webassembly.md)
+* [A Rusty hello world](beginners-guide-to-webassembly/a-rusty-hello-world.md)
+* [WebAssembly in the browser](beginners-guide-to-webassembly/wasm-hello-world.md)
+* [WebAssembly on the server-side](beginners-guide-to-webassembly/webassembly-on-the-server-side.md)
+* [Rust to JavaScript](beginners-guide-to-webassembly/rust-javascript-data-exchange.md)
 
 ## BUIDL developer tool
 

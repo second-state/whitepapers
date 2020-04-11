@@ -4,7 +4,7 @@ description: >-
   efficiency of web services.
 ---
 
-# The Case for WebAssembly on the Server-side
+# The case for WebAssembly on the server-side
 
 {% embed url="https://www.youtube.com/watch?v=RjYLHxNO4nM" %}
 

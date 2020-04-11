@@ -2,7 +2,7 @@
 description: Run high performance Rust code safely inside nodejs
 ---
 
-# WebAssembly on the Server-side
+# WebAssembly on the server-side
 
 There are great use cases for [WebAssembly on the server-side](https://medium.com/wasm/webassembly-on-the-server-side-c584f874b4a3), especially for AI, blockchain, and big data applications. In this tutorial, I will show you how to incorporate WebAssembly functions, written in Rust, into Node.js applications on the server. We can therefore provide WebAssembly functions as a microservice \(FaaS\).
 

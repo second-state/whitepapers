@@ -4,7 +4,7 @@ description: >-
   best-supported language on WebAssembly today.
 ---
 
-# A Rusty Hello World
+# A Rusty hello world
 
 While WebAssembly supports many programming languages, Rust by far has the best tooling. Rust is voted the most beloved programming language by StackOverflow users for the past 4 years in a row. It is one of the fastest-growing programming languages.
 

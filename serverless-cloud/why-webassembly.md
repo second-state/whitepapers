@@ -4,7 +4,7 @@ description: >-
   application
 ---
 
-# WebAssembly vs Native Code
+# WebAssembly vs native code
 
 WebAssembly aims to drastically improve your application performance, safety, and developer productivity. It replaces native code with a managed container and finely grained security model. 
 
