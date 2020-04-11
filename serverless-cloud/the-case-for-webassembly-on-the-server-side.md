@@ -8,9 +8,13 @@ description: >-
 
 {% embed url="https://www.youtube.com/watch?v=RjYLHxNO4nM" %}
 
-You can bootstrap a WebAssembly virtual machine from your server side application, such as a NodeJS app, and then execute potentially unsafe code inside the virtual machine. Examples? Native code and user submitted code are increasingly used in modern web apps, and they could both be potentially unsafe.
+You can bootstrap a WebAssembly virtual machine from your server side application, such as a Node.js app, and then execute high performance or potentially unsafe code inside the virtual machine.
 
-**Native code** is often used where high performance and efficiency are required. The popular NodeJS framework is written in native C/C++. Native code runs AI inference, big data analytics, image and video processing, and scientific computing. WebAssembly is a light, fast, and cross-platform container. It is a safe and managed alternative to native code. [Learn more here](https://docs.secondstate.io/beginners-guide-to-webassembly/why-webassembly).
+{% hint style="info" %}
+Node.js and Rust developers [get started here](../beginners-guide-to-webassembly/webassembly-on-the-server-side.md)! Create high performance modules for your Node.js applications.
+{% endhint %}
+
+**Native code** is often used where high performance and efficiency are required. The popular NodeJS framework is written in native C/C++. Native code runs AI inference, big data analytics, image and video processing, and scientific computing. WebAssembly is a light, fast, and cross-platform container. It is a safe and managed alternative to native code. [Learn more here](https://medium.com/wasm/webassembly-on-the-server-side-c584f874b4a3).
 
 **User submitted code** is the cornerstone of cloud native or serverless computing. For SaaS providers, users want to customize their experiences using code, or to create applications for their peers. Examples include Function as a Service, workflow apps, smart contracts, plugins, and extensions. WebAssembly supports multiple programming languages, and can provide a high performance sandbox for user submitted code with little resource consumption.
 
