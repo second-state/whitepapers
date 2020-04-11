@@ -21,7 +21,7 @@ In this tutorial, we will show more examples on how the Rust program in WebAssem
 As you will see in the examples, we believe that SSVM can support the vast majority of Rust applications and libraries, and make them available in Node.js.
 
 {% hint style="success" %}
-The source code of the tutorial is [here](https://github.com/second-state/wasm-learning/tree/master/nodejs/functions). 
+The source code of the tutorial is [here](https://github.com/second-state/wasm-learning/blob/master/nodejs/functions.md). 
 {% endhint %}
 
 #### **WebAssembly program in Rust**
