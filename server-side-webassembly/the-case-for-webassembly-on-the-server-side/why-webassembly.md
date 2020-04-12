@@ -49,5 +49,5 @@ Rust has been voted the most beloved programming language for the past 4 years i
 
 Our first tutorial is to get you set up with Rust tools to write WebAssembly programs!
 
-{% page-ref page="../beginners-guide-to-webassembly/a-rusty-hello-world.md" %}
+{% page-ref page="../../related-technologies/a-rusty-hello-world.md" %}
 

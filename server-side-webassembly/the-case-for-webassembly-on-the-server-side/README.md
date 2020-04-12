@@ -11,7 +11,7 @@ description: >-
 You can bootstrap a WebAssembly virtual machine from your server side application, such as a Node.js app, and then execute high performance and potentially unsafe code inside the virtual machine. The major use cases are web applications that require native performance or must execute user-submitted code.
 
 {% hint style="info" %}
-Node.js and Rust developers [get started here](../beginners-guide-to-webassembly/webassembly-on-the-server-side/)! Create high performance Rust + JavaScript hybrid apps on Node.js.
+Node.js and Rust developers [get started here](../webassembly-on-the-server-side/)! Create high performance Rust + JavaScript hybrid apps on Node.js.
 {% endhint %}
 
 **Native code** is often used where high performance and efficiency are required. The popular Node.js runtime is written in native C/C++. Native code runs AI inference, big data analytics, image and video processing, and scientific computing. WebAssembly is a light, fast, and cross-platform container. It is a safe and managed alternative to native code. [Learn more here](https://medium.com/wasm/webassembly-on-the-server-side-c584f874b4a3).
