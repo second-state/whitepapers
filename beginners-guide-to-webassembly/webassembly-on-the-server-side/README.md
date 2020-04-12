@@ -4,13 +4,13 @@ description: Run high performance Rust code safely inside Node.js
 
 # WebAssembly on the server-side
 
-There are great use cases for [WebAssembly on the server-side](https://medium.com/wasm/webassembly-on-the-server-side-c584f874b4a3), especially for AI, blockchain, and big data applications. In this tutorial, I will show you how to incorporate WebAssembly functions, written in Rust, into Node.js applications on the server. We can therefore provide WebAssembly functions as a microservice \(FaaS\).
+There are great use cases for [WebAssembly on the server-side](../../serverless-cloud/the-case-for-webassembly-on-the-server-side.md), especially for AI, blockchain, and big data applications. In this tutorial, I will show you how to incorporate WebAssembly functions, written in Rust, into Node.js applications on the server.
 
-In this tutorial, we use the Second State Virtual Machine \(SSVM\) , an open source WebAssembly runtime optimized for server-side applications, together with Node.js. The SSVM provides not only a WebAssembly runtime in Node.js, but also a compiler toolchain for Rust and JavaScript.
+We use the Second State Virtual Machine \(SSVM\) , an open source WebAssembly runtime optimized for server-side applications, together with Node.js. The SSVM provides not only a WebAssembly runtime in Node.js, but also a compiler toolchain for Rust and JavaScript.
 
 > While Node.js comes with a default WebAssmebly runtime inside its V8 JavaScript engine, V8 is not designed to handle the performance and complex integration requirements of server-side applications. Compared with V8, the server-optimized SSVM is more performant, integrates better with JavaScript, provides access to external enterprise resources, and supports finely grained metering.
 
-The demo application is a Rust + JavaScript hybrid application. It leverages the performance of Rust, safety and portability of WebAssembly, and ease of use of JavaScript.
+The demo application is a Rust + JavaScript hybrid application. It combines the performance of Rust, safety and portability of WebAssembly, and ease of use of JavaScript.
 
 * The host application is a Node.js web application written in JavaScript. It makes WebAssembly function calls.
 * The WebAssembly bytecode program is written in Rust. It runs inside the SSVM, and is called from the Node.js web application.
