@@ -8,7 +8,7 @@ description: >-
 
 In the [previous tutorial](./), we discussed how to create a hybrid JavaScript + Rust application for Node.js. In this tutorial, I will show you how to experiment with development without installing any developer tools software.
 
-\*\*\*\*[**Fork this GitHub repository**](https://github.com/second-state/ssvm-nodejs-starter) to get started. In your fork, you can use GitHub's web UI to edit source code files.
+\*\*\*\*[**Fork this GitHub repository**](https://github.com/second-state/ssvm-nodejs-starter/fork) to get started. In your fork, you can use GitHub's web UI to edit source code files.
 
 * The Rust files are in the `src` directory. You can put high performance workload into Rust functions. The Rust build and dependency configuration is in the `Cargo.toml` file.
 * The JavaScript files are in the `node` directory and they can access the Rust functions.

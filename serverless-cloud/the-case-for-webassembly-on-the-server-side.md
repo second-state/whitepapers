@@ -6,7 +6,7 @@ description: >-
 
 # The case for WebAssembly on the server-side
 
-{% embed url="https://www.youtube.com/watch?v=RjYLHxNO4nM" %}
+{% embed url="https://www.youtube.com/watch?v=RjYLHxNO4nM" caption="" %}
 
 You can bootstrap a WebAssembly virtual machine from your server side application, such as a Node.js app, and then execute high performance and potentially unsafe code inside the virtual machine. The major use cases are web applications that require native performance or must execute user-submitted code.
 
@@ -18,7 +18,7 @@ Node.js and Rust developers [get started here](../beginners-guide-to-webassembly
 
 **User submitted code** is the cornerstone of cloud native or serverless computing. For SaaS providers, users want to customize their experiences using code, or to create applications for their peers. Examples include Function as a Service, workflow apps, smart contracts, plugins, and extensions. WebAssembly supports multiple programming languages, and can provide a high performance sandbox for user submitted code with little resource consumption.
 
-[Second State](https://www.secondstate.io/) provides an open source WebAssembly implementation \(Second State Virtual Machine, or [SSVM](https://github.com/second-state/SSVM)\) that is specifically optimized for server side applications. It is 
+[Second State](https://www.secondstate.io/) provides an open source WebAssembly implementation \(Second State Virtual Machine, or [SSVM](https://github.com/second-state/SSVM)\) that is specifically optimized for server side applications. It is
 
 * High performance with support for JIT and AOP optimizations.
 * Seamlessly supports server application frameworks, such as NodeJS. You can build high performance NodeJS apps with SSVM.

@@ -20,7 +20,7 @@ The source code of the tutorial is [here](https://github.com/second-state/wasm-l
 {% endhint %}
 
 {% hint style="info" %}
-If you just want to try it out and do not wish to setup dev tools on your own machine, you can [fork this repository](https://github.com/second-state/ssvm-nodejs-starter) and have GitHub [build and test](https://github.com/second-state/ssvm-nodejs-starter/actions) your code for you! [See instructions here](the-no-software-approach.md).
+If you just want to try it out and do not wish to setup dev tools on your own machine, you can [fork this repository](https://github.com/second-state/ssvm-nodejs-starter/fork) and have GitHub [build and test](https://github.com/second-state/ssvm-nodejs-starter/actions) your code for you! [See instructions here](the-no-software-approach.md).
 {% endhint %}
 
 #### **Setup**
