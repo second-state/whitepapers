@@ -10,7 +10,7 @@ In this tutorial, we use the Second State Virtual Machine \(SSVM\) , an open sou
 
 > While Node.js comes with a default WebAssmebly runtime inside its V8 JavaScript engine, V8 is not designed to handle the performance and complex integration requirements of server-side applications. Compared with V8, the server-optimized SSVM is more performant, integrates better with JavaScript, provides access to external enterprise resources, and supports finely grained metering.
 
-The demo application is structured as follows.
+The demo application is a Rust + JavaScript hybrid application. It leverages the performance of Rust, safety and portability of WebAssembly, and ease of use of JavaScript.
 
 * The host application is a Node.js web application written in JavaScript. It makes WebAssembly function calls.
 * The WebAssembly bytecode program is written in Rust. It runs inside the SSVM, and is called from the Node.js web application.
