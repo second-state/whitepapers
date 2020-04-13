@@ -1,5 +1,5 @@
 ---
-description: Run high performance Rust code safely inside Node.js
+description: High performance Rust + JavaScript hybrid apps in Node.js
 ---
 
 # Getting started
