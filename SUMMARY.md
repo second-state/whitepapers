@@ -4,7 +4,7 @@
 
 ## Server-side WebAssembly
 
-* [The case for WebAssembly on the server-side](server-side-webassembly/the-case-for-webassembly-on-the-server-side/README.md)
+* [The case for server-side WebAssembly](server-side-webassembly/the-case-for-webassembly-on-the-server-side/README.md)
   * [WebAssembly vs native code](server-side-webassembly/the-case-for-webassembly-on-the-server-side/why-webassembly.md)
 * [Getting started](server-side-webassembly/webassembly-on-the-server-side/README.md)
   * [The no software approach](server-side-webassembly/webassembly-on-the-server-side/the-no-software-approach.md)

@@ -1,10 +1,8 @@
 ---
-description: >-
-  Server-side developers could use WebAssembly to improve security and
-  efficiency of web services.
+description: WebAssembly could improve security and efficiency of web services
 ---
 
-# The case for WebAssembly on the server-side
+# The case for server-side WebAssembly
 
 {% embed url="https://www.youtube.com/watch?v=RjYLHxNO4nM" caption="" %}
 
