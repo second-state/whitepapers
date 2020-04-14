@@ -6,6 +6,8 @@ description: >-
 
 # WebAssembly vs native code
 
+\*\*\*\*[**This article is outdated. Please see the latest version here.**](https://cloud.secondstate.io/server-side-webassembly/why/webassembly-vs-native-code)\*\*\*\*
+
 WebAssembly aims to drastically improve your application performance, safety, and developer productivity. It replaces native code with a managed container and finely grained security model. 
 
 {% embed url="https://youtu.be/dxnTNe6Nmpw" %}

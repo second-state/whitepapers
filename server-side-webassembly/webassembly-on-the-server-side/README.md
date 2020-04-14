@@ -4,6 +4,8 @@ description: High performance Rust + JavaScript hybrid apps in Node.js
 
 # Getting started
 
+\*\*\*\*[**This article is outdated. Please see the latest version here.**](https://cloud.secondstate.io/server-side-webassembly/getting-started)\*\*\*\*
+
 There are great use cases for [WebAssembly on the server-side](../the-case-for-webassembly-on-the-server-side/), especially for AI, blockchain, and big data applications. In this tutorial, I will show you how to incorporate WebAssembly functions, written in Rust, into Node.js applications on the server.
 
 We use the Second State Virtual Machine \(SSVM\) , an open source WebAssembly runtime optimized for server-side applications, together with Node.js. The SSVM provides not only a WebAssembly runtime in Node.js, but also a compiler toolchain for Rust and JavaScript.

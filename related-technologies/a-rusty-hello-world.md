@@ -6,6 +6,8 @@ description: >-
 
 # A Rusty hello world
 
+\*\*\*\*[**This article is outdated. Please see the latest version here.**](https://cloud.secondstate.io/related-technologies/a-rusty-hello-world)\*\*\*\*
+
 While WebAssembly supports many programming languages, Rust by far has the best tooling. Rust is voted the most beloved programming language by StackOverflow users for the past 4 years in a row. It is one of the fastest-growing programming languages.
 
 Rust is versatile and performant like C, but much safer than C due to its compiler design. Like C, it has a bit of a learning curve. In this tutorial, I will get you started with the Rust programming language. From here, you can learn much more about the Rust language through online resources like [the book](https://doc.rust-lang.org/book/).

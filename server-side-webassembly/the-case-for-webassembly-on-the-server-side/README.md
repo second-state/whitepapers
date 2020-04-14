@@ -4,6 +4,8 @@ description: WebAssembly could improve security and efficiency of web services
 
 # The case for server-side WebAssembly
 
+\*\*\*\*[**This article is outdated. Please see the latest version here.**](https://cloud.secondstate.io/server-side-webassembly/why)\*\*\*\*
+
 {% embed url="https://www.youtube.com/watch?v=RjYLHxNO4nM" caption="" %}
 
 You can bootstrap a WebAssembly virtual machine from your server side application, such as a Node.js app, and then execute high performance and potentially unsafe code inside the virtual machine. The major use cases are web applications that require native performance or must execute user-submitted code.

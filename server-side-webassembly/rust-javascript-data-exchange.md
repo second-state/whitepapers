@@ -6,6 +6,8 @@ description: >-
 
 # Rust / JavaScript bridge
 
+\*\*\*\*[**This article is outdated. Please see the latest version here.**](https://cloud.secondstate.io/server-side-webassembly/rust-and-javascript)\*\*\*\*
+
 The role of WebAssembly is not \(yet\) to replace JavaScript, but to enhance JavaScript by taking over computationally intensive tasks. Similarly, it is not \(yet\) to replace native applications or libraries, but to provide a safe sandbox for native and user submitted code. In server side Node.js applications, that translates to functions written in Rust that can be called from a JavaScript host program.
 
 {% hint style="info" %}

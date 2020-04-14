@@ -4,6 +4,8 @@ description: Run Rust programs in WebAssembly
 
 # Rust and WebAssembly
 
+\*\*\*\*[**This article is outdated. Please see the latest version here.**](https://cloud.secondstate.io/related-technologies/rust-and-webassembly)\*\*\*\*
+
 In this tutorial, we will create a very simple but complete WebAssembly application. A WebAssembly application typically has two parts.
 
 * The bytecode program that runs inside the WebAssembly virtual machine to perform computing tasks

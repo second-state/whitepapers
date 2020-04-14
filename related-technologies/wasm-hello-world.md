@@ -4,6 +4,8 @@ description: 'Create a simple WebAssembly app in Rust, and then call it from Jav
 
 # WebAssembly in the browser
 
+\*\*\*\*[**This article is outdated. Please see the latest version here.**](https://cloud.secondstate.io/related-technologies/webassembly-in-the-browser)\*\*\*\*
+
 WebAssembly was [originally invented](https://medium.com/wasm/webassembly-on-the-server-side-c584f874b4a3) as a technology solution to speed up code execution inside web browsers. It does not provide a full replacement for JavaScript, but rather works side-by-side with JavaScript. The idea is that JavaScript functions could pass computationally intensive tasks to WebAssembly functions. In this tutorial, we will demonstrate how a simple WebAssembly in-browser application works.
 
 {% hint style="success" %}
