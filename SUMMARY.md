@@ -2,18 +2,6 @@
 
 * [What is Second State](README.md)
 
-## Server-side WebAssembly
-
-* [The case for server-side WebAssembly](server-side-webassembly/the-case-for-webassembly-on-the-server-side/README.md)
-  * [WebAssembly vs native code](server-side-webassembly/the-case-for-webassembly-on-the-server-side/why-webassembly.md)
-* [Getting started](server-side-webassembly/webassembly-on-the-server-side/README.md)
-  * [The no software approach](server-side-webassembly/webassembly-on-the-server-side/the-no-software-approach.md)
-* [Rust / JavaScript bridge](server-side-webassembly/rust-javascript-data-exchange.md)
-
-## Serverless Cloud
-
-* [Getting started](serverless-cloud/getting-started.md)
-
 ## BUIDL developer tool
 
 * [Why BUIDL](buidl-developer-tool/why-buidl.md)
@@ -54,11 +42,4 @@
 * [Google for smart contracts](white-papers/google-for-smart-contracts.md)
 * [FairPlay: a new type of DApp](white-papers/fairplay-a-new-type-of-dapp.md)
 
-## Related Technologies
-
-* [Beginners guide to WebAssembly](related-technologies/beginners-guide-to-webassembly.md)
-* [A Rusty hello world](related-technologies/a-rusty-hello-world.md)
-* [Rust and WebAssembly](related-technologies/my-first-webassembly-app.md)
-* [WebAssembly in the browser](related-technologies/wasm-hello-world.md)
-* [WebAssembly and Node.js](related-technologies/wasm-on-the-server-side.md)
 
