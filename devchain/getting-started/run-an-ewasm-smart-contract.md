@@ -6,6 +6,8 @@ description: Next generation Ethereum smart contracts at your finger tip
 
 One of the key features of the Second State DevChain is its support for the next-gen Ethereum virtual machine, Ewasm. Smart contracts compiled to Ewasm can be deployed on the DevChain. 
 
+{% embed url="https://youtu.be/1RRt3UrUXAg" caption="Run a ERC20 EWASM smart contract now!" %}
+
 {% hint style="warning" %}
 Before you start, please make sure that you have a Second State DevChain up and running. If not, follow the [Getting Started tutorial](https://docs.secondstate.io/devchain/getting-started). It takes about 10 minutes.
 {% endhint %}

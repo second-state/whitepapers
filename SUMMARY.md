@@ -42,4 +42,3 @@
 * [Google for smart contracts](white-papers/google-for-smart-contracts.md)
 * [FairPlay: a new type of DApp](white-papers/fairplay-a-new-type-of-dapp.md)
 
-
