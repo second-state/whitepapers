@@ -1,10 +1,8 @@
 ---
-description: Ewasm testnets
+description: Deploy and test ewasm smart contracts via an interactive web3 console
 ---
 
-# Access ewasm testnets
-
-## CyberMiles
+# CyberMiles ewasm testnet
 
 The CyberMiles Public Blockchain runs an Ewasm testnet based on its blockchain software and Second State's SSVM. The easiest way to access the testnet is via Docker.
 
