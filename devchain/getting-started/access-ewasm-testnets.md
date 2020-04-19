@@ -6,11 +6,15 @@ description: Deploy and test ewasm smart contracts via an interactive web3 conso
 
 The CyberMiles Public Blockchain runs an Ewasm testnet based on its blockchain software and Second State's SSVM. The easiest way to access the testnet is via Docker.
 
+{% embed url="https://asciinema.org/a/321762?speed=8" caption="Watch the screencast" %}
+
+Start by pulling the Second State DevChain Docker image.
+
 ```text
 $ docker pull secondstate/devchain:devchain
 ```
 
-You can start the interactive console via Docker. Please note that the password is subject to change. Do not abuse it!
+You can now start the interactive console via Docker. Please note that the password is subject to change. Do not abuse it!
 
 ```text
 $ docker run --rm -it secondstate/devchain:devchain attach http://ewasm:3WAeT4CYSkMTAPuF@23.98.151.156
@@ -35,6 +39,12 @@ true
 ```
 
 Now you can [follow the tutorial](run-an-ewasm-smart-contract.md) to deploy and test your ewasm smart contracts.
+
+{% page-ref page="run-an-ewasm-smart-contract.md" %}
+
+{% embed url="https://asciinema.org/a/321767?speed=8" caption="Watch the screencast" %}
+
+
 
 
 
