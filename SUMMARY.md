@@ -24,7 +24,7 @@
 
 * [Getting started](devchain/getting-started/README.md)
   * [Run an ewasm smart contract](devchain/getting-started/run-an-ewasm-smart-contract.md)
-  * [CyberMiles ewasm testnet](devchain/getting-started/access-ewasm-testnets.md)
+  * [CyberMiles ewasm testnet](devchain/getting-started/cybermiles-ewasm-testnet.md)
 * [Build](devchain/build.md)
 * [Run](devchain/run.md)
 * [BaaS](devchain/baas.md)
