@@ -23,6 +23,7 @@
 ## Oasis Network Ethereum Runtime
 
 * [Getting started](oasis-network-ethereum-runtime/getting-started.md)
+* [Ethereum flavored WebAssembly \(Ewasm\)](oasis-network-ethereum-runtime/ethereum-flavored-webassembly-ewasm.md)
 
 ## DevChain
 

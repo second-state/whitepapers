@@ -4,7 +4,9 @@ description: Deploy Ethereum smart contracts and DApps using tools you already u
 
 # Getting started
 
-With BUIDL, it is a breeze to develop decentralized applications \(dapps\) on Oasis Network's Ethereum runtime nodes.
+The Oasis Network is a high-performance and privacy-first blockchain network. It is operated by a group of independent and decentralized nodes. Each node is free to run its own software and to provide computing services to the public, as long as the network can reach a consensus on the computational results.
+
+Second State has created the Oasis Ethereum runtime that supports both EVM and Ewasm smart contracts and dapps \(decentralized applications\). A network of Oasis validator nodes will deploy the Second State runtime and provide Ethereum services to the public. With BUIDL, it is a breeze to develop dapps on Oasis Network's Ethereum runtime nodes.
 
 ## Step1 Configure BUIDL for Oasis Testnet
 
@@ -57,4 +59,6 @@ Finally, click on the **Run** button to run the DApp. You will see the DApp UI i
 ![](../.gitbook/assets/buidl-getting_started-06.png)
 
 Congratulations. You now have a complete DApp deployed on the Oasis Network!
+
+Next, you can deploy a [production-ready ERC20 contract](https://github.com/CyberMiles/cybermiles-token/blob/master/contracts/CyberMilesTokenFlattened.sol) and experiment with transfers. You can also deploy [the entire set of Uniswap contracts](https://github.com/second-state/buidl/tree/master/demo/uniswap) through a BUIDL app.
 
