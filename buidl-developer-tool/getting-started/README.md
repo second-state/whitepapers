@@ -46,7 +46,37 @@ Next, go to the JS tab. It shows JavaScript on how to interact with the smart co
 
 ![](../../.gitbook/assets/screen-shot-2019-09-30-at-2.25.50-pm.png)
 
+The JS has four sections. The first section is `Don't modify` as it is populated by the BUIDL tool itself. It contains information about the contract you just deployed via BUIDL.
 
+The second section shows you the boilerplate to instantiate the `contract` and `instance` objects using data from the first section.
+
+```javascript
+var contract = window.web3 && web3.ss && web3.ss.contract(abi);
+var instance = contract && contract.at(cAddr);
+window.addEventListener('web3Ready', function() {
+  contract = web3.ss.contract(abi);
+  instance = contract.at(cAddr);
+});
+```
+
+The third section is the event handler for the **Set Data** button. It shows how to call the smart contract's `set()` function in a transaction from JavaScript.
+
+```javascript
+document.querySelector("#s").addEventListener("click", function() {
+  var n = window.prompt("Input the number:");
+  n && instance.set(n);
+});
+```
+
+The last section is the event handler for the **Get Data** button. It calls the smart contract’s `get()` function and displays the result.
+
+```javascript
+document.querySelector("#g").addEventListener("click", function() {
+  console.log(instance.get().toString());
+});
+```
+
+#### Step 4: Run the DApp
 
 Finally, click on the **Run** button to run the DApp. You will see the DApp UI in the right panel. You can click on the **Set Data** button to store a number, and **Get Data** button to retrieve the stored number.
 
