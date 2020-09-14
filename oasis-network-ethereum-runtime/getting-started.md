@@ -24,7 +24,7 @@ In the **Accounts** tab, you will see 5 auto-generated addresses, and you can se
 
 Go to the faucet web site, enter your default address from BUIDL and give yourself some gas.
 
-{% embed url="http://oasis-ewasm-faucet.secondstate.co/" %}
+{% embed url="http://faucet-demo.oasiseth.org" %}
 
 ![](../.gitbook/assets/screen-shot-2020-08-19-at-12.03.52-pm.png)
 
