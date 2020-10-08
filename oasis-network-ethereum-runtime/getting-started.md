@@ -10,9 +10,9 @@ Second State has created the Oasis Ethereum runtime that supports both EVM and E
 
 ## Step1 Configure BUIDL for Oasis Testnet
 
-The easy way is to just click the link below to launch BUIDL in your browser. It pre-loads all the configurations for you. 
+The easy way is to just click the link below to launch BUIDL in your browser. It pre-loads all the configurations for you.
 
-{% embed url="http://buidl.secondstate.io/oasis-testnet" %}
+{% embed url="http://oasiseth.org/dev" %}
 
 ![](../.gitbook/assets/screen-shot-2020-08-19-at-12.02.32-pm.png)
 
@@ -22,9 +22,9 @@ In the **Accounts** tab, you will see 5 auto-generated addresses, and you can se
 
 ![](../.gitbook/assets/screen-shot-2020-08-19-at-12.03.04-pm.png)
 
-Go to the faucet web site, enter your default address from BUIDL and give yourself some gas.
+Go to the faucet website, enter your default address from BUIDL and give yourself some gas.
 
-{% embed url="http://faucet-demo.oasiseth.org" %}
+{% embed url="http://faucet.oasiseth.org" %}
 
 ![](../.gitbook/assets/screen-shot-2020-08-19-at-12.03.52-pm.png)
 
@@ -34,7 +34,7 @@ Now, go back to BUILD's Accounts tab and you should see 1 ETH \(or 10^18 wei\) i
 
 ## Step 3 Compile and deploy a smart contract
 
-Click on the **Compile** button to compile the contract. A side bar will open to show you the compiled ABI and bytecode of the contract.
+Click on the **Compile** button to compile the contract. A sidebar will open to show you the compiled ABI and bytecode of the contract.
 
 ![](../.gitbook/assets/buidl-getting_started-02.png)
 

@@ -20,10 +20,11 @@
   * [Ethereum Classic](buidl-developer-tool/demo-a-voting-dapp/ethereum-classic.md)
   * [CyberMiles](buidl-developer-tool/demo-a-voting-dapp/cybermiles.md)
 
-## Oasis Network Ethereum Runtime
+## Oasis Ethereum ParaTime <a id="oasis-network-ethereum-runtime"></a>
 
 * [Getting started](oasis-network-ethereum-runtime/getting-started.md)
 * [Ethereum flavored WebAssembly \(Ewasm\)](oasis-network-ethereum-runtime/ethereum-flavored-webassembly-ewasm.md)
+* [Tutorial: The Oasis Second State Community Hackathon](oasis-network-ethereum-runtime/oasis-second-state-hackathon.md)
 
 ## DevChain
 
