@@ -24,7 +24,8 @@
 
 * [Getting started](oasis-network-ethereum-runtime/getting-started.md)
 * [Ethereum flavored WebAssembly \(Ewasm\)](oasis-network-ethereum-runtime/ethereum-flavored-webassembly-ewasm.md)
-* [Tutorial: The Oasis Second State Community Hackathon \#1](oasis-network-ethereum-runtime/oasis-second-state-hackathon.md)
+* [Tutorial: The Oasis Second State Community Hackathon \#1](oasis-network-ethereum-runtime/oasis-second-state-hackathon/README.md)
+  * [Tutorial: The Oasis Second State Community Hackathon Challenge  \#3](oasis-network-ethereum-runtime/oasis-second-state-hackathon/tutorial-the-oasis-second-state-community-hackathon-challenge-3.md)
 
 ## DevChain
 
