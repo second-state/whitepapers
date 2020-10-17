@@ -1,3 +1,9 @@
+---
+description: >-
+  Complete this tutorial,  you will win 500 - 900 ROSE tokens from Oasis
+  Foundation!
+---
+
 # Tutorial: The Oasis Second State Community Hackathon \#3
 
 The [hackathon](https://blog.secondstate.io/post/oasis-secondstate-hackathon/) jointly initiated by the Oasis Foundation and Second State has been underway for a week. How many of the following three challenges have you completed?  
