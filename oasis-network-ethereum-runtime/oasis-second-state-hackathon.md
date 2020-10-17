@@ -4,7 +4,7 @@ description: >-
   will win 50 ROSE tokens from Oasis Foundation!
 ---
 
-# Tutorial: The Oasis Second State Community Hackathon
+# Tutorial: The Oasis Second State Community Hackathon \#1
 
 Today’s big tech social media are plagued by the twin evil of censorship and hate speech. Is there a way to make it easy for everyone to express themselves, but also make it hard to spam and bully? Blockchain technology is here to rescue. Public blockchains, like the Oasis network, are censorship-resistant and have built-in economic incentives to punish bad behaviors.
 
