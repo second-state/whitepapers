@@ -122,7 +122,7 @@ instance.addComment ($("#name").val(), $("#comment").val(), {
 
 Click on the **Run** button on the IDE to run the web app. You will see the web page in the right panel of the IDE. You can now interact with it by paying and leaving a comment.
 
-![Figure 8. Run the Dapp web UI in the IDE](../../.gitbook/assets/screen-shot-2020-10-07-at-5.43.36-pm.png)
+![Figure 8. Run the Dapp web UI in the IDE](../.gitbook/assets/screen-shot-2020-10-07-at-5.43.36-pm.png)
 
 ### Publish it
 
