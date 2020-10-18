@@ -27,10 +27,6 @@
 * [Tutorial: The Oasis Second State Community Hackathon \#1](oasis-network-ethereum-runtime/oasis-second-state-hackathon.md)
 * [Tutorial: The Oasis Second State Community Hackathon \#3](oasis-network-ethereum-runtime/tutorial-the-oasis-second-state-community-hackathon-3.md)
 
----
-
-* [Tutorial: The Oasis Second State Community Hackathon \#3](tutorial-the-oasis-second-state-community-hackathon-3.md)
-
 ## DevChain
 
 * [Getting started](devchain/getting-started/README.md)
