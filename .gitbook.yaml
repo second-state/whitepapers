@@ -6,13 +6,3 @@ structure:
     
 redirects:
     tutorial-the-oasis-second-state-community-hackathon-3: oasis-network-ethereum-runtime/tutorial-the-oasis-second-state-community-hackathon-3.md
-    server-side-webassembly/the-case-for-webassembly-on-the-server-side: server-side-webassembly/the-case-for-webassembly-on-the-server-side/README.md
-    server-side-webassembly/the-case-for-webassembly-on-the-server-side/why-webassembly: server-side-webassembly/the-case-for-webassembly-on-the-server-side/why-webassembly.md
-    server-side-webassembly/webassembly-on-the-server-side: server-side-webassembly/webassembly-on-the-server-side/README.md
-    server-side-webassembly/webassembly-on-the-server-side/the-no-software-approach: server-side-webassembly/webassembly-on-the-server-side/the-no-software-approach.md
-    server-side-webassembly/rust-javascript-data-exchange: server-side-webassembly/rust-javascript-data-exchange.md
-    related-technologies/beginners-guide-to-webassembly: related-technologies/beginners-guide-to-webassembly.md
-    related-technologies/a-rusty-hello-world: related-technologies/a-rusty-hello-world.md
-    related-technologies/my-first-webassembly-app: related-technologies/my-first-webassembly-app.md
-    related-technologies/wasm-hello-world: related-technologies/wasm-hello-world.md
-    related-technologies/wasm-on-the-server-side: related-technologies/wasm-on-the-server-side.md
