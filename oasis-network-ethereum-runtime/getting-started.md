@@ -60,5 +60,5 @@ Finally, click on the **Run** button to run the DApp. You will see the DApp UI i
 
 Congratulations. You now have a complete DApp deployed on the Oasis Network!
 
-Next, you can deploy a [production-ready ERC20 contract](https://github.com/CyberMiles/cybermiles-token/blob/master/contracts/CyberMilesTokenFlattened.sol) and experiment with transfers. You can also deploy [the entire set of Uniswap contracts](https://github.com/second-state/buidl/tree/master/demo/uniswap) through a BUIDL app.
+Next, you can go through our tutorials to create and publish a [decentralized social media app](oasis-second-state-hackathon.md) or your own [ERC-20 tokens to be traded on Uniswap](tutorial-the-oasis-second-state-community-hackathon-3.md)!
 

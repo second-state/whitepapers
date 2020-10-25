@@ -23,9 +23,9 @@
 ## Oasis Ethereum ParaTime <a id="oasis-network-ethereum-runtime"></a>
 
 * [Getting started](oasis-network-ethereum-runtime/getting-started.md)
+* [Tutorial: publish a decentralized social media post](oasis-network-ethereum-runtime/oasis-second-state-hackathon.md)
+* [Tutorial: mint and trade your own ERC-20 tokens](oasis-network-ethereum-runtime/tutorial-the-oasis-second-state-community-hackathon-3.md)
 * [Ethereum flavored WebAssembly \(Ewasm\)](oasis-network-ethereum-runtime/ethereum-flavored-webassembly-ewasm.md)
-* [Tutorial: The Oasis Second State Community Hackathon \#1](oasis-network-ethereum-runtime/oasis-second-state-hackathon.md)
-* [Tutorial: The Oasis Second State Community Hackathon \#3](oasis-network-ethereum-runtime/tutorial-the-oasis-second-state-community-hackathon-3.md)
 
 ## DevChain
 
