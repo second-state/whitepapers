@@ -5,4 +5,6 @@ structure:
     summary: SUMMARY.md
     
 redirects:
-    tutorial-the-oasis-second-state-community-hackathon-3: oasis-network-ethereum-runtime/tutorial-the-oasis-second-state-community-hackathon-3.md
+    tutorial-the-oasis-second-state-community-hackathon-3: oasis-network-ethereum-runtime/tutorial-erc20.md
+    oasis-network-ethereum-runtime/oasis-second-state-hackathon: oasis-network-ethereum-runtime/tutorial-oasistweet.md
+    oasis-network-ethereum-runtime/tutorial-the-oasis-second-state-community-hackathon-3: oasis-network-ethereum-runtime/tutorial-erc20.md
