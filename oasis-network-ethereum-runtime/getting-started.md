@@ -60,5 +60,5 @@ Finally, click on the **Run** button to run the DApp. You will see the DApp UI i
 
 Congratulations. You now have a complete DApp deployed on the Oasis Network!
 
-Next, you can go through our tutorials to create and publish a [decentralized social media app](oasis-second-state-hackathon.md) or your own [ERC-20 tokens to be traded on Uniswap](tutorial-the-oasis-second-state-community-hackathon-3.md)!
+Next, you can go through our tutorials to create and publish a [decentralized social media app](tutorial-oasistweet.md) or your own [ERC-20 tokens to be traded on Uniswap](tutorial-erc20.md)!
 
