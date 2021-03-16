@@ -21,7 +21,7 @@ Here is a [simple ERC20 smart contract](https://github.com/second-state/oasis-ss
 
 ## Step 2 Deploy the contract via web3
 
-The Node.js application [`deploy_contract.js`](http://buidl.secondstate.io/oasis-testnet/deploy_contract.js) deploys the ERC20 smart contract to the testnet node. It uses the HEX bytecode from SOLL, as well as the private key from a known address to pay for "gas", and then initiate a coin transfer transaction.
+The Node.js application [`deploy_contract.js`](http://buidl.secondstate.io/oasis-testnet/deploy_contract.js) deploys the ERC20 smart contract to the mainnet node. It uses the HEX bytecode from SOLL, as well as the private key from a known address to pay for "gas", and then initiate a coin transfer transaction.
 
 ```text
 $ node deploy_contract.js
