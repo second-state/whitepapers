@@ -26,7 +26,7 @@ Go to the faucet website, enter your default address from BUIDL and give yoursel
 
 {% embed url="http://faucet.oasiseth.org" caption="" %}
 
-![](../.gitbook/assets/image%20%2821%29.png)
+![](../.gitbook/assets/image%20%2822%29.png)
 
 Now, go back to BUILD's Accounts tab and you should see 1 ETH \(or 10^18 wei\) in your default address.
 
