@@ -8,25 +8,25 @@ The Oasis Network is a high-performance and privacy-first blockchain network. It
 
 Second State has created the Oasis Ethereum runtime that supports both EVM and Ewasm smart contracts and dapps \(decentralized applications\). A network of Oasis validator nodes will deploy the Second State runtime and provide Ethereum services to the public. With BUIDL, it is a breeze to develop dapps on Oasis Network's Ethereum runtime nodes.
 
-## Step1 Configure BUIDL for Oasis Testnet
+## Step1 Configure BUIDL for Oasis Ethereum
 
 The easy way is to just click the link below to launch BUIDL in your browser. It pre-loads all the configurations for you.
 
-{% embed url="http://oasiseth.org/dev" %}
+{% embed url="http://oasiseth.org/dev" caption="" %}
 
 ![](../.gitbook/assets/screen-shot-2020-08-19-at-12.02.32-pm.png)
 
-## Step 2 Get some testnet Oasis ETH tokens for gas
+## Step 2 Get some Oasis ETH tokens for gas
 
-In the **Accounts** tab, you will see 5 auto-generated addresses, and you can set any of them as default. The default address is used to sign transactions. Because of that, you will need to send a little Oasis ETH into that account to pay for gas fees. 
+In the **Accounts** tab, you will see 5 auto-generated addresses, and you can set any of them as default. The default address is used to sign transactions. Because of that, you will need to send a little Oasis ETH into that account to pay for gas fees.
 
 ![](../.gitbook/assets/screen-shot-2020-08-19-at-12.03.04-pm.png)
 
 Go to the faucet website, enter your default address from BUIDL and give yourself some gas.
 
-{% embed url="http://faucet.oasiseth.org" %}
+{% embed url="http://faucet.oasiseth.org" caption="" %}
 
-![](../.gitbook/assets/screen-shot-2020-08-19-at-12.03.52-pm.png)
+![](../.gitbook/assets/image%20%2821%29.png)
 
 Now, go back to BUILD's Accounts tab and you should see 1 ETH \(or 10^18 wei\) in your default address.
 
