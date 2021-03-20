@@ -25,6 +25,7 @@
 * [Getting started](oasis-network-ethereum-runtime/getting-started.md)
 * [Tutorial: publish a decentralized social media post](oasis-network-ethereum-runtime/tutorial-oasistweet.md)
 * [Tutorial: mint and trade your own ERC-20 tokens](oasis-network-ethereum-runtime/tutorial-erc20.md)
+* [Tutorial: mint and transfer your own ERC-721\(NFT\) tokens](oasis-network-ethereum-runtime/tutorial-mint-and-transfer-your-own-erc-721-nft-tokens.md)
 * [Ethereum flavored WebAssembly \(Ewasm\)](oasis-network-ethereum-runtime/ethereum-flavored-webassembly-ewasm.md)
 
 ## DevChain
