@@ -19,6 +19,8 @@ This part can still be developed using the development tool, [BUIDL](http://oasi
 
 ### **Step 1 Set up MetaMask**
 
+> :warning: **Warning**: Pasting the private key of an account with a lot of value (i.e. a holding account) is not recommended whatsoever. Instead, please only transfer a tiny amount of value to a **new one-off development account** address and only use this new development account when writing and deploying your contracts. After all, you only need enough value to pay for gas; nothing else. Keep your holding account safe by never sharing its private keys.
+
 It is recommended that the third challenge to be completed with MetaMask wallet because our newly issued ERC20 token is under the created address, which is easier.
 
 Open **MetaMask**, and select **custom RPC**. Enter the network name and add the RPC link of Oasis Ethereum: _https://rpc.oasiseth.org:8545_, and make sure that MetaMask is in the Oasis Ethereum environment.
