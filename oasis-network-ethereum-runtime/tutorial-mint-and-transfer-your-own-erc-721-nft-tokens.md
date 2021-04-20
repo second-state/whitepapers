@@ -32,7 +32,7 @@ Then deposit 0.01 OETH to this MetaMask account from t[he OETH developer faucet.
 
 You can export the private key of this account via MetaMask’s "Account details" menu.
 
-> :warning: Pasting the private key of an account with a lot of value (i.e. a holding account) is not recommended whatsoever. Instead, please only transfer a tiny amount of value to a **new one-off development account** address and only use this new development account when writing and deploying your contracts. After all, you only need enough value to pay for gas; nothing else. Keep your holding account safe by never sharing its private keys.
+> :warning: **Warning**: Pasting the private key of an account with a lot of value (i.e. a holding account) is not recommended whatsoever. Instead, please only transfer a tiny amount of value to a **new one-off development account** address and only use this new development account when writing and deploying your contracts. After all, you only need enough value to pay for gas; nothing else. Keep your holding account safe by never sharing its private keys.
 
 #### Step 2 Import the MetaMask account address into the BUIDL Account
 
